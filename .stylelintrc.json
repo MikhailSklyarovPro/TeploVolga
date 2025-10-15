@@ -1,0 +1,16 @@
+{
+  "extends": ["stylelint-config-standard"],
+  "rules": {
+    "color-named": "never",
+    "selector-max-id": 0,
+    "selector-no-qualifying-type": true,
+    "selector-no-vendor-prefix": true,
+    "property-no-vendor-prefix": true,
+    "value-no-vendor-prefix": true,
+    "function-url-quotes": "always",
+    "font-family-name-quotes": "always-where-recommended",
+    "font-weight-notation": "numeric",
+    "media-feature-range-notation": "context"
+  },
+  "ignoreFiles": ["node_modules/**/*", "dist/**/*", "build/**/*", "*.min.css"]
+}

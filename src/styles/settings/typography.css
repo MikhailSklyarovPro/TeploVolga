@@ -1,0 +1,46 @@
+/* Все шрифты адаптивны с 1920px до 375px */
+
+/* size: 40px-64px line-height: 40px-64px */
+h1 {
+  font-size: clamp(2.5rem, 2.1966rem + 1.2945vw, 3.75rem);
+  line-height: clamp(2.5rem, 2.1966rem + 1.2945vw, 3.75rem);
+  font-weight: 500;
+}
+
+/* size: 32px-50px line-height: 34px-50px */
+h2 {
+  font-size: clamp(2rem, 1.7269rem + 1.165vw, 3.125rem);
+  line-height: clamp(2.125rem, 1.8823rem + 1.0356vw, 3.125rem);
+  font-weight: 400;
+}
+
+/* size: 24px-32px line-height: 28px-36px */
+h3 {
+  font-size: clamp(1.5rem, 1.3786rem + 0.5178vw, 2rem);
+  line-height: clamp(1.75rem, 1.6286rem + 0.5178vw, 2.25rem);
+  font-weight: 400;
+}
+
+.text-base {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 400;
+}
+
+.text-base-bold {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+}
+
+.text-description {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.text-small {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+}

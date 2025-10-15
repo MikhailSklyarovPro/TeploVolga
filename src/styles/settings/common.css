@@ -1,0 +1,8 @@
+/* Импорт базовых стилей */
+@import url('base.css');
+@import url('typography.css');
+
+/* Импорт компонентов */
+@import url('../components/header.css');
+@import url('../components/footer.css');
+@import url('../components/buttons.css');

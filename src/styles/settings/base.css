@@ -1,0 +1,108 @@
+/* Базовык стили */
+:root {
+  /* Цвета */
+  --color-orange: #fd5d39;
+  --color-green: #00534c;
+  --color-dark-blue: #213561;
+  --color-blue: #6896c4;
+  --color-bluish-grey: #769fb1;
+  --color-light-blue: #e1ebf5;
+  --color-beige: #eddcd1;
+  --color-snow-white: #fffafa;
+  --color-white: #fff;
+  --color-fiord: #4a586e;
+  --color-light-fiord: #7c8797;
+  --color-black: #21272a;
+  --color-grey: #414042;
+
+  /* Шрифты */
+  --font-family-default: geologica, arial, sans-serif;
+}
+
+@font-face {
+  font-family: geologica;
+  src: url('../../fonts/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf')
+    format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Сброс базовых стилей */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  line-height: 1.15;
+  text-size-adjust: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-default);
+  scroll-behavior: smooth;
+}
+
+body {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh;
+  font-weight: 300;
+  color: var(--color-black);
+  user-select: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+main {
+  max-width: 100vw;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+li,
+button,
+th,
+td,
+input,
+label,
+menu,
+textarea,
+pre {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-default);
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
