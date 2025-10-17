@@ -4,14 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
-    <link rel="stylesheet" href="styles/pages/index.css" />
     <link rel="stylesheet" href="styles/settings/common.css" />
+    <link rel="stylesheet" href="styles/components/swipe.css" />
+    <link rel="stylesheet" href="styles/pages/index.css" />
+    <script src="js/swipe.js"></script>
   </head>
   <body>
-    <header></header>
     <main>
-      <p>Привет мирр!</p>
+      <!-- Блок 2: Сайты компаний -->
+      <section class="home__companies" data-swipe>
+        <a href="pages/heating-networks/index.html" class="home__company">
+          <p class="caption">Теплосети</p>
+          <img src="img/home/block2-companies/heating-networks.webp" alt="Цех с трубами" />
+        </a>
+        <a href="pages/heat-generation/index.html" class="home__company">
+          <p class="caption">Генерация тепла</p>
+          <img src="img/home/block2-companies/heat-generation.webp" alt="Труба с дымом из ТЭЦ" />
+        </a>
+        <a href="pages/avtozavodskaya-tpp/index.html" class="home__company">
+          <p class="caption">Автозаводская ТЭЦ</p>
+          <img src="img/home/block2-companies/avtozavodskaya-tpp.webp" alt="Вид с высоты на ТЭЦ с трубами и город" />
+        </a>
+        <a href="pages/factory-networks/index.html" class="home__company">
+          <p class="caption">Заводские сети</p>
+          <img src="img/home/block2-companies/factory-networks.webp" alt="Цех с трубами" />
+        </a>
+        <a href="pages/ese-kuban/index.html" class="home__company">
+          <p class="caption">ЕСЭ-Кубань</p>
+          <img src="img/home/block2-companies/ese-kuban.webp" alt="Вышка линии электропередачи" />
+        </a>
+        <a href="pages/op-yaroslavl/index.html" class="home__company">
+          <p class="caption">ОП Ярославль</p>
+          <img src="img/home/block2-companies/op-yaroslavl.webp" alt="Вышки линий электропередач" />
+        </a>
+        <a href="https://www.energosale34.ru/" target="_blank" class="home__company">
+          <p class="caption">ВолгаЭнергоСбыт</p>
+          <img
+            src="img/home/block2-companies/volga-energy-distribution.webp"
+            alt="Вышка линий электропередач с неоновыми проводами"
+          />
+          <span class="home__company__icon-external-link"
+            ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
+              <path
+                d="M19.9997 7.51859C19.9947 7.71717 19.9055 7.90297 19.7556 8.02825L12.4224 14.1647C12.2232 14.3317 11.9465 14.3649 11.714 14.2533C11.4816 14.1399 11.3324 13.9005 11.3324 13.6371V10.2374C10.0349 10.2851 8.75748 10.5016 7.52487 10.88C5.15243 11.6112 2.94319 12.9672 1.13586 14.8023C1.00753 14.9318 0.83837 15 0.665872 15C0.568374 15 0.470876 14.9778 0.380053 14.9335C0.125892 14.8099 -0.0249318 14.5364 0.0033984 14.2508C0.107563 13.1787 0.869218 7.68919 5.66751 4.86393C7.72081 3.65539 9.78242 3.37245 11.3333 3.38266V0.682636C11.3333 0.412459 11.4883 0.168705 11.73 0.0587618C11.9717 -0.051181 12.2525 -0.00430647 12.4483 0.178082L19.7815 6.99632C19.9249 7.12928 20.0039 7.32002 19.9997 7.51859Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+        </a>
+      </section>
     </main>
-    <footer></footer>
+    <footer class="footer"></footer>
   </body>
 </html>
