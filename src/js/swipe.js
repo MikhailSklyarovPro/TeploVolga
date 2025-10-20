@@ -165,5 +165,5 @@ function initSwipe() {
 // Инициализация при загрузке DOM
 document.addEventListener('DOMContentLoaded', initSwipe);
 
-// Экспорт для использования в других модулях
-export { initSwipe, SwipeController };
+window.SwipeController = SwipeController;
+window.initSwipe = initSwipe;
