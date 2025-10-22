@@ -405,6 +405,101 @@ main {
 
 }
 
+/* ============================================= Блок 5: Цитаты ============================================= */
+.home__quotes {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  /* 30px-40px */
+  gap: clamp(1.875rem, 1.7233rem + 0.6472vw, 2.5rem);
+}
+
+.home__quotes__container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-light-blue);
+
+  /* 30px 15px - 50px 177px */
+  padding: clamp(1.875rem, 1.57rem + 1.29vw, 3.125rem) clamp(0.9375rem, -1.52rem + 10.49vw, 11.0625rem);
+
+  /* 4px-125px */
+  gap: clamp(0.25rem, -1.59rem + 7.83vw, 7.8125rem)
+}
+
+.home__quotes__container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  transition: all 300ms ease;
+}
+
+.quotes__button__background {
+  transition: all 300ms ease;
+}
+
+.quotes__button__arrow {
+  transition: all 300ms ease;
+}
+
+.home__quotes__content {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.home__quote {
+  display: flex;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.home__quote.active {
+  opacity: 1;
+}
+
+.home__quote img {
+  object-fit: cover;
+  border-radius: 100%;
+  width: 100px;
+  height: 100px;
+}
+
+.home__quote>p {
+  max-width: 774px;
+}
+
+.home__quote__person {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  max-width: 404px;
+}
+
+.home__quotes__footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid var(--color-fiord);
+
+  /* 15px-50px */
+  gap: clamp(0.938rem, 0.4072rem + 2.2649vw, 3.125rem);
+
+  /* 30px-40px */
+  padding-bottom: clamp(1.875rem, 1.7233rem + 0.6472vw, 2.5rem);
+}
+
 
 /* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
 @media (hover: hover) and (pointer: fine) {
@@ -441,6 +536,13 @@ main {
     fill: var(--color-light-fiord);
   }
 
+  .home__quotes__container button:hover .quotes__button__background {
+    fill: var(--color-orange);
+  }
+
+  .home__quotes__container button:hover .quotes__button__arrow {
+    fill: var(--color-white);
+  }
 }
 
 .home__company:active {
@@ -471,9 +573,17 @@ main {
   fill: var(--color-light-fiord);
 }
 
+.home__quotes__container button:active .quotes__button__background {
+  fill: var(--color-orange);
+}
+
+.home__quotes__container button:active .quotes__button__arrow {
+  fill: var(--color-white);
+}
+
 /* ============================================= media запросы ============================================= */
 @media (width <=744px) {
-  .home__quote-footer {
+  .home__quotes__footer {
     flex-direction: column;
   }
 }

@@ -38,19 +38,20 @@ class QuotesCarousel {
 
     this.setupInitialState();
     this.bindEvents();
-    this.startAutoPlay();
   }
 
   setupInitialState() {
-    // Скрываем все элементы кроме первого
+    // Показываем только первый элемент
     this.items.forEach((item, index) => {
-      item.style.display = index === 0 ? 'flex' : 'none';
-      item.classList.toggle(this.options.activeClass, index === 0);
-    });
-
-    // Добавляем атрибуты для навигации
-    this.buttons.forEach((button, index) => {
-      button.setAttribute('data-direction', index === 0 ? 'prev' : 'next');
+      if (index === 0) {
+        item.style.display = 'flex';
+        item.style.opacity = '1';
+        item.classList.add(this.options.activeClass);
+      } else {
+        item.style.display = 'none';
+        item.style.opacity = '0';
+        item.classList.remove(this.options.activeClass);
+      }
     });
   }
 
@@ -58,7 +59,7 @@ class QuotesCarousel {
     this.buttons.forEach(button => {
       button.addEventListener('click', e => {
         e.preventDefault();
-        const direction = button.getAttribute('data-direction');
+        const direction = this.getButtonDirection(button);
         this.navigate(direction);
       });
     });
@@ -72,9 +73,17 @@ class QuotesCarousel {
       }
     });
 
-    // Пауза автоплея при наведении
-    this.container.addEventListener('mouseenter', () => this.pauseAutoPlay());
-    this.container.addEventListener('mouseleave', () => this.startAutoPlay());
+    // События мыши можно использовать для других целей в будущем
+  }
+
+  getButtonDirection(button) {
+    // Определяем направление по классу кнопки
+    if (button.classList.contains('home__quotes__button-prev')) {
+      return 'prev';
+    } else if (button.classList.contains('home__quotes__button-next')) {
+      return 'next';
+    }
+    return 'next'; // По умолчанию
   }
 
   navigate(direction) {
@@ -83,7 +92,6 @@ class QuotesCarousel {
     }
 
     this.isTransitioning = true;
-    this.pauseAutoPlay();
 
     const currentItem = this.items[this.currentIndex];
     const nextIndex = this.getNextIndex(direction);
@@ -93,6 +101,7 @@ class QuotesCarousel {
     currentItem.style.opacity = '0';
     currentItem.classList.remove(this.options.activeClass);
 
+    // Ждем полного завершения анимации скрытия
     setTimeout(() => {
       // Скрываем текущий элемент
       currentItem.style.display = 'none';
@@ -102,19 +111,20 @@ class QuotesCarousel {
       nextItem.style.opacity = '0';
       nextItem.classList.add(this.options.activeClass);
 
-      // Плавное появление следующего элемента
+      // Небольшая задержка для стабилизации DOM
       requestAnimationFrame(() => {
-        nextItem.style.transition = `opacity ${this.options.transitionDuration}ms ease-in-out`;
-        nextItem.style.opacity = '1';
+        requestAnimationFrame(() => {
+          nextItem.style.opacity = '1';
+        });
       });
 
       this.currentIndex = nextIndex;
 
+      // Ждем завершения анимации появления
       setTimeout(() => {
         this.isTransitioning = false;
-        this.startAutoPlay();
       }, this.options.transitionDuration);
-    }, this.options.transitionDuration / 2);
+    }, this.options.transitionDuration);
   }
 
   getNextIndex(direction) {
@@ -167,9 +177,9 @@ document.addEventListener('DOMContentLoaded', () => {
   // Инициализация карусели для блока цитат
   const quotesCarousel = new QuotesCarousel('.home__quotes', {
     itemSelector: '.home__quote',
-    buttonSelector: '.home__quote-container__buttons button',
-    autoPlay: true,
-    autoPlayInterval: 6000,
+    buttonSelector: '.home__quotes__button-prev, .home__quotes__button-next',
+    autoPlay: false,
+    transitionDuration: 300,
   });
 
   // Экспорт для глобального доступа
