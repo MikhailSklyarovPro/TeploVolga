@@ -96,7 +96,7 @@ main {
   padding: 50px clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem) clamp(3.125rem, 1.6080rem + 6.4725vw, 9.375rem);
 }
 
-.ecology__card-image {
+.home__ecology__card-image {
   display: flex;
   align-items: flex-end;
   background-image: url('../../img/home/block3-ecology/ecology-background.webp');
@@ -114,7 +114,7 @@ main {
   padding: clamp(0.938rem, 0.4072rem + 2.2649vw, 3.125rem) clamp(0.938rem, -0.3513rem + 5.5011vw, 6.25rem);
 }
 
-.ecology__card-text {
+.home__ecology__card-text {
   display: flex;
   flex-direction: column;
 
@@ -130,11 +130,11 @@ main {
   background: #ffffffe6;
 }
 
-.ecology__card-text h2 {
+.home__ecology__card-text h2 {
   color: var(--color-fiord);
 }
 
-.ecology__our-works-container {
+.home__ecology__our-works-container {
   display: flex;
   justify-content: space-evenly;
 
@@ -142,7 +142,7 @@ main {
   gap: clamp(1.875rem, 0.8131rem + 4.5307vw, 6.25rem);
 }
 
-.ecology__our-works-text {
+.home__ecology__our-works-text {
   display: flex;
   flex-direction: column;
   max-width: 628px;
@@ -151,7 +151,7 @@ main {
   gap: clamp(0.938rem, 0.6346rem + 1.2945vw, 2.188rem);
 }
 
-.ecology__our-works-text ul {
+.home__ecology__our-works-text ul {
   display: flex;
   flex-direction: column;
 
@@ -161,7 +161,7 @@ main {
   list-style-position: inside;
 }
 
-.ecology__our-works-video {
+.home__ecology__our-works-video {
   position: relative;
 
   /* 345px-639px */
@@ -171,7 +171,7 @@ main {
   height: clamp(11.375rem, 9.0388rem + 9.9676vw, 21rem);
 }
 
-.ecology__our-works-video video {
+.home__ecology__our-works-video video {
   flex-shrink: 0;
   object-fit: cover;
   clip-path: polygon(100% 69.521%, 100% 69.521%, 99.989% 70.069%, 99.955% 70.609%, 99.899% 71.141%, 99.821% 71.66%, 99.723% 72.166%, 99.604% 72.656%, 99.465% 73.127%, 99.307% 73.578%, 99.129% 74.005%, 98.933% 74.407%, 86.491% 97.989%, 86.491% 97.989%, 86.28% 98.359%, 86.056% 98.693%, 85.819% 98.992%, 85.573% 99.253%, 85.316% 99.478%, 85.051% 99.663%, 84.779% 99.809%, 84.501% 99.915%, 84.218% 99.978%, 83.932% 100%, 3.703% 100%, 3.703% 100%, 3.115% 99.91%, 2.558% 99.648%, 2.037% 99.23%, 1.562% 98.669%, 1.14% 97.98%, 0.778% 97.176%, 0.483% 96.273%, 0.263% 95.283%, 0.126% 94.222%, 0.078% 93.104%, 0.078% 6.897%, 0.078% 6.897%, 0.126% 5.778%, 0.263% 4.717%, 0.483% 3.727%, 0.778% 2.824%, 1.14% 2.02%, 1.562% 1.331%, 2.037% 0.77%, 2.558% 0.352%, 3.115% 0.09%, 3.703% 0%, 96.375% 0%, 96.375% 0%, 96.963% 0.09%, 97.521% 0.352%, 98.041% 0.77%, 98.516% 1.331%, 98.938% 2.02%, 99.301% 2.824%, 99.595% 3.727%, 99.815% 4.717%, 99.953% 5.778%, 100% 6.897%, 100% 69.521%);
@@ -183,7 +183,7 @@ main {
   height: clamp(11.375rem, 9.0388rem + 9.9676vw, 21rem);
 }
 
-.ecology__our-works-video__info {
+.home__ecology__our-works-video__info {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -204,14 +204,14 @@ main {
   transition: all 300ms ease;
 }
 
-.ecology__our-works-video__info svg {
+.home__ecology__our-works-video__info svg {
   flex-shrink: 0;
 
   /* 36px-65px */
   width: clamp(2.25rem, 1.8100rem + 1.8775vw, 4.063rem);
 }
 
-.ecology__our-works-video--modal {
+.home__ecology__our-works-video--modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -224,7 +224,7 @@ main {
   z-index: 100;
 }
 
-.ecology__our-works-video--modal-content {
+.home__ecology__our-works-video--modal-content {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -232,7 +232,7 @@ main {
   border-radius: 20px;
 }
 
-.ecology__our-works-video--modal video {
+.home__ecology__our-works-video--modal video {
   /* 345px-1270px */
   width: clamp(21.563rem, 7.5310rem + 59.8700vw, 79.375rem);
 
@@ -242,24 +242,171 @@ main {
   object-fit: cover;
 }
 
-.ecology__our-works-video--modal-close {
+.home__ecology__our-works-video--modal-close {
   align-self: flex-end;
 }
 
+/* ============================================= Блок 4: Новости ============================================= */
+.home__news {
+  display: flex;
+  flex-direction: column;
 
-/* ============================================= Все эффекты наведения и фокуса ============================================= */
-.home__company:active {
-  box-shadow: 0 4px 0 0 var(--color-orange);
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+
+  /* 0 15px 50px 15px - 0 85px 150px 85px */
+  padding: 0 clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem) clamp(3.125rem, 1.6080rem + 6.4725vw, 9.375rem);
 }
 
-.home__company:active .home__company__icon-external-link {
-  box-shadow: 0 4px 0 0 var(--color-orange);
+.home__news-title {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
-.ecology__our-works-video__info:active {
-  background-color: var(--color-white);
+.home__news-title h2 {
+  color: var(--color-fiord);
 }
 
+.home__news-title__controls {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.home__news-title__controls__all-news {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home__news-title__controls__all-news a {
+  transition: all 300ms ease;
+}
+
+.home__news-title__controls__all-news path {
+  transition: all 300ms ease;
+}
+
+.home__news-title__controls__arrow path {
+  transition: all 300ms ease;
+}
+
+.home__news-cards {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding-bottom: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.home__news-card__date {
+  /* 15px-30px */
+  padding-left: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+.home__news-wrapper-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.home__news-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light-blue);
+  flex-grow: 1;
+  overflow: clip;
+  transition: all 300ms ease;
+  cursor: pointer;
+
+  /* 256px-416px */
+  width: clamp(16rem, 13.5728rem + 10.3560vw, 26rem);
+
+  /* 15px-20px */
+  border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+}
+
+.home__news-card__image {
+  position: relative;
+  width: 100%;
+
+  /* 166px-200px */
+  height: clamp(10.375rem, 9.8592rem + 2.2006vw, 12.5rem);
+  overflow: hidden;
+}
+
+.home__news-card__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #6896c400 0%, #6896c4cc 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.home__news-card__image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.home__news-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.home__news-card__content {
+  display: flex;
+  flex-direction: column;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+
+  /* 15px-32px */
+  padding: clamp(0.938rem, 0.6802rem + 1.0998vw, 2rem);
+}
+
+.home__news-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.home__news-card__tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  border-radius: 5px;
+}
+
+.home__news-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+
+}
+
+
+/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
 @media (hover: hover) and (pointer: fine) {
   .home__company:hover {
     box-shadow: 0 4px 0 0 var(--color-orange);
@@ -269,13 +416,68 @@ main {
     box-shadow: 0 4px 0 0 var(--color-orange);
   }
 
-  .ecology__our-works-video__info:hover {
+  .home__ecology__our-works-video__info:hover {
     background-color: var(--color-white);
+  }
+
+  .home__news-card:hover {
+    box-shadow: 0 6px 0 0 var(--color-orange);
+  }
+
+  .home__news-card:hover .home__news-card__image::after {
+    opacity: 1;
+    background: linear-gradient(180deg, #6896c400 50%, #fd5d39cc 100%);
+  }
+
+  .home__news-title__controls__arrow:hover path {
+    fill: var(--color-blue);
+  }
+
+  .home__news-title__controls__all-news:hover a {
+    color: var(--color-light-fiord);
+  }
+
+  .home__news-title__controls__all-news:hover path {
+    fill: var(--color-light-fiord);
+  }
+
+}
+
+.home__company:active {
+  box-shadow: 0 4px 0 0 var(--color-orange);
+}
+
+.home__company:active .home__company__icon-external-link {
+  box-shadow: 0 4px 0 0 var(--color-orange);
+}
+
+.home__ecology__our-works-video__info:active {
+  background-color: var(--color-white);
+}
+
+.home__news-card:active {
+  box-shadow: 0 6px 0 0 var(--color-blue);
+}
+
+.home__news-card:active .home__news-card__image::after {
+  opacity: 0;
+}
+
+.home__news-title__controls__all-news:active a {
+  color: var(--color-light-fiord);
+}
+
+.home__news-title__controls__all-news:active path {
+  fill: var(--color-light-fiord);
+}
+
+/* ============================================= media запросы ============================================= */
+@media (width <=744px) {
+  .home__quote-footer {
+    flex-direction: column;
   }
 }
 
-
-/* ============================================= media запросы ============================================= */
 @media (width <=944px) and (hover: none) and (pointer: coarse) {
   .home__companies {
     overflow-x: auto;
@@ -287,67 +489,71 @@ main {
 }
 
 @media (width <=1100px) {
-  .ecology__our-works-container {
+  .home__ecology__our-works-container {
     flex-direction: column;
     justify-content: flex-start;
   }
 
-  .ecology__our-works-text {
+  .home__ecology__our-works-text {
     max-width: none;
   }
 }
 
 @media (width <=1100px) and (hover: hover) {
-  .ecology__our-works-video {
+  .home__ecology__our-works-video {
     width: 100%;
     height: auto;
   }
 
-  .ecology__our-works-video video {
+  .home__ecology__our-works-video video {
     width: 100%;
     height: auto;
   }
 
-  .ecology__our-works-video--modal-content {
+  .home__ecology__our-works-video--modal-content {
     height: auto;
     width: calc(100% - clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem));
   }
 
-  .ecology__our-works-video--modal-content video {
+  .home__ecology__our-works-video--modal-content video {
     height: auto;
     width: calc(100% - clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem));
   }
 }
 
 @media (hover: none) and (pointer: coarse) {
-  .ecology__our-works-video {
+  .home__ecology__our-works-video {
     width: 100%;
     height: auto;
   }
 
-  .ecology__our-works-video video {
+  .home__ecology__our-works-video video {
     width: 100%;
     height: auto;
   }
 
-  .ecology__our-works-video--modal-content {
+  .home__ecology__our-works-video--modal-content {
     width: 90%;
     height: auto;
   }
 
-  .ecology__our-works-video--modal-content video {
+  .home__ecology__our-works-video--modal-content video {
     width: 90%;
     height: auto;
+  }
+
+  .home__news-title__controls__arrow {
+    display: none;
   }
 }
 
 @media (hover: none) and (orientation: landscape) {
-  .ecology__our-works-video--modal-content {
+  .home__ecology__our-works-video--modal-content {
     height: 85%;
     width: auto;
   }
 
-  .ecology__our-works-video--modal-content video {
+  .home__ecology__our-works-video--modal-content video {
     height: 85%;
     width: auto;
   }

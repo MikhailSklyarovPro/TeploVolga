@@ -9,37 +9,38 @@
     <link rel="stylesheet" href="styles/pages/index.css" />
     <script src="js/swipe.js"></script>
     <script src="js/video-control.js"></script>
+    <script src="js/quotes-carousel.js"></script>
   </head>
   <body>
     <main>
       <!-- Блок 2: Сайты компаний -->
-      <section class="home__companies" data-swipe>
+      <section class="home__companies">
         <a href="pages/heating-networks/index.html" class="home__company">
-          <p class="caption">Теплосети</p>
+          <p class="caption--400">Теплосети</p>
           <img src="img/home/block2-companies/heating-networks.webp" alt="Цех с трубами" />
         </a>
         <a href="pages/heat-generation/index.html" class="home__company">
-          <p class="caption">Генерация тепла</p>
+          <p class="caption--400">Генерация тепла</p>
           <img src="img/home/block2-companies/heat-generation.webp" alt="Труба с дымом из ТЭЦ" />
         </a>
         <a href="pages/avtozavodskaya-tpp/index.html" class="home__company">
-          <p class="caption">Автозаводская ТЭЦ</p>
+          <p class="caption--400">Автозаводская ТЭЦ</p>
           <img src="img/home/block2-companies/avtozavodskaya-tpp.webp" alt="Вид с высоты на ТЭЦ с трубами и город" />
         </a>
         <a href="pages/factory-networks/index.html" class="home__company">
-          <p class="caption">Заводские сети</p>
+          <p class="caption--400">Заводские сети</p>
           <img src="img/home/block2-companies/factory-networks.webp" alt="Цех с трубами" />
         </a>
         <a href="pages/ese-kuban/index.html" class="home__company">
-          <p class="caption">ЕСЭ-Кубань</p>
+          <p class="caption--400">ЕСЭ-Кубань</p>
           <img src="img/home/block2-companies/ese-kuban.webp" alt="Вышка линии электропередачи" />
         </a>
         <a href="pages/op-yaroslavl/index.html" class="home__company">
-          <p class="caption">ОП Ярославль</p>
+          <p class="caption--400">ОП Ярославль</p>
           <img src="img/home/block2-companies/op-yaroslavl.webp" alt="Вышки линий электропередач" />
         </a>
         <a href="https://www.energosale34.ru/" target="_blank" class="home__company">
-          <p class="caption">ВолгаЭнергоСбыт</p>
+          <p class="caption--400">ВолгаЭнергоСбыт</p>
           <img
             src="img/home/block2-companies/volga-energy-distribution.webp"
             alt="Вышка линий электропередач с неоновыми проводами"
@@ -57,51 +58,53 @@
 
       <!-- Блок 3: Экология -->
       <section class="home__ecology">
-        <article class="ecology__card-image">
-          <article class="ecology__card-text">
+        <article class="home__ecology__card-image">
+          <article class="home__ecology__card-text">
             <h2>Экология</h2>
-            <p class="text-base">
+            <p class="text-base--400">
               В компании «Эн+ Тепло Волга» охрана природы и забота об экологии — это одна из ключевых задач.
             </p>
           </article>
         </article>
-        <div class="ecology__our-works-container">
-          <div class="ecology__our-works-text">
+        <div class="home__ecology__our-works-container">
+          <div class="home__ecology__our-works-text">
             <h3>Мы работаем над тем, чтобы:</h3>
             <ul>
-              <li class="text-base">уменьшать выбросы в воздух, воду и почву;</li>
-              <li class="text-base">использовать ресурсы более рационально;</li>
-              <li class="text-base">внедрять современные технологии, которые делают производство чище и безопаснее;</li>
-              <li class="text-base">
+              <li class="text-base--400">уменьшать выбросы в воздух, воду и почву;</li>
+              <li class="text-base--400">использовать ресурсы более рационально;</li>
+              <li class="text-base--400">
+                внедрять современные технологии, которые делают производство чище и безопаснее;
+              </li>
+              <li class="text-base--400">
                 контролировать воздействие на природу не только на местном, но и на глобальном уровне.
               </li>
             </ul>
           </div>
           <div
-            class="ecology__our-works-video"
+            class="home__ecology__our-works-video"
             data-video-controller
-            data-modal-target="#ecology__our-works-video--modal"
+            data-modal-target="#home__ecology__our-works-video--modal"
           >
             <video loop muted autoplay>
-              <source src="video/video.webm" type="video/webm" />
+              <source src="video/home_ecology.webm" type="video/webm" />
             </video>
-            <div class="ecology__our-works-video__info" data-video-poster>
+            <div class="home__ecology__our-works-video__info" data-video-poster>
               <svg xmlns="http://www.w3.org/2000/svg" width="43" height="47" viewBox="0 0 43 47" fill="none">
                 <path
                   d="M39 17.5198C43.6667 20.2142 43.6667 26.9499 39 29.6442L11.25 45.6657C6.58334 48.36 0.749998 44.9921 0.749998 39.6035L0.749999 7.56057C0.75 2.17196 6.58333 -1.19592 11.25 1.49838L39 17.5198Z"
                   fill="#FD5D39"
                 />
               </svg>
-              <p class="text-description">Выпустили в воду более 25 тысяч мальков стерляди</p>
+              <p class="text-description--400">Выпустили в воду более 25 тысяч мальков стерляди</p>
             </div>
           </div>
-          <div id="ecology__our-works-video--modal" class="ecology__our-works-video--modal">
-            <div class="ecology__our-works-video--modal-content">
-              <button class="btn-orange text-base ecology__our-works-video--modal-close" data-modal-close>
+          <div id="home__ecology__our-works-video--modal" class="home__ecology__our-works-video--modal">
+            <div class="home__ecology__our-works-video--modal-content">
+              <button class="btn-orange text-base--400 home__ecology__our-works-video--modal-close" data-modal-close>
                 Закрыть
               </button>
               <video controls controlsList="nofullscreen" disablepictureinpicture>
-                <source src="video/video.webm" type="video/webm" />
+                <source src="video/home_ecology.webm" type="video/webm" />
               </video>
             </div>
           </div>
@@ -109,76 +112,175 @@
       </section>
 
       <!-- Блок 4: Новости -->
-      <section>
-        <div>
+      <section class="home__news">
+        <div class="home__news-title">
           <h2>Новости</h2>
-          <div>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="31" viewBox="0 0 14 31" fill="none">
-              <path
-                d="M3.68001 12.7567C2.27566 14.2463 2.27566 16.7535 3.68014 18.2433L14 29.19L12.2937 31L1.97383 20.0533C1.86995 19.9431 1.75796 19.8243 1.63963 19.6988C-0.546031 17.3803 -0.5468 13.6206 1.63886 11.3022L12.2938 0L14 1.80982L3.68001 12.7567Z"
-                fill="#FD5D39"
-              />
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="31" viewBox="0 0 14 31" fill="none">
-              <path
-                d="M10.32 12.7567C11.7243 14.2463 11.7243 16.7535 10.3199 18.2433L1.71154e-06 29.19L1.70631 31L12.0262 20.0533C12.13 19.9431 12.242 19.8243 12.3604 19.6988C14.546 17.3803 14.5468 13.6206 12.3611 11.3022L1.70618 0L0 1.80982L10.32 12.7567Z"
-                fill="#FD5D39"
-              />
-            </svg>
-            <span class="text-description">Все новости</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" viewBox="0 0 21 15" fill="none">
-              <path
-                d="M20.7071 8.20711C21.0976 7.81658 21.0976 7.18342 20.7071 6.79289L14.3431 0.428932C13.9526 0.0384078 13.3195 0.0384078 12.9289 0.428932C12.5384 0.819457 12.5384 1.45262 12.9289 1.84315L18.5858 7.5L12.9289 13.1569C12.5384 13.5474 12.5384 14.1805 12.9289 14.5711C13.3195 14.9616 13.9526 14.9616 14.3431 14.5711L20.7071 8.20711ZM0 7.5V8.5H20V7.5V6.5H0V7.5Z"
-                fill="#4A586E"
-              />
-            </svg>
+          <div class="home__news-title__controls">
+            <button class="home__news-title__controls__arrow" data-swipe-prev>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="31" viewBox="0 0 14 31" fill="none">
+                <path
+                  d="M3.68001 12.7567C2.27566 14.2463 2.27566 16.7535 3.68014 18.2433L14 29.19L12.2937 31L1.97383 20.0533C1.86995 19.9431 1.75796 19.8243 1.63963 19.6988C-0.546031 17.3803 -0.5468 13.6206 1.63886 11.3022L12.2938 0L14 1.80982L3.68001 12.7567Z"
+                  fill="#FD5D39"
+                />
+              </svg>
+            </button>
+            <button class="home__news-title__controls__arrow" data-swipe-next>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="31" viewBox="0 0 14 31" fill="none">
+                <path
+                  d="M10.32 12.7567C11.7243 14.2463 11.7243 16.7535 10.3199 18.2433L1.71154e-06 29.19L1.70631 31L12.0262 20.0533C12.13 19.9431 12.242 19.8243 12.3604 19.6988C14.546 17.3803 14.5468 13.6206 12.3611 11.3022L1.70618 0L0 1.80982L10.32 12.7567Z"
+                  fill="#FD5D39"
+                />
+              </svg>
+            </button>
+            <div class="home__news-title__controls__all-news">
+              <a href="pages/home/news.html" class="text-description--300">Все новости</a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="15" viewBox="0 0 21 15" fill="none">
+                <path
+                  d="M20.7071 8.20711C21.0976 7.81658 21.0976 7.18342 20.7071 6.79289L14.3431 0.428932C13.9526 0.0384078 13.3195 0.0384078 12.9289 0.428932C12.5384 0.819457 12.5384 1.45262 12.9289 1.84315L18.5858 7.5L12.9289 13.1569C12.5384 13.5474 12.5384 14.1805 12.9289 14.5711C13.3195 14.9616 13.9526 14.9616 14.3431 14.5711L20.7071 8.20711ZM0 7.5V8.5H20V7.5V6.5H0V7.5Z"
+                  fill="#4A586E"
+                />
+              </svg>
+            </div>
           </div>
         </div>
-        <div>
-          <span>19 сентября</span>
-          <article>
-            <img src="" alt="" />
-            <div>
-              <p>120 этажей вверх: марафон по-нижегородски</p>
-              <p>Более 50 коллег из «Эн+ Тепло Волга» приняли участие в пятом «Марафоне Нижний Новгород».</p>
+        <div class="home__news-cards" data-swipe>
+          <a href="pages/home/news-details.html" class="home__news-wrapper-card">
+            <span class="home__news-card__date text-description--300">19 сентября</span>
+            <div class="home__news-card">
+              <div class="home__news-card__image">
+                <img src="img/home/block4-news/news1.webp" alt="Коллеги из Эн+ Тепло Волга групповое фото" />
+              </div>
+              <div class="home__news-card__content">
+                <div class="home__news-card__tags">
+                  <span class="home__news-card__tag text-description--300">Эн+ Тепло Волга</span>
+                </div>
+                <div class="home__news-card__info">
+                  <p class="caption--500">120 этажей вверх: марафон по-нижегородски</p>
+                  <p class="text-description--400">
+                    Более 50 коллег из «Эн+ Тепло Волга» приняли участие в пятом «Марафоне Нижний Новгород».
+                  </p>
+                </div>
+              </div>
             </div>
-          </article>
-        </div>
-        <div>
-          <span>16 сентября </span>
-          <article>
-            <img src="" alt="" />
-            <div>
-              <p>Безопасность по-новому</p>
-              <p>
-                В «Теплосетях» прошла двухдневная коучинговая сессия по охране труда для руководителей «ЭН+ ТЕПЛО
-                ВОЛГА».
-              </p>
+          </a>
+          <a href="pages/home/news-details.html" class="home__news-wrapper-card">
+            <span class="home__news-card__date text-description--300">16 сентября</span>
+            <div class="home__news-card">
+              <div class="home__news-card__image">
+                <img src="img/home/block4-news/news2.webp" alt="Коллеги из Эн+ Тепло Волга в учебном классе" />
+              </div>
+              <div class="home__news-card__content">
+                <div class="home__news-card__tags">
+                  <span class="home__news-card__tag text-description--300">Теплосети</span>
+                </div>
+                <div class="home__news-card__info">
+                  <p class="caption--500">Безопасность по-новому</p>
+                  <p class="text-description--400">
+                    В «Теплосетях» прошла двухдневная коучинговая сессия по охране труда для руководителей «ЭН+ ТЕПЛО
+                    ВОЛГА».
+                  </p>
+                </div>
+              </div>
             </div>
-          </article>
-        </div>
-        <div>
-          <span>26 августа</span>
-          <article>
-            <div>
-              <img src="" alt="" />
-              <p>130 метров под землей</p>
-              <p>
-                Новый жилой комплекс «Чкалов» в Нижнем Новгороде получил горячую воду благодаря уникальной технологии
-                бестраншейной прокладки.
-              </p>
+          </a>
+          <a href="pages/home/news-details.html" class="home__news-wrapper-card">
+            <span class="home__news-card__date text-description--300">26 августа</span>
+            <div class="home__news-card">
+              <div class="home__news-card__image">
+                <img src="img/home/block4-news/news3.webp" alt="Бестраншейный прокладчик труд в работе" />
+              </div>
+              <div class="home__news-card__content">
+                <div class="home__news-card__tags">
+                  <span class="home__news-card__tag text-description--300">Теплосети</span>
+                </div>
+                <div class="home__news-card__info">
+                  <p class="caption--500">130 метров под землей</p>
+                  <p class="text-description--400">
+                    Новый жилой комплекс «Чкалов» в Нижнем Новгороде получил горячую воду благодаря уникальной
+                    технологии бестраншейной прокладки.
+                  </p>
+                </div>
+              </div>
             </div>
-          </article>
-        </div>
-        <div>
-          <span>05 августа </span>
-          <article>
-            <div>
-              <img src="" alt="" />
-              <p>От старых котлов к экологичному будущему</p>
-              <p>На двух котельных ООО «Генерация тепла» развернулись масштабные работы по реконструкции.</p>
+          </a>
+          <a href="pages/home/news-details.html" class="home__news-wrapper-card">
+            <span class="home__news-card__date text-description--300">05 августа</span>
+            <div class="home__news-card">
+              <div class="home__news-card__image">
+                <img src="img/home/block4-news/news4.webp" alt="Сварщик варит трубу" />
+              </div>
+              <div class="home__news-card__content">
+                <div class="home__news-card__tags">
+                  <span class="home__news-card__tag text-description--300">Генерация тепла</span>
+                </div>
+                <div class="home__news-card__info">
+                  <p class="caption--500">От старых котлов к экологичному будущему</p>
+                  <p class="text-description--400">
+                    На двух котельных ООО «Генерация тепла» развернулись масштабные работы по реконструкции.
+                  </p>
+                </div>
+              </div>
             </div>
-          </article>
+          </a>
+          <a href="pages/home/news-details.html" class="home__news-wrapper-card">
+            <span class="home__news-card__date text-description--300">26 августа</span>
+            <div class="home__news-card">
+              <div class="home__news-card__image">
+                <img src="img/home/block4-news/news3.webp" alt="Бестраншейный прокладчик труд в работе" />
+              </div>
+              <div class="home__news-card__content">
+                <div class="home__news-card__tags">
+                  <span class="home__news-card__tag text-description--300">Теплосети</span>
+                </div>
+                <div class="home__news-card__info">
+                  <p class="caption--500">130 метров под землей</p>
+                  <p class="text-description--400">
+                    Новый жилой комплекс «Чкалов» в Нижнем Новгороде получил горячую воду благодаря уникальной
+                    технологии бестраншейной прокладки.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="pages/home/news-details.html" class="home__news-wrapper-card">
+            <span class="home__news-card__date text-description--300">16 сентября</span>
+            <div class="home__news-card">
+              <div class="home__news-card__image">
+                <img src="img/home/block4-news/news2.webp" alt="Коллеги из Эн+ Тепло Волга в учебном классе" />
+              </div>
+              <div class="home__news-card__content">
+                <div class="home__news-card__tags">
+                  <span class="home__news-card__tag text-description--300">Теплосети</span>
+                </div>
+                <div class="home__news-card__info">
+                  <p class="caption--500">Безопасность по-новому</p>
+                  <p class="text-description--400">
+                    В «Теплосетях» прошла двухдневная коучинговая сессия по охране труда для руководителей «ЭН+ ТЕПЛО
+                    ВОЛГА».
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
+          <a href="pages/home/news-details.html" class="home__news-wrapper-card">
+            <span class="home__news-card__date text-description--300">05 августа</span>
+            <div class="home__news-card">
+              <div class="home__news-card__image">
+                <img src="img/home/block4-news/news4.webp" alt="Сварщик варит трубу" />
+              </div>
+              <div class="home__news-card__content">
+                <div class="home__news-card__tags">
+                  <span class="home__news-card__tag text-description--300">Генерация тепла</span>
+                </div>
+                <div class="home__news-card__info">
+                  <p class="caption--500">От старых котлов к экологичному будущему</p>
+                  <p class="text-description--400">
+                    На двух котельных ООО «Генерация тепла» развернулись масштабные работы по реконструкции.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </a>
         </div>
       </section>
     </main>

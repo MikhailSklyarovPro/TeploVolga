@@ -22,30 +22,44 @@ h3 {
 }
 
 /* size: 16px-32px line-height: 24px-36px */
-.caption {
+.caption--500 {
+  font-size: clamp(1rem, 0.7573rem + 1.0356vw, 2rem);
+  line-height: clamp(1.5rem, 1.3180rem + 0.7767vw, 2.25rem);
+  font-weight: 500;
+}
+
+/* size: 16px-32px line-height: 24px-36px */
+.caption--400 {
   font-size: clamp(1rem, 0.7573rem + 1.0356vw, 2rem);
   line-height: clamp(1.5rem, 1.3180rem + 0.7767vw, 2.25rem);
   font-weight: 400;
 }
 
-.text-base {
+.text-base--400 {
   /* 16px-20px */
   font-size: clamp(1rem, 0.9393rem + 0.2589vw, 1.25rem);
   line-height: 26px;
   font-weight: 400;
 }
 
-.text-base-bold {
+.text-base--700 {
   /* 16px-20px */
   font-size: clamp(1rem, 0.9393rem + 0.2589vw, 1.25rem);
   line-height: 26px;
   font-weight: 700;
 }
 
-.text-description {
+.text-description--400 {
   /* 12px-16px */
   font-size: clamp(0.75rem, 0.6893rem + 0.2589vw, 1rem);
   font-weight: 400;
+  line-height: 24px;
+}
+
+.text-description--300 {
+  /* 12px-16px */
+  font-size: clamp(0.75rem, 0.6893rem + 0.2589vw, 1rem);
+  font-weight: 300;
   line-height: 24px;
 }
 
