@@ -750,20 +750,10 @@ main {
   transform: scale(1.1);
 }
 
-/* ============================================= media запросы ============================================= */
+/* ============================================= media запросы на десктоп ============================================= */
 @media (width <=744px) {
   .home__quotes__footer {
     flex-direction: column;
-  }
-}
-
-@media (width <=944px) and (hover: none) and (pointer: coarse) {
-  .home__companies {
-    overflow-x: auto;
-    grid-auto-flow: column;
-
-    /* 150px-406px */
-    grid-auto-columns: minmax(clamp(9.375rem, 5.4915rem + 16.5696vw, 25.375rem), 1fr);
   }
 }
 
@@ -814,6 +804,18 @@ main {
     flex: auto;
     justify-content: flex-start;
     flex-direction: column-reverse;
+  }
+}
+
+/* ============================================= media запросы на мобилку ============================================= */
+
+@media (width <=944px) and (hover: none) and (pointer: coarse) {
+  .home__companies {
+    overflow-x: auto;
+    grid-auto-flow: column;
+
+    /* 150px-406px */
+    grid-auto-columns: minmax(clamp(9.375rem, 5.4915rem + 16.5696vw, 25.375rem), 1fr);
   }
 }
 

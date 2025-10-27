@@ -21,8 +21,7 @@
 
 @font-face {
   font-family: geologica;
-  src: url('../../fonts/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf')
-    format('truetype');
+  src: url('../../fonts/Geologica-VariableFont_CRSV\,SHRP\,slnt\,wght.ttf') format('truetype');
   font-weight: 100 900;
   font-style: normal;
   font-display: swap;
@@ -53,6 +52,7 @@ body {
   font-weight: 300;
   color: var(--color-black);
   user-select: none;
+  background-color: #F1F6FB;
 }
 
 body::-webkit-scrollbar {

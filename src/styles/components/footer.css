@@ -1,3 +1,280 @@
 .footer {
   display: flex;
+  flex-direction: column;
+  color: var(--color-white);
+
+  /* 20px-40px */
+  border-radius: clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem) clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem) 0 0;
+  background: linear-gradient(0deg, #2C4B83 0%, var(--color-bluish-grey) 100%);
+}
+
+.footer__content {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* 50px-200px */
+  gap: clamp(3.125rem, 0.8495rem + 9.7087vw, 12.5rem);
+
+  /* 30px 15px 50px 15px - 50px 85px 100px 85px */
+  padding: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem) clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem) clamp(3.125rem, 2.3665rem + 3.2362vw, 6.25rem);
+}
+
+.footer__content__partners {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+}
+
+.footer__content__partners__logos {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  overflow: hidden;
+
+  /* 20px-40px */
+  gap: clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem);
+}
+
+.footer__content__partners__logos svg {
+  width: min-content;
+
+  /* 40px-65px */
+  height: clamp(2.5rem, 2.1208rem + 1.6181vw, 4.0625rem);
+}
+
+.footer-logo-item {
+  transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.footer__content__partners__pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer__content__partners__pagination__dot {
+  width: 32px;
+  height: 6px;
+  border-radius: 15px;
+  background-color: #fff6;
+  transition: all 400ms ease;
+  cursor: pointer;
+}
+
+
+.footer__content__partners__pagination__dot.active {
+  width: 32px;
+  height: 6px;
+  background-color: var(--color-orange);
+  box-shadow: 0 0 8px #ff7a0066;
+}
+
+.footer__content__partners__buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.footer__content__partners__buttons button {
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer__content__partners__buttons__background {
+  transition: all 300ms ease;
+}
+
+.footer__content__corporate-culture {
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+}
+
+.footer__content__corporate-culture__items {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /* 20px-40px */
+  gap: clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem);
+}
+
+.footer__content__corporate-culture__item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer__content__corporate-culture__item svg {
+  width: min-content;
+
+  /* 40px-60px */
+  height: clamp(2.5rem, 2.1966rem + 1.2945vw, 3.75rem);
+}
+
+.footer__menu {
+  display: flex;
+  flex-direction: column;
+
+  /* 0px 15px 30px 15px - 25px 85px 25px 85px */
+  padding: clamp(0rem, -0.3792rem + 1.6181vw, 1.5625rem) clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem) clamp(1.875rem, 1.9508rem + -0.3236vw, 1.5625rem);
+
+  /* 30px-40px */
+  gap: clamp(1.875rem, 1.7233rem + 0.6472vw, 2.5rem);
+}
+
+.footer__menu-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.footer__separate {
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-white);
+}
+
+.footer__menu-top ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+.footer__menu-top__contacts {
+  display: flex;
+  align-items: flex-end;
+  white-space: nowrap;
+
+  /* 20px-48px */
+  gap: clamp(1.25rem, 0.8252rem + 1.8123vw, 3rem);
+}
+
+.footer__menu-top__contacts__messengers {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer__menu-top__contacts__messengers svg {
+  cursor: pointer;
+}
+
+.footer__menu-top__contacts__messengers path {
+  transition: all 300ms ease;
+}
+
+.footer__menu-bottom {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-40px */
+  gap: clamp(1.875rem, 1.7233rem + 0.6472vw, 2.5rem);
+}
+
+.footer__menu-bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+.footer__menu-bottom__owner-rights {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  order: 3;
+}
+
+.footer__menu-bottom__owner-rights .text-light-blue {
+  transition: all 300ms ease;
+  color: #8BE8F7;
+}
+
+.footer nav ul li a {
+  transition: all 300ms ease;
+}
+
+/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
+.footer__content__partners__buttons button:active .footer__content__partners__buttons__background {
+  fill: var(--color-orange);
+  fill-opacity: 1;
+}
+
+.footer nav ul li:active a {
+  color: var(--color-orange);
+}
+
+.footer__menu-bottom__owner-rights a:active .text-light-blue {
+  color: var(--color-orange);
+}
+
+.footer__menu-top__contacts__messengers a:active path {
+  fill: var(--color-orange);
+}
+
+.footer__content__partners__pagination__dot:active {
+  transform: scale(1);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .footer__content__partners__buttons button:hover .footer__content__partners__buttons__background {
+    fill: var(--color-orange);
+    fill-opacity: 1;
+  }
+
+  .footer nav ul li:hover a {
+    color: var(--color-orange);
+  }
+
+  .footer__menu-bottom__owner-rights a:hover .text-light-blue {
+    color: var(--color-orange);
+  }
+
+  .footer__menu-top__contacts__messengers a:hover path {
+    fill: var(--color-orange);
+  }
+
+  .footer__content__partners__pagination__dot:hover {
+    background-color: #fff9;
+    transform: scale(1.1);
+  }
+}
+
+@media (width <=744px) {
+  .footer__menu-top__contacts {
+    order: 2;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer__menu-top,
+  .footer__menu-bottom {
+    display: contents;
+  }
+}
+
+
+@media (width <=1440px) {
+  .footer__content {
+    flex-direction: column;
+  }
 }
