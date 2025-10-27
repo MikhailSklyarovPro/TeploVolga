@@ -500,6 +500,159 @@ main {
   padding-bottom: clamp(1.875rem, 1.7233rem + 0.6472vw, 2.5rem);
 }
 
+/* ============================================= Блок 6: Фотогалерея ============================================= */
+.home__gallery {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /* 50px 15px - 150px 85px */
+  padding: clamp(3.125rem, 1.6080rem + 6.4725vw, 9.375rem) clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem);
+}
+
+.home__gallery__content {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+}
+
+.home__gallery__title {
+  color: var(--color-fiord);
+}
+
+.home__gallery__main {
+  display: flex;
+
+  /* 15px-20px */
+  gap: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+
+  /* 200px-550px */
+  height: clamp(12.5rem, 7.1905rem + 22.6537vw, 34.375rem);
+}
+
+.home__gallery__image-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+
+  /* 15px-20px */
+  border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+
+  /* 200px-550px */
+  height: clamp(12.5rem, 7.1905rem + 22.6537vw, 34.375rem);
+}
+
+.home__gallery__main-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.home__gallery__info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* 15px-35px */
+  gap: clamp(0.938rem, 0.6346rem + 1.2945vw, 2.188rem);
+}
+
+.home__gallery__content-top {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+
+  /* 15px-35px */
+  gap: clamp(0.938rem, 0.6346rem + 1.2945vw, 2.188rem);
+}
+
+.home__gallery__subtitle {
+  color: var(--color-fiord);
+}
+
+.home__gallery__description {
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+  scrollbar-width: none;
+
+  /* 15px-20px */
+  gap: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+}
+
+.home__gallery__navigation {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  pointer-events: none;
+  z-index: 2;
+
+  /* 20px-30px */
+  padding: 0 clamp(1.25rem, 1.0983rem + 0.6472vw, 1.875rem);
+}
+
+.home__gallery__nav-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  transition: all 300ms ease;
+  pointer-events: auto;
+  background-color: rgb(255 255 255 / 58%);
+}
+
+.home__gallery__nav-btn svg {
+  flex-shrink: 0;
+}
+
+.home__gallery__thumbnails {
+  display: grid;
+
+  /* 80px-100px */
+  grid-template-columns: repeat(auto-fill, minmax(clamp(5rem, 4.6966rem + 1.2945vw, 6.25rem), 1fr));
+
+  /* 10px-20px */
+  gap: clamp(0.625rem, 0.4733rem + 0.6472vw, 1.25rem);
+}
+
+.home__gallery__thumbnail {
+  position: relative;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+  overflow: hidden;
+  border-radius: 15px;
+  aspect-ratio: 1;
+}
+
+.home__gallery__thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 200ms ease;
+}
+
+.home__gallery__thumbnail.active {
+  box-shadow: 0 0 0 3px var(--color-orange);
+}
+
+.home__gallery__thumbnail.active::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgb(253 93 57 / 20%);
+  z-index: 1;
+}
+
 
 /* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
 @media (hover: hover) and (pointer: fine) {
@@ -543,6 +696,14 @@ main {
   .home__quotes__container button:hover .quotes__button__arrow {
     fill: var(--color-white);
   }
+
+  .home__gallery__nav-btn:hover {
+    background-color: var(--color-white);
+  }
+
+  .home__gallery__thumbnail:hover img {
+    transform: scale(1.1);
+  }
 }
 
 .home__company:active {
@@ -579,6 +740,14 @@ main {
 
 .home__quotes__container button:active .quotes__button__arrow {
   fill: var(--color-white);
+}
+
+.home__gallery__nav-btn:active {
+  background-color: var(--color-white);
+}
+
+.home__gallery__thumbnail:active img {
+  transform: scale(1.1);
 }
 
 /* ============================================= media запросы ============================================= */
@@ -631,6 +800,23 @@ main {
   }
 }
 
+@media (width <=1200px) and (hover: hover) {
+  .home__gallery__main {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .home__gallery__image-container {
+    flex: auto;
+  }
+
+  .home__gallery__info {
+    flex: auto;
+    justify-content: flex-start;
+    flex-direction: column-reverse;
+  }
+}
+
 @media (hover: none) and (pointer: coarse) {
   .home__ecology__our-works-video {
     width: 100%;
@@ -654,6 +840,81 @@ main {
 
   .home__news-title__controls__arrow {
     display: none;
+  }
+
+  .home__gallery__navigation {
+    display: none;
+  }
+
+  .home__gallery__thumbnails {
+    display: none;
+  }
+
+  .home__gallery__main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .home__gallery__image-container {
+    position: relative;
+    flex: auto;
+    overflow: visible;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home__gallery__main-image {
+    position: relative;
+    z-index: 2;
+    width: 96%;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
+  }
+
+  .home__gallery__image-container::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(-100%);
+    width: 100%;
+
+    /* 172px-473px */
+    height: clamp(10.75rem, 6.1839rem + 19.4822vw, 29.5625rem);
+    background-image: var(--prev-image);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    opacity: 0.6;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+
+  .home__gallery__image-container::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) translateX(100%);
+    width: 100%;
+
+    /* 172px-473px */
+    height: clamp(10.75rem, 6.1839rem + 19.4822vw, 29.5625rem);
+    background-image: var(--next-image);
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    opacity: 0.6;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 300ms ease;
+  }
+
+  .home__gallery__info {
+    flex: auto;
   }
 }
 
