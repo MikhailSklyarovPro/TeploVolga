@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   color: var(--color-white);
+  position: static;
+  z-index: 101;
 
   /* 20px-40px */
   border-radius: clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem) clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem) 0 0;

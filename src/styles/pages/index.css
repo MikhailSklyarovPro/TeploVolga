@@ -4,6 +4,141 @@ main {
   background-color: #F1F6FB;
 }
 
+/* ============================================= Блок 1: Главный экран ============================================= */
+.home__main-screen {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  /* 480px-700px */
+  height: clamp(30rem, 26.6626rem + 14.2395vw, 43.75rem);
+  margin-top: -100px;
+
+  /* 20px-40px */
+  border-radius: 0 0 clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem) clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem);
+}
+
+.home__main-screen__image {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+.home__main-screen__controls {
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  padding-top: 100px;
+
+  /* 15px-85px */
+  padding-left: clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem);
+  padding-right: clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem);
+}
+
+.home__main-screen__controls::before {
+  content: '';
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff1c 7.87%, #243d6a4d 46.13%, #243d6ae6 92.9%);
+}
+
+.home__main-screen__items {
+  display: flex;
+}
+
+.home__main-screen__item {
+  width: 100%;
+  height: 100%;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Только описание плавно появляется/исчезает */
+.home__main-screen__item__description {
+  min-width: 500px;
+  height: 100%;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 50%;
+  opacity: 0;
+  transition: opacity 300ms ease-in-out;
+
+  /* 15px-56px */
+  padding: clamp(0.9375rem, 0.3155rem + 2.6537vw, 3.5rem);
+
+  /* 25px-50px */
+  gap: clamp(1.5625rem, 1.1833rem + 1.6181vw, 3.125rem);
+}
+
+.home__main-screen__item.active .home__main-screen__item__description {
+  opacity: 1;
+}
+
+.home__main-screen__controls button {
+  z-index: 4;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+
+  /* 46px-92px */
+  width: clamp(2.875rem, 2.1772rem + 2.9773vw, 5.75rem);
+}
+
+.home__main-screen__controls button svg {
+  width: 100%;
+  height: 100%;
+}
+
+.home__main-screen__content {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+.home__main-screen__controls__pagination {
+  z-index: 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.home__main-screen__controls__pagination__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff80;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+
+.home__main-screen__controls__pagination__dot.active {
+  width: 40px;
+  border-radius: 5px;
+  background-color: var(--color-white);
+}
+
+.home__main-screen__controls__button-background {
+  transition: all 300ms ease;
+}
+
 /* ============================================= Блок 2: Сайты компаний ============================================= */
 .home__companies {
   position: relative;
@@ -204,7 +339,7 @@ main {
   transition: all 300ms ease;
 }
 
-.home__ecology__our-works-video__info svg {
+.home__ecology__our-works-video__info .home__ecology__our-works-video__info__icon {
   flex-shrink: 0;
 
   /* 36px-65px */
@@ -609,7 +744,7 @@ main {
   background-color: rgb(255 255 255 / 58%);
 }
 
-.home__gallery__nav-btn svg {
+.home__gallery__nav-btn__icon {
   flex-shrink: 0;
 }
 
@@ -704,6 +839,15 @@ main {
   .home__gallery__thumbnail:hover img {
     transform: scale(1.1);
   }
+
+  .home__main-screen__controls button:hover .home__main-screen__controls__button-background {
+    fill: var(--color-orange);
+    fill-opacity: 1;
+  }
+
+  .home__main-screen__controls__pagination__dot:hover {
+    background-color: #fffc;
+  }
 }
 
 .home__company:active {
@@ -750,10 +894,45 @@ main {
   transform: scale(1.1);
 }
 
+.home__main-screen__controls button:active .home__main-screen__controls__button-background {
+  fill: var(--color-orange);
+  fill-opacity: 1;
+}
+
+.home__main-screen__controls__pagination__dot:active {
+  background-color: #fffc;
+}
+
 /* ============================================= media запросы на десктоп ============================================= */
 @media (width <=744px) {
   .home__quotes__footer {
     flex-direction: column;
+  }
+
+  .home__main-screen__controls__prev {
+    position: absolute;
+
+    /* 15px-85px */
+    left: clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem);
+    bottom: 25px;
+  }
+
+  .home__main-screen__controls__next {
+    position: absolute;
+
+    /* 15px-85px */
+    right: clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem);
+    bottom: 25px;
+  }
+
+  .home__main-screen__item__description {
+    min-width: auto;
+    max-width: none;
+    width: 100%;
+  }
+
+  .home__main-screen__controls {
+    grid-template-columns: auto;
   }
 }
 
