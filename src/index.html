@@ -41,10 +41,7 @@
               d="M13.6717 17.9969H0V22.0413H17.1311C17.8162 22.0413 18.466 22.782 18.466 23.5661L18.4583 29.2934H2.82344V33.3378L18.466 33.3456V39.0667C18.466 39.8492 17.8178 40.5899 17.1326 40.5899H0V44.6343H13.6717C18.807 44.6343 22.8302 40.655 22.8302 35.5754V27.0558C22.8302 21.9763 18.807 17.9969 13.6717 17.9969Z"
               fill="white"
             />
-            <path
-              d="M46.6067 17.9969V29.3198H30.8305V17.9969H26.517V44.6343H30.8305V33.3161H46.6067V44.6343H50.9186V17.9969H46.6067Z"
-              fill="white"
-            />
+            <path d="M46.6067 17.9969V29.3198H30.8305V17.9969H26.517V44.6343H30.8305V33.3161H46.6067V44.6343H50.9186V17.9969H46.6067Z" fill="white" />
             <path
               d="M105.504 38.8342C105.191 39.0868 104.711 39.2123 104.065 39.2123H102.422V36.1116H104.009C104.684 36.1116 105.18 36.2449 105.499 36.5129C105.819 36.7795 105.977 37.1669 105.977 37.6751C105.977 38.1958 105.819 38.5832 105.504 38.8342ZM102.422 32.3244H103.908C104.492 32.3244 104.94 32.4422 105.255 32.6762C105.568 32.9117 105.727 33.2526 105.727 33.6973C105.727 34.0088 105.653 34.2738 105.504 34.4954C105.358 34.7154 105.148 34.8859 104.877 35.0021C104.605 35.1199 104.289 35.1788 103.928 35.1788H102.422V32.3244ZM105.484 35.4825C105.711 35.4019 105.934 35.2655 106.148 35.0718C106.363 34.8781 106.539 34.6534 106.676 34.3947C106.814 34.1359 106.883 33.8662 106.883 33.5842C106.883 32.8528 106.628 32.2996 106.117 31.9246C105.607 31.5481 104.942 31.3606 104.121 31.3606H101.247V40.1839H104.278C104.873 40.1839 105.389 40.077 105.823 39.8647C106.26 39.6524 106.593 39.3642 106.83 38.9985C107.065 38.6328 107.183 38.2128 107.183 37.7387C107.183 37.1591 107.02 36.6726 106.693 36.2821C106.366 35.8916 105.962 35.6235 105.484 35.4825Z"
               fill="white"
@@ -71,26 +68,36 @@
         </svg>
         <nav>
           <ul>
-            <li><a class="text-base--400" href="./pages/heating-networks/index.html">Теплосети</a></li>
-            <li><a class="text-base--400" href="./pages/heat-generation/index.html">Генерация тепла</a></li>
-            <li><a class="text-base--400" href="./pages/avtozavodskaya-tpp/index.html">Автозаводская ТЭЦ</a></li>
-            <li><a class="text-base--400" href="./pages/factory-networks/index.html">Заводские сети</a></li>
-            <li><a class="text-base--400" href="./pages/ese-kuban/index.html">ЕСЭ-Кубань</a></li>
-            <li><a class="text-base--400" href="./pages/op-yaroslavl/index.html">ОП Ярославль</a></li>
+            <li>
+              <a class="text-base--400" id="heating-networks" href="./pages/heating-networks/index.html">Теплосети</a>
+            </li>
+            <li>
+              <a class="text-base--400" id="heat-generation" href="./pages/heat-generation/index.html">Генерация тепла</a>
+            </li>
+            <li>
+              <a class="text-base--400" id="avtozavodskaya-tpp" href="./pages/avtozavodskaya-tpp/index.html">Автозаводская ТЭЦ</a>
+            </li>
+            <li>
+              <a class="text-base--400" id="factory-networks" href="./pages/factory-networks/index.html">Заводские сети</a>
+            </li>
+            <li><a class="text-base--400" id="ese-kuban" href="./pages/ese-kuban/index.html">ЕСЭ-Кубань</a></li>
+            <li><a class="text-base--400" id="op-yaroslavl" href="./pages/op-yaroslavl/index.html">ОП Ярославль</a></li>
           </ul>
         </nav>
         <div class="header__main-menu__buttons">
           <div class="header__main-menu__buttons__icons">
-            <button>
+            <button class="header__main-menu__button__search">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
                 <path d="M26.7812 26.7773L30.3168 30.3129" stroke="white" stroke-width="2" />
                 <circle cx="20" cy="20" r="9" stroke="white" stroke-width="2" />
               </svg>
             </button>
-            <button>
+            <button class="header__main-menu__button__eye">
               <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-                <path d="M26.7812 26.7773L30.3168 30.3129" stroke="white" stroke-width="2" />
-                <circle cx="20" cy="20" r="9" stroke="white" stroke-width="2" />
+                <path
+                  d="M20 25.4C21.4773 25.4 22.733 24.875 23.767 23.825C24.8011 22.775 25.3182 21.5 25.3182 20C25.3182 18.5 24.8011 17.225 23.767 16.175C22.733 15.125 21.4773 14.6 20 14.6C18.5227 14.6 17.267 15.125 16.233 16.175C15.1989 17.225 14.6818 18.5 14.6818 20C14.6818 21.5 15.1989 22.775 16.233 23.825C17.267 24.875 18.5227 25.4 20 25.4ZM20 23.24C19.1136 23.24 18.3602 22.925 17.7398 22.295C17.1193 21.665 16.8091 20.9 16.8091 20C16.8091 19.1 17.1193 18.335 17.7398 17.705C18.3602 17.075 19.1136 16.76 20 16.76C20.8864 16.76 21.6398 17.075 22.2602 17.705C22.8807 18.335 23.1909 19.1 23.1909 20C23.1909 20.9 22.8807 21.665 22.2602 22.295C21.6398 22.925 20.8864 23.24 20 23.24ZM20 29C17.1242 29 14.5045 28.185 12.1409 26.555C9.77727 24.925 8.06364 22.74 7 20C8.06364 17.26 9.77727 15.075 12.1409 13.445C14.5045 11.815 17.1242 11 20 11C22.8758 11 25.4955 11.815 27.8591 13.445C30.2227 15.075 31.9364 17.26 33 20C31.9364 22.74 30.2227 24.925 27.8591 26.555C25.4955 28.185 22.8758 29 20 29ZM20 26.6C22.2258 26.6 24.2693 26.005 26.1307 24.815C27.992 23.625 29.4152 22.02 30.4 20C29.4152 17.98 27.992 16.375 26.1307 15.185C24.2693 13.995 22.2258 13.4 20 13.4C17.7742 13.4 15.7307 13.995 13.8693 15.185C12.008 16.375 10.5848 17.98 9.6 20C10.5848 22.02 12.008 23.625 13.8693 24.815C15.7307 26.005 17.7742 26.6 20 26.6Z"
+                  fill="white"
+                />
               </svg>
             </button>
           </div>
@@ -106,7 +113,273 @@
           </button>
         </div>
       </div>
+      <div class="header__sub-menu">
+        <nav data-sub-menu="heating-networks">
+          <ul>
+            <li><a class="text-description--600" href="./pages/heating-networks/index.html">О компании</a></li>
+            <li>
+              <a class="text-description--600" href="./pages/heating-networks/information-disclosure.html">Раскрытие информации</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heating-networks/purchases.html">Закупки</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heating-networks/implementation-illiquids.html">Реализация неликвидов</a>
+            </li>
+            <li><a class="text-description--600" href="./pages/heating-networks/vacancy.html">Вакансии</a></li>
+            <li>
+              <a class="text-description--600" href="./pages/heating-networks/contacts.html">Контактная информация</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heating-networks/privacy-policy.html">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-sub-menu="heat-generation">
+          <ul>
+            <li>
+              <a class="text-description--600" href="./pages/heat-generation/index.html">О компани</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heat-generation/information-disclosure.html">Раскрытие информации</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heat-generation/purchases.html">Закупки</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heat-generation/implementation-illiquids.html">Реализация неликвидов</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heat-generation/tariffs.html">Тарифы</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heat-generation/technical-connection.html">Техническое присоединение</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heat-generation/privacy-policy.html">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-sub-menu="avtozavodskaya-tpp">
+          <ul>
+            <li>
+              <a class="text-description--600" href="./pages/avtozavodskaya-tpp/index.html">О компани</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/avtozavodskaya-tpp/information-disclosure.html">Раскрытие информации</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/avtozavodskaya-tpp/purchases.html">Закупки</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/avtozavodskaya-tpp/vacancy.html">Вакансии</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/heat-generation/privacy-policy.html">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-sub-menu="factory-networks">
+          <ul>
+            <li>
+              <a class="text-description--600" href="./pages/factory-networks/index.html">О компани</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/factory-networks/information-disclosure.html">Раскрытие информации</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/factory-networks/purchases.html">Закупки</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/factory-networks/consumers.html">Потребителям</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/factory-networks/privacy-policy.html">Политика конфиденциальности</a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-sub-menu="ese-kuban">
+          <ul>
+            <li>
+              <a class="text-description--600" href="./pages/ese-kuban/index.html">О компани</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/ese-kuban/information-disclosure.html">Раскрытие информации</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/ese-kuban/consumers.html">Потребителям</a>
+            </li>
+            <li>
+              <a class="text-description--600" href="./pages/ese-kuban/contacts.html">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+        <nav data-sub-menu="op-yaroslavl">
+          <ul>
+            <li>
+              <a class="text-description--600" href="./pages/op-yaroslavl/index.html">О компани</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
+
+    <!-- Модальное меню -->
+    <div class="header__modal-menu">
+      <div class="header__modal-menu__container">
+        <button class="header__modal-menu__close" aria-label="Закрыть меню">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M12 12L28 28M28 12L12 28" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <div class="header__modal-menu__content">
+          <nav class="header__modal-menu__main">
+            <svg xmlns="http://www.w3.org/2000/svg" width="275" height="81" viewBox="0 0 275 81" fill="none">
+              <g clip-path="url(#clip0_340_35827)">
+                <path d="M185.435 48.7423V36.1767H180.545V32.3889H194.988V36.1767H190.115V48.7423H185.435Z" fill="white" />
+                <path
+                  d="M201.289 38.5085H208.934C208.901 37.5462 208.567 36.7876 207.932 36.2241C207.297 35.6635 206.421 35.3846 205.311 35.3846C204.201 35.3846 203.279 35.6635 202.545 36.2241C201.816 36.7876 201.393 37.5462 201.289 38.5085ZM205.568 49.2276C203.804 49.2276 202.255 48.865 200.919 48.1426C199.585 47.4174 198.541 46.4105 197.793 45.1135C197.045 43.8193 196.672 42.3019 196.672 40.5642C196.672 39.3007 196.887 38.1403 197.321 37.0832C197.754 36.0261 198.365 35.1112 199.149 34.3386C199.933 33.566 200.858 32.9691 201.921 32.5395C202.984 32.1155 204.152 31.9036 205.422 31.9036C206.822 31.9036 208.064 32.1518 209.149 32.6455C210.234 33.142 211.134 33.8365 211.85 34.7263C212.565 35.6189 213.067 36.662 213.349 37.8586C213.633 39.058 213.658 40.3606 213.423 41.7636H201.015C201.015 42.5167 201.211 43.1777 201.601 43.7384C201.99 44.299 202.539 44.7397 203.252 45.0577C203.961 45.3757 204.792 45.5347 205.742 45.5347C206.684 45.5347 207.581 45.4064 208.437 45.147C209.293 44.8876 210.099 44.4915 210.856 43.9643L212.41 47.2026C211.899 47.6043 211.256 47.9557 210.488 48.2626C209.718 48.5694 208.904 48.8065 208.042 48.9766C207.183 49.1412 206.358 49.2276 205.568 49.2276Z"
+                  fill="white"
+                />
+                <path d="M216.817 48.7423V32.3889H232.991V48.7423H228.308V36.1767H221.497V48.7423H216.817Z" fill="white" />
+                <path
+                  d="M237.351 49.0994L235.793 44.9043C236.895 44.6226 237.696 44.2014 238.198 43.6408C238.701 43.0801 239.018 42.3159 239.151 41.3508C239.286 40.3857 239.352 39.1501 239.352 37.6495V32.3889H253.249V48.7423H248.569V36.1767H243.632V37.6495C243.632 39.3342 243.538 40.8236 243.35 42.1206C243.165 43.4149 242.842 44.5278 242.381 45.4622C241.923 46.3966 241.285 47.1608 240.473 47.7522C239.664 48.3463 238.621 48.7953 237.351 49.0994Z"
+                  fill="white"
+                />
+                <path
+                  d="M265.417 45.1302C266.239 45.1302 266.974 44.9433 267.625 44.5724C268.28 44.1986 268.791 43.6714 269.166 42.9853C269.539 42.2991 269.727 41.493 269.727 40.5642C269.727 39.6242 269.542 38.8153 269.174 38.1348C268.804 37.457 268.296 36.9298 267.642 36.5588C266.99 36.1851 266.248 36.001 265.417 36.001C264.583 36.001 263.835 36.1851 263.177 36.5588C262.523 36.9298 262.007 37.457 261.64 38.1348C261.272 38.8153 261.087 39.6242 261.087 40.5642C261.087 41.5042 261.275 42.3131 261.648 42.9937C262.021 43.6714 262.537 44.1986 263.186 44.5724C263.837 44.9433 264.583 45.1302 265.417 45.1302ZM265.417 49.2276C263.674 49.2276 262.128 48.8316 260.784 48.045C259.436 47.2584 258.381 46.2069 257.617 44.8959C256.852 43.5822 256.471 42.1429 256.471 40.5642C256.471 39.4095 256.692 38.3133 257.128 37.2701C257.567 36.2269 258.185 35.3037 258.989 34.5004C259.79 33.6971 260.734 33.0639 261.825 32.5981C262.912 32.1351 264.111 31.9036 265.417 31.9036C267.159 31.9036 268.697 32.2941 270.039 33.0862C271.38 33.8728 272.432 34.9215 273.197 36.2325C273.959 37.5434 274.343 38.9883 274.343 40.5642C274.343 41.7078 274.122 42.804 273.686 43.8527C273.247 44.8987 272.631 45.8248 271.833 46.6281C271.038 47.4314 270.094 48.0673 269.003 48.5303C267.915 48.9961 266.717 49.2276 265.417 49.2276Z"
+                  fill="white"
+                />
+                <path
+                  d="M147.153 32.3861C142.614 32.3861 138.792 28.5257 138.792 23.9402V0H133.276V23.9402C133.276 28.5257 129.454 32.3861 124.912 32.3861H101.217V37.959H124.912C129.454 37.959 133.276 41.8194 133.276 46.4049V70.3451H138.792V46.4049C138.792 41.8194 142.614 37.959 147.153 37.959H170.848V32.3861H147.153Z"
+                  fill="white"
+                />
+                <path
+                  d="M24.5733 32.3944H0V39.6744H30.7912C32.0226 39.6744 33.1905 41.0076 33.1905 42.419L33.1767 52.7281H5.0748V60.0081L33.1905 60.022V70.32C33.1905 71.7285 32.0254 73.0618 30.794 73.0618H0V80.3418H24.5733C33.8035 80.3418 41.0347 73.1789 41.0347 64.0358V48.7004C41.0347 39.5572 33.8035 32.3944 24.5733 32.3944Z"
+                  fill="white"
+                />
+                <path d="M83.7702 32.3944V52.7755H55.4142V32.3944H47.6612V80.3418H55.4142V59.969H83.7702V80.3418H91.5204V32.3944H83.7702Z" fill="white" />
+                <path
+                  d="M189.631 69.9016C189.068 70.3562 188.207 70.5821 187.044 70.5821H184.093V65.0008H186.945C188.157 65.0008 189.049 65.2407 189.623 65.7233C190.197 66.203 190.482 66.9003 190.482 67.8152C190.482 68.7524 190.197 69.4497 189.631 69.9016ZM184.093 58.1839H186.763C187.812 58.1839 188.618 58.3959 189.184 58.8171C189.747 59.241 190.032 59.8547 190.032 60.6552C190.032 61.2158 189.899 61.6928 189.631 62.0916C189.369 62.4877 188.991 62.7945 188.505 63.0037C188.016 63.2157 187.447 63.3217 186.799 63.3217H184.093V58.1839ZM189.596 63.8684C190.004 63.7234 190.405 63.4779 190.788 63.1293C191.175 62.7806 191.492 62.3761 191.738 61.9103C191.987 61.4445 192.111 60.9592 192.111 60.4516C192.111 59.135 191.653 58.1393 190.733 57.4643C189.816 56.7865 188.621 56.449 187.146 56.449H181.981V72.331H187.428C188.497 72.331 189.424 72.1386 190.206 71.7564C190.99 71.3743 191.589 70.8555 192.014 70.1972C192.437 69.539 192.649 68.7831 192.649 67.9296C192.649 66.8864 192.357 66.0106 191.768 65.3077C191.18 64.6048 190.454 64.1222 189.596 63.8684Z"
+                  fill="white"
+                />
+                <path
+                  d="M203.967 68.8975C203.638 69.5 203.188 69.963 202.614 70.2921C202.042 70.6212 201.382 70.7858 200.645 70.7858C199.908 70.7858 199.254 70.6212 198.679 70.2921C198.102 69.963 197.652 69.5 197.326 68.8975C196.998 68.2978 196.838 67.5893 196.838 66.7721C196.838 65.9464 196.998 65.2352 197.326 64.6327C197.652 64.0302 198.1 63.5672 198.674 63.2437C199.245 62.9173 199.902 62.7555 200.645 62.7555C201.382 62.7555 202.045 62.9173 202.622 63.2437C203.196 63.5672 203.649 64.0302 203.972 64.6327C204.298 65.2352 204.464 65.9464 204.464 66.7721C204.464 67.5893 204.295 68.2978 203.967 68.8975ZM203.696 61.6789C202.807 61.1406 201.788 60.87 200.645 60.87C199.789 60.87 199.002 61.0262 198.285 61.3358C197.564 61.6482 196.943 62.075 196.41 62.6244C195.877 63.1739 195.468 63.8015 195.173 64.5128C194.883 65.224 194.737 65.9771 194.737 66.7721C194.737 67.8431 194.991 68.8277 195.499 69.7203C196.009 70.6129 196.708 71.3269 197.6 71.8653C198.489 72.4008 199.505 72.6713 200.645 72.6713C201.504 72.6713 202.294 72.5124 203.011 72.2C203.732 71.8876 204.356 71.4552 204.889 70.9113C205.419 70.3674 205.833 69.7398 206.123 69.0286C206.416 68.3173 206.559 67.567 206.559 66.7721C206.559 65.6982 206.305 64.7136 205.797 63.821C205.287 62.9313 204.588 62.2144 203.696 61.6789Z"
+                  fill="white"
+                />
+                <path
+                  d="M210.356 64.694C210.356 65.9659 210.309 66.9979 210.212 67.7929C210.113 68.585 209.886 69.2015 209.536 69.6366C209.182 70.0689 208.622 70.3869 207.852 70.5821L208.614 72.4984C209.378 72.2892 210.002 71.9879 210.486 71.5974C210.969 71.2069 211.344 70.7076 211.607 70.094C211.874 69.4804 212.057 68.7329 212.159 67.8431C212.261 66.9533 212.311 65.9045 212.311 64.694V62.9814H216.971V72.331H219.037V61.213H210.356V64.694Z"
+                  fill="white"
+                />
+                <path d="M222.609 72.331H224.677V62.9814H229.741V61.213H222.609V72.331Z" fill="white" />
+                <path
+                  d="M240.324 68.8975C239.998 69.5 239.551 69.963 238.98 70.2921C238.411 70.6212 237.759 70.7858 237.025 70.7858C236.293 70.7858 235.642 70.6212 235.073 70.2921C234.504 69.963 234.054 69.5 233.725 68.8975C233.397 68.2978 233.231 67.5893 233.231 66.7721C233.231 65.9464 233.397 65.2352 233.725 64.6327C234.054 64.0302 234.504 63.5672 235.073 63.2437C235.642 62.9173 236.293 62.7555 237.025 62.7555C237.759 62.7555 238.411 62.9173 238.98 63.2437C239.551 63.5672 239.998 64.0302 240.324 64.6327C240.647 65.2352 240.813 65.9464 240.813 66.7721C240.813 67.5893 240.647 68.2978 240.324 68.8975ZM240.979 61.2131V62.9592C240.6 62.4236 240.148 61.9494 239.562 61.5757C238.831 61.1043 237.911 60.87 236.801 60.87C235.973 60.87 235.208 61.0206 234.515 61.3219C233.825 61.6203 233.226 62.0331 232.726 62.5687C232.223 63.1014 231.837 63.7262 231.558 64.4458C231.279 65.1655 231.144 65.9409 231.144 66.7721C231.144 67.8822 231.384 68.8835 231.859 69.7733C232.339 70.6603 233.005 71.366 233.861 71.8876C234.714 72.4092 235.694 72.6713 236.801 72.6713C237.911 72.6713 238.831 72.4343 239.562 71.9601C240.148 71.5863 240.6 71.1094 240.979 70.5738V72.3311H242.867V61.2131H240.979Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_340_35827">
+                  <rect width="275" height="81" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+            <ul>
+              <li><a class="text-base--400" href="./index.html">Главная</a></li>
+              <li><a class="text-base--400" href="./pages/home/ecology.html">Экология</a></li>
+              <li><a class="text-base--400" href="./pages/home/corporate-culture.html">Корпоративная культура</a></li>
+              <li><a class="text-base--400" href="./pages/home/structure.html">Структура компании</a></li>
+              <li><a class="text-base--400" href="./pages/home/youth-council.html">Молодежный совет</a></li>
+              <li><a class="text-base--400" href="./pages/home/worker-council.html">Рабочий совет</a></li>
+              <li><a class="text-base--400" href="./pages/home/news.html">Новости</a></li>
+            </ul>
+          </nav>
+          <nav class="header__modal-menu__detailed">
+            <div class="header__modal-menu__detailed__item">
+              <h3>Теплосети</h3>
+              <ul>
+                <li><a class="text-base--400" href="./pages/heating-networks/index.html">О компании</a></li>
+                <li><a class="text-base--400" href="./pages/heating-networks/information-disclosure.html">Раскрытие информации</a></li>
+                <li><a class="text-base--400" href="./pages/heating-networks/purchases.html">Закупки</a></li>
+                <li><a class="text-base--400" href="./pages/heating-networks/implementation-illiquids.html">Реализация неликвидов</a></li>
+                <li><a class="text-base--400" href="./pages/heating-networks/vacancy.html">Вакансии</a></li>
+                <li><a class="text-base--400" href="./pages/heating-networks/contacts.html">Контакты</a></li>
+                <li><a class="text-base--400" href="./pages/heating-networks/privacy-policy.html">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+            <div class="header__modal-menu__detailed__item">
+              <h3>Автозаводская ТЭЦ</h3>
+              <ul>
+                <li><a class="text-base--400" href="./pages/avtozavodskaya-tpp/index.html">О компании</a></li>
+                <li><a class="text-base--400" href="./pages/avtozavodskaya-tpp/information-disclosure.html">Раскрытие информации</a></li>
+                <li><a class="text-base--400" href="./pages/avtozavodskaya-tpp/purchases.html">Закупки</a></li>
+                <li><a class="text-base--400" href="./pages/avtozavodskaya-tpp/implementation-illiquids.html">Реализация неликвидов</a></li>
+                <li><a class="text-base--400" href="./pages/avtozavodskaya-tpp/vacancy.html">Вакансии</a></li>
+                <li><a class="text-base--400" href="./pages/avtozavodskaya-tpp/contacts.html">Контакты</a></li>
+                <li><a class="text-base--400" href="./pages/avtozavodskaya-tpp/privacy-policy.html">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+            <div class="header__modal-menu__detailed__item">
+              <h3>Генерация тепла</h3>
+              <ul>
+                <li><a class="text-base--400" href="./pages/heat-generation/index.html">О компании</a></li>
+                <li><a class="text-base--400" href="./pages/heat-generation/information-disclosure.html">Раскрытие информации</a></li>
+                <li><a class="text-base--400" href="./pages/heat-generation/purchases.html">Закупки</a></li>
+                <li><a class="text-base--400" href="./pages/heat-generation/implementation-illiquids.html">Реализация неликвидов</a></li>
+                <li><a class="text-base--400" href="./pages/heat-generation/tariffs.html">Тарифы</a></li>
+                <li><a class="text-base--400" href="./pages/heat-generation/technical-connection.html">Техническое присоединение</a></li>
+                <li><a class="text-base--400" href="./pages/heat-generation/privacy-policy.html">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+            <div class="header__modal-menu__detailed__item">
+              <h3>Заводские сети</h3>
+              <ul>
+                <li><a class="text-base--400" href="./pages/factory-networks/index.html">О компании</a></li>
+                <li><a class="text-base--400" href="./pages/factory-networks/information-disclosure.html">Раскрытие информации</a></li>
+                <li><a class="text-base--400" href="./pages/factory-networks/purchases.html">Закупки</a></li>
+                <li><a class="text-base--400" href="./pages/factory-networks/consumers.html">Потребителям</a></li>
+                <li><a class="text-base--400" href="./pages/factory-networks/privacy-policy.html">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+            <div class="header__modal-menu__detailed__item">
+              <h3>ЕСЭ-Кубань</h3>
+              <ul>
+                <li><a class="text-base--400" href="./pages/ese-kuban/index.html">О компании</a></li>
+                <li><a class="text-base--400" href="./pages/ese-kuban/information-disclosure.html">Раскрытие информации</a></li>
+                <li><a class="text-base--400" href="./pages/ese-kuban/consumers.html">Потребителям</a></li>
+                <li><a class="text-base--400" href="./pages/ese-kuban/privacy-policy.html">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+            <div class="header__modal-menu__detailed__item">
+              <h3>ОП Ярославль</h3>
+              <ul>
+                <li><a class="text-base--400" href="./pages/op-yaroslavl/index.html">О компании</a></li>
+                <li><a class="text-base--400" href="./pages/op-yaroslavl/information-disclosure.html">Раскрытие информации</a></li>
+                <li><a class="text-base--400" href="./pages/op-yaroslavl/consumers.html">Потребителям</a></li>
+                <li><a class="text-base--400" href="./pages/op-yaroslavl/privacy-policy.html">Политика конфиденциальности</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+        <div class="header__modal-menu__footer">
+          <div class="header__modal-menu__footer__main-menu">
+            <a class="text-base--400" href="">Противодейсвие коррупции</a>
+          </div>
+          <div class="header__modal-menu__footer__detailed-menu">
+            <a class="header__modal-menu__external text-base--400" href="https://www.energosale34.ru/" target="_blank">
+              <span>ВолгаЭнергоСбыт</span>
+              <span class="external-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
+                  <path
+                    d="M19.9997 7.51859C19.9947 7.71717 19.9055 7.90297 19.7556 8.02825L12.4224 14.1647C12.2232 14.3317 11.9465 14.3649 11.714 14.2533C11.4816 14.1399 11.3324 13.9005 11.3324 13.6371V10.2374C10.0349 10.2851 8.75748 10.5016 7.52487 10.88C5.15243 11.6112 2.94319 12.9672 1.13586 14.8023C1.00753 14.9318 0.83837 15 0.665872 15C0.568374 15 0.470876 14.9778 0.380053 14.9335C0.125892 14.8099 -0.0249318 14.5364 0.0033984 14.2508C0.107563 13.1787 0.869218 7.68919 5.66751 4.86393C7.72081 3.65539 9.78242 3.37245 11.3333 3.38266V0.682636C11.3333 0.412459 11.4883 0.168705 11.73 0.0587618C11.9717 -0.051181 12.2525 -0.00430647 12.4483 0.178082L19.7815 6.99632C19.9249 7.12928 20.0039 7.32002 19.9997 7.51859Z"
+                    fill="white"
+                  />
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Блок 1: Главный экран  -->
     <section
@@ -138,22 +411,9 @@
               fill="white"
             />
             <defs>
-              <filter
-                id="filter0_d_297_41597"
-                x="5.24521e-05"
-                y="0"
-                width="107.898"
-                height="115.258"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
+              <filter id="filter0_d_297_41597" x="5.24521e-05" y="0" width="107.898" height="115.258" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                 <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feColorMatrix
-                  in="SourceAlpha"
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                  result="hardAlpha"
-                />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                 <feOffset dy="7.9488" />
                 <feGaussianBlur stdDeviation="3.9744" />
                 <feComposite in2="hardAlpha" operator="out" />
@@ -169,37 +429,23 @@
             <div class="home__main-screen__item" data-carousel-item>
               <div class="home__main-screen__item__description">
                 <h1 class="text--white">Эн+ Тепло Волга</h1>
-                <p class="text-base--400 text--white">
-                  Занимаемся тепло- и водоснабжением жителей Автозаводского и Ленинского районов Нижнего Новгорода.
-                </p>
+                <p class="text-base--400 text--white">Занимаемся тепло- и водоснабжением жителей Автозаводского и Ленинского районов Нижнего Новгорода.</p>
               </div>
-              <img
-                class="home__main-screen__image"
-                src="./img/home/block1-main-screen/main-screen-bg1.webp"
-                alt="Вид на ТЭЦ и город"
-              />
+              <img class="home__main-screen__image" src="./img/home/block1-main-screen/main-screen-bg1.webp" alt="Вид на ТЭЦ и город" />
             </div>
             <div class="home__main-screen__item" data-carousel-item>
               <div class="home__main-screen__item__description">
                 <h3 class="text-base--400 text--white">Общая мощность</h3>
                 <h1 class="text--white">480 МВт.</h1>
               </div>
-              <img
-                class="home__main-screen__image"
-                src="./img/home/block1-main-screen/main-screen-bg2.webp"
-                alt="Рабочи в каске смотрит на датчике в цехе"
-              />
+              <img class="home__main-screen__image" src="./img/home/block1-main-screen/main-screen-bg2.webp" alt="Рабочи в каске смотрит на датчике в цехе" />
             </div>
             <div class="home__main-screen__item" data-carousel-item>
               <div class="home__main-screen__item__description">
                 <h3 class="text-base--400 text--white">Протяженность тепловых сетей</h3>
                 <h1 class="text--white">614 км</h1>
               </div>
-              <img
-                class="home__main-screen__image"
-                src="./img/home/block1-main-screen/main-screen-bg3.webp"
-                alt="Трубы"
-              />
+              <img class="home__main-screen__image" src="./img/home/block1-main-screen/main-screen-bg3.webp" alt="Трубы" />
             </div>
           </div>
           <div class="home__main-screen__controls__pagination"></div>
@@ -224,22 +470,9 @@
               fill="white"
             />
             <defs>
-              <filter
-                id="filter0_d_297_41593"
-                x="-6.96182e-05"
-                y="0"
-                width="107.898"
-                height="115.258"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
+              <filter id="filter0_d_297_41593" x="-6.96182e-05" y="0" width="107.898" height="115.258" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                 <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feColorMatrix
-                  in="SourceAlpha"
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                  result="hardAlpha"
-                />
+                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                 <feOffset dy="7.9488" />
                 <feGaussianBlur stdDeviation="3.9744" />
                 <feComposite in2="hardAlpha" operator="out" />
@@ -282,11 +515,8 @@
         </a>
         <a href="https://www.energosale34.ru/" target="_blank" class="home__company">
           <p class="caption--400">ВолгаЭнергоСбыт</p>
-          <img
-            src="img/home/block2-companies/volga-energy-distribution.webp"
-            alt="Вышка линий электропередач с неоновыми проводами"
-          />
-          <span class="home__company__icon-external-link"
+          <img src="img/home/block2-companies/volga-energy-distribution.webp" alt="Вышка линий электропередач с неоновыми проводами" />
+          <span class="external-link"
             ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="15" viewBox="0 0 20 15" fill="none">
               <path
                 d="M19.9997 7.51859C19.9947 7.71717 19.9055 7.90297 19.7556 8.02825L12.4224 14.1647C12.2232 14.3317 11.9465 14.3649 11.714 14.2533C11.4816 14.1399 11.3324 13.9005 11.3324 13.6371V10.2374C10.0349 10.2851 8.75748 10.5016 7.52487 10.88C5.15243 11.6112 2.94319 12.9672 1.13586 14.8023C1.00753 14.9318 0.83837 15 0.665872 15C0.568374 15 0.470876 14.9778 0.380053 14.9335C0.125892 14.8099 -0.0249318 14.5364 0.0033984 14.2508C0.107563 13.1787 0.869218 7.68919 5.66751 4.86393C7.72081 3.65539 9.78242 3.37245 11.3333 3.38266V0.682636C11.3333 0.412459 11.4883 0.168705 11.73 0.0587618C11.9717 -0.051181 12.2525 -0.00430647 12.4483 0.178082L19.7815 6.99632C19.9249 7.12928 20.0039 7.32002 19.9997 7.51859Z"
@@ -302,9 +532,7 @@
         <article class="home__ecology__card-image">
           <article class="home__ecology__card-text">
             <h2>Экология</h2>
-            <p class="text-base--400">
-              В компании «Эн+ Тепло Волга» охрана природы и забота об экологии — это одна из ключевых задач.
-            </p>
+            <p class="text-base--400">В компании «Эн+ Тепло Волга» охрана природы и забота об экологии — это одна из ключевых задач.</p>
           </article>
         </article>
         <div class="home__ecology__our-works-container">
@@ -313,31 +541,16 @@
             <ul>
               <li class="text-base--400">уменьшать выбросы в воздух, воду и почву;</li>
               <li class="text-base--400">использовать ресурсы более рационально;</li>
-              <li class="text-base--400">
-                внедрять современные технологии, которые делают производство чище и безопаснее;
-              </li>
-              <li class="text-base--400">
-                контролировать воздействие на природу не только на местном, но и на глобальном уровне.
-              </li>
+              <li class="text-base--400">внедрять современные технологии, которые делают производство чище и безопаснее;</li>
+              <li class="text-base--400">контролировать воздействие на природу не только на местном, но и на глобальном уровне.</li>
             </ul>
           </div>
-          <div
-            class="home__ecology__our-works-video"
-            data-video-controller
-            data-modal-target="#home__ecology__our-works-video--modal"
-          >
+          <div class="home__ecology__our-works-video" data-video-controller data-modal-target="#home__ecology__our-works-video--modal">
             <video loop muted autoplay>
               <source src="video/home_ecology.webm" type="video/webm" />
             </video>
             <div class="home__ecology__our-works-video__info" data-video-poster>
-              <svg
-                class="home__ecology__our-works-video__info__icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="43"
-                height="47"
-                viewBox="0 0 43 47"
-                fill="none"
-              >
+              <svg class="home__ecology__our-works-video__info__icon" xmlns="http://www.w3.org/2000/svg" width="43" height="47" viewBox="0 0 43 47" fill="none">
                 <path
                   d="M39 17.5198C43.6667 20.2142 43.6667 26.9499 39 29.6442L11.25 45.6657C6.58334 48.36 0.749998 44.9921 0.749998 39.6035L0.749999 7.56057C0.75 2.17196 6.58333 -1.19592 11.25 1.49838L39 17.5198Z"
                   fill="#FD5D39"
@@ -348,9 +561,7 @@
           </div>
           <div id="home__ecology__our-works-video--modal" class="home__ecology__our-works-video--modal">
             <div class="home__ecology__our-works-video--modal-content">
-              <button class="btn-orange text-base--400 home__ecology__our-works-video--modal-close" data-modal-close>
-                Закрыть
-              </button>
+              <button class="btn-orange text-base--400 home__ecology__our-works-video--modal-close" data-modal-close>Закрыть</button>
               <video controls controlsList="nofullscreen" disablepictureinpicture>
                 <source src="video/home_ecology.webm" type="video/webm" />
               </video>
@@ -404,9 +615,7 @@
                 </div>
                 <div class="home__news-card__info">
                   <p class="caption--500">120 этажей вверх: марафон по-нижегородски</p>
-                  <p class="text-description--400">
-                    Более 50 коллег из «Эн+ Тепло Волга» приняли участие в пятом «Марафоне Нижний Новгород».
-                  </p>
+                  <p class="text-description--400">Более 50 коллег из «Эн+ Тепло Волга» приняли участие в пятом «Марафоне Нижний Новгород».</p>
                 </div>
               </div>
             </div>
@@ -423,10 +632,7 @@
                 </div>
                 <div class="home__news-card__info">
                   <p class="caption--500">Безопасность по-новому</p>
-                  <p class="text-description--400">
-                    В «Теплосетях» прошла двухдневная коучинговая сессия по охране труда для руководителей «ЭН+ ТЕПЛО
-                    ВОЛГА».
-                  </p>
+                  <p class="text-description--400">В «Теплосетях» прошла двухдневная коучинговая сессия по охране труда для руководителей «ЭН+ ТЕПЛО ВОЛГА».</p>
                 </div>
               </div>
             </div>
@@ -443,10 +649,7 @@
                 </div>
                 <div class="home__news-card__info">
                   <p class="caption--500">130 метров под землей</p>
-                  <p class="text-description--400">
-                    Новый жилой комплекс «Чкалов» в Нижнем Новгороде получил горячую воду благодаря уникальной
-                    технологии бестраншейной прокладки.
-                  </p>
+                  <p class="text-description--400">Новый жилой комплекс «Чкалов» в Нижнем Новгороде получил горячую воду благодаря уникальной технологии бестраншейной прокладки.</p>
                 </div>
               </div>
             </div>
@@ -463,9 +666,7 @@
                 </div>
                 <div class="home__news-card__info">
                   <p class="caption--500">От старых котлов к экологичному будущему</p>
-                  <p class="text-description--400">
-                    На двух котельных ООО «Генерация тепла» развернулись масштабные работы по реконструкции.
-                  </p>
+                  <p class="text-description--400">На двух котельных ООО «Генерация тепла» развернулись масштабные работы по реконструкции.</p>
                 </div>
               </div>
             </div>
@@ -482,10 +683,7 @@
                 </div>
                 <div class="home__news-card__info">
                   <p class="caption--500">130 метров под землей</p>
-                  <p class="text-description--400">
-                    Новый жилой комплекс «Чкалов» в Нижнем Новгороде получил горячую воду благодаря уникальной
-                    технологии бестраншейной прокладки.
-                  </p>
+                  <p class="text-description--400">Новый жилой комплекс «Чкалов» в Нижнем Новгороде получил горячую воду благодаря уникальной технологии бестраншейной прокладки.</p>
                 </div>
               </div>
             </div>
@@ -502,10 +700,7 @@
                 </div>
                 <div class="home__news-card__info">
                   <p class="caption--500">Безопасность по-новому</p>
-                  <p class="text-description--400">
-                    В «Теплосетях» прошла двухдневная коучинговая сессия по охране труда для руководителей «ЭН+ ТЕПЛО
-                    ВОЛГА».
-                  </p>
+                  <p class="text-description--400">В «Теплосетях» прошла двухдневная коучинговая сессия по охране труда для руководителей «ЭН+ ТЕПЛО ВОЛГА».</p>
                 </div>
               </div>
             </div>
@@ -522,9 +717,7 @@
                 </div>
                 <div class="home__news-card__info">
                   <p class="caption--500">От старых котлов к экологичному будущему</p>
-                  <p class="text-description--400">
-                    На двух котельных ООО «Генерация тепла» развернулись масштабные работы по реконструкции.
-                  </p>
+                  <p class="text-description--400">На двух котельных ООО «Генерация тепла» развернулись масштабные работы по реконструкции.</p>
                 </div>
               </div>
             </div>
@@ -533,13 +726,7 @@
       </section>
 
       <!-- Блок 5: Цитата -->
-      <section
-        id="quotes-carousel"
-        class="home__quotes"
-        data-carousel
-        data-carousel-animation="fade"
-        data-carousel-duration="300"
-      >
+      <section id="quotes-carousel" class="home__quotes" data-carousel data-carousel-animation="fade" data-carousel-duration="300">
         <div class="home__quotes__container">
           <button class="home__quotes__button-prev" data-carousel-prev>
             <svg xmlns="http://www.w3.org/2000/svg" width="55" height="58" viewBox="0 0 55 58" fill="none">
@@ -557,22 +744,9 @@
                 fill="#FD5D39"
               />
               <defs>
-                <filter
-                  id="filter0_d_297_41135"
-                  x="0.703735"
-                  y="0"
-                  width="54.2963"
-                  height="58"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
+                <filter id="filter0_d_297_41135" x="0.703735" y="0" width="54.2963" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                   <feOffset dy="4" />
                   <feGaussianBlur stdDeviation="2" />
                   <feComposite in2="hardAlpha" operator="out" />
@@ -587,40 +761,34 @@
             <div class="home__quote" data-carousel-item>
               <img src="img/home/block5-quote/man.png" alt="Иванов Иван Иванович" />
               <p class="text-description--400">
-                «Профильная подготовка школьников позволяет гармонично соединить теоретические знания и практическое
-                применение, обеспечивая молодым людям уверенный старт в обучении в вузе и профессиональной карьере»,
+                «Профильная подготовка школьников позволяет гармонично соединить теоретические знания и практическое применение, обеспечивая молодым людям уверенный старт в обучении в вузе и
+                профессиональной карьере»,
               </p>
               <div class="home__quote__person">
                 <span class="text-base--700">Михаил Ефимов</span>
-                <p class="text-description--400">
-                  и. о. генерального директора филиала «Нижегородский» ООО «Эн+ Тепло Волга»
-                </p>
+                <p class="text-description--400">и. о. генерального директора филиала «Нижегородский» ООО «Эн+ Тепло Волга»</p>
               </div>
             </div>
             <div class="home__quote" data-carousel-item>
               <img src="img/home/block5-quote/man.png" alt="Иванов Иван Иванович" />
               <p class="text-description--400">
-                «Профильная подготовка школьников позволяет гармонично соединить теоретические знания и практическое
-                применение, обеспечивая молодым людям уверенный старт в обучении в вузе и профессиональной карьере»,
+                «Профильная подготовка школьников позволяет гармонично соединить теоретические знания и практическое применение, обеспечивая молодым людям уверенный старт в обучении в вузе и
+                профессиональной карьере»,
               </p>
               <div class="home__quote__person">
                 <span class="text-base--700">Михаил Ефимов2</span>
-                <p class="text-description--400">
-                  и. о. генерального директора филиала «Нижегородский» ООО «Эн+ Тепло Волга»
-                </p>
+                <p class="text-description--400">и. о. генерального директора филиала «Нижегородский» ООО «Эн+ Тепло Волга»</p>
               </div>
             </div>
             <div class="home__quote" data-carousel-item>
               <img src="img/home/block5-quote/man.png" alt="Иванов Иван Иванович" />
               <p class="text-description--400">
-                «Профильная подготовка школьников позволяет гармонично соединить теоретические знания и практическое
-                применение, обеспечивая молодым людям уверенный старт в обучении в вузе и профессиональной карьере»,
+                «Профильная подготовка школьников позволяет гармонично соединить теоретические знания и практическое применение, обеспечивая молодым людям уверенный старт в обучении в вузе и
+                профессиональной карьере»,
               </p>
               <div class="home__quote__person">
                 <span class="text-base--700">Михаил Ефимов3</span>
-                <p class="text-description--400">
-                  и. о. генерального директора филиала «Нижегородский» ООО «Эн+ Тепло Волга»
-                </p>
+                <p class="text-description--400">и. о. генерального директора филиала «Нижегородский» ООО «Эн+ Тепло Волга»</p>
               </div>
             </div>
           </div>
@@ -640,22 +808,9 @@
                 fill="#FD5D39"
               />
               <defs>
-                <filter
-                  id="filter0_d_428_14860"
-                  x="0.703613"
-                  y="0"
-                  width="54.2964"
-                  height="58"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
+                <filter id="filter0_d_428_14860" x="0.703613" y="0" width="54.2964" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                   <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                   <feOffset dy="4" />
                   <feGaussianBlur stdDeviation="2" />
                   <feComposite in2="hardAlpha" operator="out" />
@@ -680,22 +835,10 @@
 
           <div class="home__gallery__main">
             <div class="home__gallery__image-container">
-              <img
-                src="img/home/block6-gallery/gallery1.webp"
-                alt="Генерация тепла"
-                class="home__gallery__main-image"
-                data-gallery-main
-              />
+              <img src="img/home/block6-gallery/gallery1.webp" alt="Генерация тепла" class="home__gallery__main-image" data-gallery-main />
               <div class="home__gallery__navigation">
                 <button class="home__gallery__nav-btn" data-gallery-prev>
-                  <svg
-                    class="home__gallery__nav-btn__icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="31"
-                    viewBox="0 0 14 31"
-                    fill="none"
-                  >
+                  <svg class="home__gallery__nav-btn__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="31" viewBox="0 0 14 31" fill="none">
                     <path
                       d="M3.68001 12.7567C2.27566 14.2463 2.27566 16.7535 3.68014 18.2433L14 29.19L12.2937 31L1.97383 20.0533C1.86995 19.9431 1.75796 19.8243 1.63963 19.6988C-0.546031 17.3803 -0.5468 13.6206 1.63886 11.3022L12.2938 0L14 1.80982L3.68001 12.7567Z"
                       fill="#FD5D39"
@@ -703,14 +846,7 @@
                   </svg>
                 </button>
                 <button class="home__gallery__nav-btn" data-gallery-next>
-                  <svg
-                    class="home__gallery__nav-btn__icon"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="14"
-                    height="31"
-                    viewBox="0 0 14 31"
-                    fill="none"
-                  >
+                  <svg class="home__gallery__nav-btn__icon" xmlns="http://www.w3.org/2000/svg" width="14" height="31" viewBox="0 0 14 31" fill="none">
                     <path
                       d="M10.32 12.7567C11.7243 14.2463 11.7243 16.7535 10.3199 18.2433L1.71154e-06 29.19L1.70631 31L12.0262 20.0533C12.13 19.9431 12.242 19.8243 12.3604 19.6988C14.546 17.3803 14.5468 13.6206 12.3611 11.3022L1.70618 0L0 1.80982L10.32 12.7567Z"
                       fill="#FD5D39"
@@ -725,12 +861,9 @@
                 <span class="home__gallery__subtitle text-base--400">Генерация тепла</span>
                 <div class="home__gallery__description">
                   <p class="text-description--400">
-                    Сотрудник «Генерации тепла» за работой оборудования, чтобы дома и предприятия получали тепло без
-                    перебоев. Наш труд – это забота о комфорте и безопасности людей каждый день.
+                    Сотрудник «Генерации тепла» за работой оборудования, чтобы дома и предприятия получали тепло без перебоев. Наш труд – это забота о комфорте и безопасности людей каждый день.
                   </p>
-                  <p class="text-description--400">
-                    Благодаря таким специалистам энергия подаётся надёжно и с вниманием к окружающей среде.
-                  </p>
+                  <p class="text-description--400">Благодаря таким специалистам энергия подаётся надёжно и с вниманием к окружающей среде.</p>
                 </div>
               </div>
 
@@ -826,22 +959,13 @@
                   d="M80.6775 21.838H80.8544L83.3819 15.9255H86.3643L81.6632 25.713C81.3766 26.3772 80.9451 26.9705 80.3995 27.4505C79.905 27.8295 79.2935 28.0282 78.6682 28.013C77.9193 28.0312 77.1747 27.895 76.4819 27.613L77.0885 25.363C77.2596 25.4341 77.4374 25.4886 77.6193 25.5255C77.7957 25.5434 77.9736 25.5434 78.1501 25.5255C78.3874 25.5576 78.6288 25.5114 78.8368 25.3937C79.0447 25.2762 79.2075 25.094 79.3001 24.8755L79.4391 24.5255L74.5358 15.8755H77.7962L80.6775 21.838Z"
                   fill="white"
                 />
-                <path
-                  d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z"
-                  fill="white"
-                />
-                <path
-                  d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z"
-                  fill="white"
-                />
+                <path d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z" fill="white" />
+                <path d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z" fill="white" />
                 <path
                   d="M127.776 16.7877C128.133 17.0722 128.415 17.4355 128.602 17.8482C128.787 18.2608 128.873 18.7112 128.851 19.1627C128.857 19.6218 128.753 20.0759 128.547 20.4877C128.358 20.8552 128.057 21.1562 127.688 21.3502V21.5127C128.257 21.6868 128.751 22.043 129.091 22.5252C129.448 23.0252 129.635 23.6254 129.621 24.2377C129.621 24.7073 129.536 25.1729 129.369 25.6127C129.193 26.0419 128.916 26.4233 128.56 26.7253C128.156 27.0719 127.682 27.3315 127.17 27.4877C126.529 27.6858 125.858 27.7787 125.186 27.7627H119.398V15.9252H124.693C125.791 15.856 126.879 16.1604 127.776 16.7877ZM124.795 20.5377C125.177 20.5649 125.556 20.4489 125.856 20.2127C125.987 20.1028 126.091 19.9644 126.159 19.8083C126.227 19.652 126.257 19.4824 126.248 19.3127C126.248 18.5252 125.73 18.1377 124.706 18.1377H122.052V20.5377H124.795ZM125.224 25.4502C126.412 25.4502 126.993 24.9877 126.993 24.0627C127.002 23.8677 126.964 23.6733 126.883 23.4953C126.802 23.3173 126.679 23.1605 126.525 23.0377C126.15 22.7994 125.708 22.6817 125.262 22.7003H122.103V25.4502H125.224Z"
                   fill="white"
                 />
-                <path
-                  d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z"
-                  fill="white"
-                />
+                <path d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z" fill="white" />
                 <path
                   d="M153.456 16.2C154.009 16.3928 154.52 16.69 154.959 17.075C155.385 17.4395 155.718 17.8975 155.932 18.4123C156.17 18.9698 156.291 19.5697 156.286 20.1748C156.294 20.8045 156.16 21.4278 155.895 22C155.652 22.5293 155.289 22.9957 154.833 23.3625C154.372 23.7518 153.833 24.0415 153.253 24.2125C152.62 24.4117 151.959 24.5088 151.295 24.5H148.856V27.7375H146.126V15.9H151.459C152.136 15.8875 152.812 15.9888 153.456 16.2ZM151.295 22.15C151.9 22.1801 152.496 21.9937 152.975 21.6248C153.348 21.2447 153.557 20.7358 153.557 20.2061C153.557 19.6765 153.348 19.1676 152.975 18.7875C152.752 18.5976 152.493 18.4535 152.213 18.3633C151.934 18.2732 151.638 18.2388 151.345 18.2623H148.818V22.15H151.295Z"
                   fill="white"
@@ -850,22 +974,10 @@
                   d="M167.597 18.3876C167.012 18.1912 166.396 18.094 165.777 18.1001C165.237 18.0901 164.701 18.1835 164.197 18.3751C163.744 18.5417 163.334 18.8066 162.997 19.1501C162.659 19.4882 162.396 19.8929 162.226 20.3376C162.041 20.8167 161.948 21.3251 161.948 21.8376C161.941 22.3681 162.041 22.8946 162.238 23.3876C162.403 23.8317 162.667 24.2335 163.009 24.5626C163.348 24.8917 163.752 25.1471 164.197 25.3126C164.693 25.5032 165.221 25.5966 165.752 25.5876C166.4 25.5916 167.042 25.4771 167.647 25.2501C168.235 25.0221 168.772 24.6824 169.227 24.2501L170.756 26.1001C169.361 27.3867 167.507 28.0744 165.6 28.0126C164.737 28.0244 163.88 27.876 163.072 27.5751C162.327 27.3 161.647 26.8744 161.076 26.3251C160.527 25.7704 160.096 25.1112 159.812 24.3876C159.494 23.5921 159.336 22.7431 159.344 21.8876C159.339 21.0661 159.494 20.2514 159.799 19.4876C160.082 18.7517 160.512 18.08 161.063 17.5126C161.656 16.9297 162.361 16.4706 163.136 16.1626C164.854 15.5721 166.725 15.5721 168.443 16.1626C169.209 16.4429 169.913 16.8674 170.516 17.4126L169.037 19.3376C168.63 18.9239 168.14 18.6001 167.597 18.3876Z"
                   fill="white"
                 />
-                <path
-                  d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z"
-                  fill="white"
-                />
-                <path
-                  d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z"
-                  fill="white"
-                />
-                <path
-                  d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z"
-                  fill="white"
-                />
+                <path d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z" fill="white" />
+                <path d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z" fill="white" />
+                <path d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z" fill="white" />
+                <path d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z" fill="white" />
                 <path
                   d="M86.5784 47.7123H83.9498V38.2248H80.2976C80.2976 39.2373 80.2976 40.1748 80.2976 41.0498C80.286 41.8397 80.2311 42.6283 80.1334 43.4123C80.0565 44.0604 79.9211 44.7006 79.7289 45.3248C79.5642 45.8447 79.3076 46.3314 78.9707 46.7623C78.6642 47.1383 78.2694 47.4344 77.8207 47.6248C77.3144 47.8239 76.7732 47.9216 76.2285 47.9123C75.8893 47.9176 75.5505 47.8882 75.2174 47.8248C74.9199 47.7649 74.6313 47.6684 74.358 47.5373L74.952 45.2623C75.1 45.3196 75.252 45.3656 75.4069 45.3998H75.8366C76.0502 45.4072 76.2624 45.3643 76.4558 45.2748C76.6475 45.1593 76.8045 44.9953 76.9108 44.7998C77.0974 44.5042 77.23 44.1784 77.3025 43.8373C77.4112 43.3892 77.4873 42.9338 77.5301 42.4748C77.5301 41.9373 77.6185 41.3123 77.6185 40.5748C77.6185 39.8373 77.6185 38.9998 77.6185 38.0748V35.8623H86.6289L86.5784 47.7123Z"
                   fill="white"
@@ -886,10 +998,7 @@
                   d="M131.517 39.7625C131.465 40.4085 131.659 41.0505 132.06 41.5625C132.285 41.781 132.556 41.948 132.853 42.0517C133.15 42.1554 133.466 42.1932 133.779 42.1625C134.276 42.1697 134.77 42.1023 135.245 41.9625C135.696 41.8426 136.123 41.6483 136.509 41.3875V35.85H139.201V47.7125H136.509V43.7C135.57 44.2624 134.484 44.5405 133.387 44.5C132.763 44.5087 132.14 44.4201 131.542 44.2375C131.014 44.0704 130.531 43.7885 130.127 43.4125C129.721 43.0191 129.41 42.5406 129.217 42.0125C128.992 41.3698 128.885 40.6925 128.901 40.0125V35.8125H131.568L131.517 39.7625Z"
                   fill="white"
                 />
-                <path
-                  d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z"
-                  fill="white"
-                />
+                <path d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z" fill="white" />
                 <path
                   d="M163.856 36.7255C164.212 37.0073 164.495 37.3681 164.685 37.7785C164.873 38.1888 164.962 38.6375 164.943 39.088C164.948 39.5483 164.839 40.0031 164.627 40.413C164.442 40.7832 164.147 41.0886 163.78 41.288V41.438C164.346 41.6243 164.837 41.9831 165.183 42.463C165.541 42.9628 165.726 43.5631 165.714 44.1755C165.716 44.6423 165.626 45.1052 165.448 45.538C165.27 45.9691 164.993 46.354 164.64 46.663C164.236 47.005 163.768 47.2641 163.262 47.4255C162.616 47.6265 161.943 47.7235 161.265 47.713H155.477V35.8505H160.772C161.872 35.7828 162.961 36.0918 163.856 36.7255ZM160.874 40.4755C161.262 40.4986 161.644 40.3783 161.948 40.138C162.075 40.0287 162.176 39.8918 162.242 39.738C162.308 39.5841 162.337 39.4172 162.327 39.2505C162.327 38.463 161.821 38.0755 160.785 38.0755H158.144V40.4755H160.874ZM161.316 45.388C162.491 45.388 163.072 44.9255 163.072 43.988C163.081 43.796 163.043 43.6047 162.965 43.4291C162.885 43.2535 162.767 43.0982 162.618 42.9755C162.242 42.7357 161.801 42.6137 161.354 42.6255H158.194V45.388H161.316Z"
                   fill="white"
@@ -932,10 +1041,7 @@
                   d="M120.981 34.9535V29.6646L122.583 29.8027L123.015 29.5808H134.805V34.9535H132.262V31.7809H123.513V34.9535H120.981ZM129.85 31.7809V23.4032H125.924V24.5766C125.924 25.4789 125.862 26.3158 125.735 27.0837C125.609 27.8528 125.387 28.5368 125.07 29.1359C124.752 29.7361 124.315 30.2378 123.75 30.6433C123.189 31.0488 122.471 31.3397 121.599 31.5159L120.981 29.6646C121.645 29.5106 122.148 29.2086 122.49 28.7612C122.834 28.3125 123.063 27.7369 123.183 27.0307C123.303 26.3256 123.362 25.5085 123.362 24.5766V21.2031H132.63V31.7809H129.85Z"
                   fill="white"
                 />
-                <path
-                  d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z"
-                  fill="white"
-                />
+                <path d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z" fill="white" />
                 <path
                   d="M149.437 34.9535V29.6646L151.039 29.8027L151.471 29.5808H163.26V34.9535H160.718V31.7809H151.969V34.9535H149.437ZM158.306 31.7809V23.4032H154.38V24.5766C154.38 25.4789 154.317 26.3158 154.191 27.0837C154.065 27.8528 153.842 28.5368 153.525 29.1359C153.208 29.7361 152.769 30.2378 152.206 30.6433C151.644 31.0488 150.927 31.3397 150.053 31.5159L149.437 29.6646C150.1 29.5106 150.603 29.2086 150.946 28.7612C151.29 28.3125 151.519 27.7369 151.639 27.0307C151.757 26.3256 151.816 25.5085 151.816 24.5766V21.2031H161.086V31.7809H158.306Z"
                   fill="white"
@@ -944,14 +1050,8 @@
                   d="M177.677 31.7804L174.541 26.1957L177.654 21.2026H180.575L177.514 26.0577L180.955 31.7804H177.677ZM171.1 31.7804V27.3901H168.105V25.19H171.1V21.2026H173.869V25.19H176.832V27.3901H173.869V31.7804H171.1ZM164.071 31.7804L167.434 26.1957L164.373 21.2026H167.403L170.42 26.1957L167.218 31.7804H164.071Z"
                   fill="white"
                 />
-                <path
-                  d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z"
-                  fill="white"
-                />
+                <path d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z" fill="white" />
+                <path d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z" fill="white" />
                 <path
                   d="M210.306 32.0984C209.562 32.0984 208.908 31.9603 208.337 31.6855C207.767 31.4094 207.323 31.0211 207.002 30.517C206.68 30.0129 206.52 29.4151 206.52 28.7236C206.52 28.1308 206.672 27.6032 206.975 27.1373C207.278 26.6714 207.744 26.2856 208.37 25.9787C208.997 25.6718 209.798 25.466 210.771 25.36C211.745 25.254 212.906 25.2688 214.254 25.4019L214.297 27.1903C213.417 27.0634 212.648 27.0067 211.993 27.0202C211.337 27.035 210.795 27.1065 210.365 27.2384C209.936 27.3678 209.615 27.5502 209.402 27.7819C209.19 28.0149 209.083 28.2861 209.083 28.5967C209.083 29.0626 209.257 29.42 209.602 29.6702C209.949 29.9204 210.422 30.0462 211.019 30.0462C211.532 30.0462 211.989 29.9549 212.393 29.7701C212.797 29.5876 213.119 29.3288 213.361 28.9923C213.603 28.6583 213.724 28.2626 213.724 27.8041V25.127C213.724 24.6895 213.629 24.3074 213.436 23.9795C213.246 23.6516 212.955 23.3953 212.56 23.2129C212.168 23.0304 211.669 22.9368 211.064 22.9368C210.5 22.9368 209.941 23.0206 209.387 23.187C208.831 23.3521 208.316 23.6073 207.839 23.9536L207.083 22.0173C207.767 21.5736 208.491 21.2556 209.252 21.0657C210.013 20.8759 210.747 20.7798 211.452 20.7798C212.462 20.7798 213.335 20.9351 214.074 21.2445C214.814 21.5551 215.383 22.0296 215.784 22.6681C216.184 23.3065 216.384 24.1151 216.384 25.095V31.7804H213.94V30.5749C213.58 31.068 213.082 31.4463 212.447 31.7064C211.812 31.9677 211.098 32.0984 210.306 32.0984Z"
                   fill="white"
@@ -968,10 +1068,7 @@
                   d="M16.6192 21.2085H0V25.9748H20.8248C21.6591 25.9748 22.4467 26.8487 22.4467 27.7719L22.4379 34.5226H3.43173V39.2889L22.4467 39.2988V46.0408C22.4467 46.964 21.6591 47.8367 20.826 47.8367H0V52.603H16.6192C22.8626 52.603 27.7525 47.9131 27.7525 41.9266V31.8861C27.7525 25.8984 22.8626 21.2085 16.6192 21.2085Z"
                   fill="white"
                 />
-                <path
-                  d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z"
-                  fill="white"
-                />
+                <path d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z" fill="white" />
               </g>
               <defs>
                 <clipPath id="clip0_297_41192">
@@ -985,22 +1082,13 @@
                   d="M80.6775 21.838H80.8544L83.3819 15.9255H86.3643L81.6632 25.713C81.3766 26.3772 80.9451 26.9705 80.3995 27.4505C79.905 27.8295 79.2935 28.0282 78.6682 28.013C77.9193 28.0312 77.1747 27.895 76.4819 27.613L77.0885 25.363C77.2596 25.4341 77.4374 25.4886 77.6193 25.5255C77.7957 25.5434 77.9736 25.5434 78.1501 25.5255C78.3874 25.5576 78.6288 25.5114 78.8368 25.3937C79.0447 25.2762 79.2075 25.094 79.3001 24.8755L79.4391 24.5255L74.5358 15.8755H77.7962L80.6775 21.838Z"
                   fill="white"
                 />
-                <path
-                  d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z"
-                  fill="white"
-                />
-                <path
-                  d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z"
-                  fill="white"
-                />
+                <path d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z" fill="white" />
+                <path d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z" fill="white" />
                 <path
                   d="M127.776 16.7877C128.133 17.0722 128.415 17.4355 128.602 17.8482C128.787 18.2608 128.873 18.7112 128.851 19.1627C128.857 19.6218 128.753 20.0759 128.547 20.4877C128.358 20.8552 128.057 21.1562 127.688 21.3502V21.5127C128.257 21.6868 128.751 22.043 129.091 22.5252C129.448 23.0252 129.635 23.6254 129.621 24.2377C129.621 24.7073 129.536 25.1729 129.369 25.6127C129.193 26.0419 128.916 26.4233 128.56 26.7253C128.156 27.0719 127.682 27.3315 127.17 27.4877C126.529 27.6858 125.858 27.7787 125.186 27.7627H119.398V15.9252H124.693C125.791 15.856 126.879 16.1604 127.776 16.7877ZM124.795 20.5377C125.177 20.5649 125.556 20.4489 125.856 20.2127C125.987 20.1028 126.091 19.9644 126.159 19.8083C126.227 19.652 126.257 19.4824 126.248 19.3127C126.248 18.5252 125.73 18.1377 124.706 18.1377H122.052V20.5377H124.795ZM125.224 25.4502C126.412 25.4502 126.993 24.9877 126.993 24.0627C127.002 23.8677 126.964 23.6733 126.883 23.4953C126.802 23.3173 126.679 23.1605 126.525 23.0377C126.15 22.7994 125.708 22.6817 125.262 22.7003H122.103V25.4502H125.224Z"
                   fill="white"
                 />
-                <path
-                  d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z"
-                  fill="white"
-                />
+                <path d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z" fill="white" />
                 <path
                   d="M153.456 16.2C154.009 16.3928 154.52 16.69 154.959 17.075C155.385 17.4395 155.718 17.8975 155.932 18.4123C156.17 18.9698 156.291 19.5697 156.286 20.1748C156.294 20.8045 156.16 21.4278 155.895 22C155.652 22.5293 155.289 22.9957 154.833 23.3625C154.372 23.7518 153.833 24.0415 153.253 24.2125C152.62 24.4117 151.959 24.5088 151.295 24.5H148.856V27.7375H146.126V15.9H151.459C152.136 15.8875 152.812 15.9888 153.456 16.2ZM151.295 22.15C151.9 22.1801 152.496 21.9937 152.975 21.6248C153.348 21.2447 153.557 20.7358 153.557 20.2061C153.557 19.6765 153.348 19.1676 152.975 18.7875C152.752 18.5976 152.493 18.4535 152.213 18.3633C151.934 18.2732 151.638 18.2388 151.345 18.2623H148.818V22.15H151.295Z"
                   fill="white"
@@ -1009,22 +1097,10 @@
                   d="M167.597 18.3876C167.012 18.1912 166.396 18.094 165.777 18.1001C165.237 18.0901 164.701 18.1835 164.197 18.3751C163.744 18.5417 163.334 18.8066 162.997 19.1501C162.659 19.4882 162.396 19.8929 162.226 20.3376C162.041 20.8167 161.948 21.3251 161.948 21.8376C161.941 22.3681 162.041 22.8946 162.238 23.3876C162.403 23.8317 162.667 24.2335 163.009 24.5626C163.348 24.8917 163.752 25.1471 164.197 25.3126C164.693 25.5032 165.221 25.5966 165.752 25.5876C166.4 25.5916 167.042 25.4771 167.647 25.2501C168.235 25.0221 168.772 24.6824 169.227 24.2501L170.756 26.1001C169.361 27.3867 167.507 28.0744 165.6 28.0126C164.737 28.0244 163.88 27.876 163.072 27.5751C162.327 27.3 161.647 26.8744 161.076 26.3251C160.527 25.7704 160.096 25.1112 159.812 24.3876C159.494 23.5921 159.336 22.7431 159.344 21.8876C159.339 21.0661 159.494 20.2514 159.799 19.4876C160.082 18.7517 160.512 18.08 161.063 17.5126C161.656 16.9297 162.361 16.4706 163.136 16.1626C164.854 15.5721 166.725 15.5721 168.443 16.1626C169.209 16.4429 169.913 16.8674 170.516 17.4126L169.037 19.3376C168.63 18.9239 168.14 18.6001 167.597 18.3876Z"
                   fill="white"
                 />
-                <path
-                  d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z"
-                  fill="white"
-                />
-                <path
-                  d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z"
-                  fill="white"
-                />
-                <path
-                  d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z"
-                  fill="white"
-                />
+                <path d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z" fill="white" />
+                <path d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z" fill="white" />
+                <path d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z" fill="white" />
+                <path d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z" fill="white" />
                 <path
                   d="M86.5784 47.7123H83.9498V38.2248H80.2976C80.2976 39.2373 80.2976 40.1748 80.2976 41.0498C80.286 41.8397 80.2311 42.6283 80.1334 43.4123C80.0565 44.0604 79.9211 44.7006 79.7289 45.3248C79.5642 45.8447 79.3076 46.3314 78.9707 46.7623C78.6642 47.1383 78.2694 47.4344 77.8207 47.6248C77.3144 47.8239 76.7732 47.9216 76.2285 47.9123C75.8893 47.9176 75.5505 47.8882 75.2174 47.8248C74.9199 47.7649 74.6313 47.6684 74.358 47.5373L74.952 45.2623C75.1 45.3196 75.252 45.3656 75.4069 45.3998H75.8366C76.0502 45.4072 76.2624 45.3643 76.4558 45.2748C76.6475 45.1593 76.8045 44.9953 76.9108 44.7998C77.0974 44.5042 77.23 44.1784 77.3025 43.8373C77.4112 43.3892 77.4873 42.9338 77.5301 42.4748C77.5301 41.9373 77.6185 41.3123 77.6185 40.5748C77.6185 39.8373 77.6185 38.9998 77.6185 38.0748V35.8623H86.6289L86.5784 47.7123Z"
                   fill="white"
@@ -1045,10 +1121,7 @@
                   d="M131.517 39.7625C131.465 40.4085 131.659 41.0505 132.06 41.5625C132.285 41.781 132.556 41.948 132.853 42.0517C133.15 42.1554 133.466 42.1932 133.779 42.1625C134.276 42.1697 134.77 42.1023 135.245 41.9625C135.696 41.8426 136.123 41.6483 136.509 41.3875V35.85H139.201V47.7125H136.509V43.7C135.57 44.2624 134.484 44.5405 133.387 44.5C132.763 44.5087 132.14 44.4201 131.542 44.2375C131.014 44.0704 130.531 43.7885 130.127 43.4125C129.721 43.0191 129.41 42.5406 129.217 42.0125C128.992 41.3698 128.885 40.6925 128.901 40.0125V35.8125H131.568L131.517 39.7625Z"
                   fill="white"
                 />
-                <path
-                  d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z"
-                  fill="white"
-                />
+                <path d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z" fill="white" />
                 <path
                   d="M163.856 36.7255C164.212 37.0073 164.495 37.3681 164.685 37.7785C164.873 38.1888 164.962 38.6375 164.943 39.088C164.948 39.5483 164.839 40.0031 164.627 40.413C164.442 40.7832 164.147 41.0886 163.78 41.288V41.438C164.346 41.6243 164.837 41.9831 165.183 42.463C165.541 42.9628 165.726 43.5631 165.714 44.1755C165.716 44.6423 165.626 45.1052 165.448 45.538C165.27 45.9691 164.993 46.354 164.64 46.663C164.236 47.005 163.768 47.2641 163.262 47.4255C162.616 47.6265 161.943 47.7235 161.265 47.713H155.477V35.8505H160.772C161.872 35.7828 162.961 36.0918 163.856 36.7255ZM160.874 40.4755C161.262 40.4986 161.644 40.3783 161.948 40.138C162.075 40.0287 162.176 39.8918 162.242 39.738C162.308 39.5841 162.337 39.4172 162.327 39.2505C162.327 38.463 161.821 38.0755 160.785 38.0755H158.144V40.4755H160.874ZM161.316 45.388C162.491 45.388 163.072 44.9255 163.072 43.988C163.081 43.796 163.043 43.6047 162.965 43.4291C162.885 43.2535 162.767 43.0982 162.618 42.9755C162.242 42.7357 161.801 42.6137 161.354 42.6255H158.194V45.388H161.316Z"
                   fill="white"
@@ -1091,10 +1164,7 @@
                   d="M120.981 34.9535V29.6646L122.583 29.8027L123.015 29.5808H134.805V34.9535H132.262V31.7809H123.513V34.9535H120.981ZM129.85 31.7809V23.4032H125.924V24.5766C125.924 25.4789 125.862 26.3158 125.735 27.0837C125.609 27.8528 125.387 28.5368 125.07 29.1359C124.752 29.7361 124.315 30.2378 123.75 30.6433C123.189 31.0488 122.471 31.3397 121.599 31.5159L120.981 29.6646C121.645 29.5106 122.148 29.2086 122.49 28.7612C122.834 28.3125 123.063 27.7369 123.183 27.0307C123.303 26.3256 123.362 25.5085 123.362 24.5766V21.2031H132.63V31.7809H129.85Z"
                   fill="white"
                 />
-                <path
-                  d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z"
-                  fill="white"
-                />
+                <path d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z" fill="white" />
                 <path
                   d="M149.437 34.9535V29.6646L151.039 29.8027L151.471 29.5808H163.26V34.9535H160.718V31.7809H151.969V34.9535H149.437ZM158.306 31.7809V23.4032H154.38V24.5766C154.38 25.4789 154.317 26.3158 154.191 27.0837C154.065 27.8528 153.842 28.5368 153.525 29.1359C153.208 29.7361 152.769 30.2378 152.206 30.6433C151.644 31.0488 150.927 31.3397 150.053 31.5159L149.437 29.6646C150.1 29.5106 150.603 29.2086 150.946 28.7612C151.29 28.3125 151.519 27.7369 151.639 27.0307C151.757 26.3256 151.816 25.5085 151.816 24.5766V21.2031H161.086V31.7809H158.306Z"
                   fill="white"
@@ -1103,14 +1173,8 @@
                   d="M177.677 31.7804L174.541 26.1957L177.654 21.2026H180.575L177.514 26.0577L180.955 31.7804H177.677ZM171.1 31.7804V27.3901H168.105V25.19H171.1V21.2026H173.869V25.19H176.832V27.3901H173.869V31.7804H171.1ZM164.071 31.7804L167.434 26.1957L164.373 21.2026H167.403L170.42 26.1957L167.218 31.7804H164.071Z"
                   fill="white"
                 />
-                <path
-                  d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z"
-                  fill="white"
-                />
+                <path d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z" fill="white" />
+                <path d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z" fill="white" />
                 <path
                   d="M210.306 32.0984C209.562 32.0984 208.908 31.9603 208.337 31.6855C207.767 31.4094 207.323 31.0211 207.002 30.517C206.68 30.0129 206.52 29.4151 206.52 28.7236C206.52 28.1308 206.672 27.6032 206.975 27.1373C207.278 26.6714 207.744 26.2856 208.37 25.9787C208.997 25.6718 209.798 25.466 210.771 25.36C211.745 25.254 212.906 25.2688 214.254 25.4019L214.297 27.1903C213.417 27.0634 212.648 27.0067 211.993 27.0202C211.337 27.035 210.795 27.1065 210.365 27.2384C209.936 27.3678 209.615 27.5502 209.402 27.7819C209.19 28.0149 209.083 28.2861 209.083 28.5967C209.083 29.0626 209.257 29.42 209.602 29.6702C209.949 29.9204 210.422 30.0462 211.019 30.0462C211.532 30.0462 211.989 29.9549 212.393 29.7701C212.797 29.5876 213.119 29.3288 213.361 28.9923C213.603 28.6583 213.724 28.2626 213.724 27.8041V25.127C213.724 24.6895 213.629 24.3074 213.436 23.9795C213.246 23.6516 212.955 23.3953 212.56 23.2129C212.168 23.0304 211.669 22.9368 211.064 22.9368C210.5 22.9368 209.941 23.0206 209.387 23.187C208.831 23.3521 208.316 23.6073 207.839 23.9536L207.083 22.0173C207.767 21.5736 208.491 21.2556 209.252 21.0657C210.013 20.8759 210.747 20.7798 211.452 20.7798C212.462 20.7798 213.335 20.9351 214.074 21.2445C214.814 21.5551 215.383 22.0296 215.784 22.6681C216.184 23.3065 216.384 24.1151 216.384 25.095V31.7804H213.94V30.5749C213.58 31.068 213.082 31.4463 212.447 31.7064C211.812 31.9677 211.098 32.0984 210.306 32.0984Z"
                   fill="white"
@@ -1127,10 +1191,7 @@
                   d="M16.6192 21.2085H0V25.9748H20.8248C21.6591 25.9748 22.4467 26.8487 22.4467 27.7719L22.4379 34.5226H3.43173V39.2889L22.4467 39.2988V46.0408C22.4467 46.964 21.6591 47.8367 20.826 47.8367H0V52.603H16.6192C22.8626 52.603 27.7525 47.9131 27.7525 41.9266V31.8861C27.7525 25.8984 22.8626 21.2085 16.6192 21.2085Z"
                   fill="white"
                 />
-                <path
-                  d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z"
-                  fill="white"
-                />
+                <path d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z" fill="white" />
               </g>
               <defs>
                 <clipPath id="clip0_297_41192">
@@ -1144,22 +1205,13 @@
                   d="M80.6775 21.838H80.8544L83.3819 15.9255H86.3643L81.6632 25.713C81.3766 26.3772 80.9451 26.9705 80.3995 27.4505C79.905 27.8295 79.2935 28.0282 78.6682 28.013C77.9193 28.0312 77.1747 27.895 76.4819 27.613L77.0885 25.363C77.2596 25.4341 77.4374 25.4886 77.6193 25.5255C77.7957 25.5434 77.9736 25.5434 78.1501 25.5255C78.3874 25.5576 78.6288 25.5114 78.8368 25.3937C79.0447 25.2762 79.2075 25.094 79.3001 24.8755L79.4391 24.5255L74.5358 15.8755H77.7962L80.6775 21.838Z"
                   fill="white"
                 />
-                <path
-                  d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z"
-                  fill="white"
-                />
-                <path
-                  d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z"
-                  fill="white"
-                />
+                <path d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z" fill="white" />
+                <path d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z" fill="white" />
                 <path
                   d="M127.776 16.7877C128.133 17.0722 128.415 17.4355 128.602 17.8482C128.787 18.2608 128.873 18.7112 128.851 19.1627C128.857 19.6218 128.753 20.0759 128.547 20.4877C128.358 20.8552 128.057 21.1562 127.688 21.3502V21.5127C128.257 21.6868 128.751 22.043 129.091 22.5252C129.448 23.0252 129.635 23.6254 129.621 24.2377C129.621 24.7073 129.536 25.1729 129.369 25.6127C129.193 26.0419 128.916 26.4233 128.56 26.7253C128.156 27.0719 127.682 27.3315 127.17 27.4877C126.529 27.6858 125.858 27.7787 125.186 27.7627H119.398V15.9252H124.693C125.791 15.856 126.879 16.1604 127.776 16.7877ZM124.795 20.5377C125.177 20.5649 125.556 20.4489 125.856 20.2127C125.987 20.1028 126.091 19.9644 126.159 19.8083C126.227 19.652 126.257 19.4824 126.248 19.3127C126.248 18.5252 125.73 18.1377 124.706 18.1377H122.052V20.5377H124.795ZM125.224 25.4502C126.412 25.4502 126.993 24.9877 126.993 24.0627C127.002 23.8677 126.964 23.6733 126.883 23.4953C126.802 23.3173 126.679 23.1605 126.525 23.0377C126.15 22.7994 125.708 22.6817 125.262 22.7003H122.103V25.4502H125.224Z"
                   fill="white"
                 />
-                <path
-                  d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z"
-                  fill="white"
-                />
+                <path d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z" fill="white" />
                 <path
                   d="M153.456 16.2C154.009 16.3928 154.52 16.69 154.959 17.075C155.385 17.4395 155.718 17.8975 155.932 18.4123C156.17 18.9698 156.291 19.5697 156.286 20.1748C156.294 20.8045 156.16 21.4278 155.895 22C155.652 22.5293 155.289 22.9957 154.833 23.3625C154.372 23.7518 153.833 24.0415 153.253 24.2125C152.62 24.4117 151.959 24.5088 151.295 24.5H148.856V27.7375H146.126V15.9H151.459C152.136 15.8875 152.812 15.9888 153.456 16.2ZM151.295 22.15C151.9 22.1801 152.496 21.9937 152.975 21.6248C153.348 21.2447 153.557 20.7358 153.557 20.2061C153.557 19.6765 153.348 19.1676 152.975 18.7875C152.752 18.5976 152.493 18.4535 152.213 18.3633C151.934 18.2732 151.638 18.2388 151.345 18.2623H148.818V22.15H151.295Z"
                   fill="white"
@@ -1168,22 +1220,10 @@
                   d="M167.597 18.3876C167.012 18.1912 166.396 18.094 165.777 18.1001C165.237 18.0901 164.701 18.1835 164.197 18.3751C163.744 18.5417 163.334 18.8066 162.997 19.1501C162.659 19.4882 162.396 19.8929 162.226 20.3376C162.041 20.8167 161.948 21.3251 161.948 21.8376C161.941 22.3681 162.041 22.8946 162.238 23.3876C162.403 23.8317 162.667 24.2335 163.009 24.5626C163.348 24.8917 163.752 25.1471 164.197 25.3126C164.693 25.5032 165.221 25.5966 165.752 25.5876C166.4 25.5916 167.042 25.4771 167.647 25.2501C168.235 25.0221 168.772 24.6824 169.227 24.2501L170.756 26.1001C169.361 27.3867 167.507 28.0744 165.6 28.0126C164.737 28.0244 163.88 27.876 163.072 27.5751C162.327 27.3 161.647 26.8744 161.076 26.3251C160.527 25.7704 160.096 25.1112 159.812 24.3876C159.494 23.5921 159.336 22.7431 159.344 21.8876C159.339 21.0661 159.494 20.2514 159.799 19.4876C160.082 18.7517 160.512 18.08 161.063 17.5126C161.656 16.9297 162.361 16.4706 163.136 16.1626C164.854 15.5721 166.725 15.5721 168.443 16.1626C169.209 16.4429 169.913 16.8674 170.516 17.4126L169.037 19.3376C168.63 18.9239 168.14 18.6001 167.597 18.3876Z"
                   fill="white"
                 />
-                <path
-                  d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z"
-                  fill="white"
-                />
-                <path
-                  d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z"
-                  fill="white"
-                />
-                <path
-                  d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z"
-                  fill="white"
-                />
+                <path d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z" fill="white" />
+                <path d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z" fill="white" />
+                <path d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z" fill="white" />
+                <path d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z" fill="white" />
                 <path
                   d="M86.5784 47.7123H83.9498V38.2248H80.2976C80.2976 39.2373 80.2976 40.1748 80.2976 41.0498C80.286 41.8397 80.2311 42.6283 80.1334 43.4123C80.0565 44.0604 79.9211 44.7006 79.7289 45.3248C79.5642 45.8447 79.3076 46.3314 78.9707 46.7623C78.6642 47.1383 78.2694 47.4344 77.8207 47.6248C77.3144 47.8239 76.7732 47.9216 76.2285 47.9123C75.8893 47.9176 75.5505 47.8882 75.2174 47.8248C74.9199 47.7649 74.6313 47.6684 74.358 47.5373L74.952 45.2623C75.1 45.3196 75.252 45.3656 75.4069 45.3998H75.8366C76.0502 45.4072 76.2624 45.3643 76.4558 45.2748C76.6475 45.1593 76.8045 44.9953 76.9108 44.7998C77.0974 44.5042 77.23 44.1784 77.3025 43.8373C77.4112 43.3892 77.4873 42.9338 77.5301 42.4748C77.5301 41.9373 77.6185 41.3123 77.6185 40.5748C77.6185 39.8373 77.6185 38.9998 77.6185 38.0748V35.8623H86.6289L86.5784 47.7123Z"
                   fill="white"
@@ -1204,10 +1244,7 @@
                   d="M131.517 39.7625C131.465 40.4085 131.659 41.0505 132.06 41.5625C132.285 41.781 132.556 41.948 132.853 42.0517C133.15 42.1554 133.466 42.1932 133.779 42.1625C134.276 42.1697 134.77 42.1023 135.245 41.9625C135.696 41.8426 136.123 41.6483 136.509 41.3875V35.85H139.201V47.7125H136.509V43.7C135.57 44.2624 134.484 44.5405 133.387 44.5C132.763 44.5087 132.14 44.4201 131.542 44.2375C131.014 44.0704 130.531 43.7885 130.127 43.4125C129.721 43.0191 129.41 42.5406 129.217 42.0125C128.992 41.3698 128.885 40.6925 128.901 40.0125V35.8125H131.568L131.517 39.7625Z"
                   fill="white"
                 />
-                <path
-                  d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z"
-                  fill="white"
-                />
+                <path d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z" fill="white" />
                 <path
                   d="M163.856 36.7255C164.212 37.0073 164.495 37.3681 164.685 37.7785C164.873 38.1888 164.962 38.6375 164.943 39.088C164.948 39.5483 164.839 40.0031 164.627 40.413C164.442 40.7832 164.147 41.0886 163.78 41.288V41.438C164.346 41.6243 164.837 41.9831 165.183 42.463C165.541 42.9628 165.726 43.5631 165.714 44.1755C165.716 44.6423 165.626 45.1052 165.448 45.538C165.27 45.9691 164.993 46.354 164.64 46.663C164.236 47.005 163.768 47.2641 163.262 47.4255C162.616 47.6265 161.943 47.7235 161.265 47.713H155.477V35.8505H160.772C161.872 35.7828 162.961 36.0918 163.856 36.7255ZM160.874 40.4755C161.262 40.4986 161.644 40.3783 161.948 40.138C162.075 40.0287 162.176 39.8918 162.242 39.738C162.308 39.5841 162.337 39.4172 162.327 39.2505C162.327 38.463 161.821 38.0755 160.785 38.0755H158.144V40.4755H160.874ZM161.316 45.388C162.491 45.388 163.072 44.9255 163.072 43.988C163.081 43.796 163.043 43.6047 162.965 43.4291C162.885 43.2535 162.767 43.0982 162.618 42.9755C162.242 42.7357 161.801 42.6137 161.354 42.6255H158.194V45.388H161.316Z"
                   fill="white"
@@ -1250,10 +1287,7 @@
                   d="M120.981 34.9535V29.6646L122.583 29.8027L123.015 29.5808H134.805V34.9535H132.262V31.7809H123.513V34.9535H120.981ZM129.85 31.7809V23.4032H125.924V24.5766C125.924 25.4789 125.862 26.3158 125.735 27.0837C125.609 27.8528 125.387 28.5368 125.07 29.1359C124.752 29.7361 124.315 30.2378 123.75 30.6433C123.189 31.0488 122.471 31.3397 121.599 31.5159L120.981 29.6646C121.645 29.5106 122.148 29.2086 122.49 28.7612C122.834 28.3125 123.063 27.7369 123.183 27.0307C123.303 26.3256 123.362 25.5085 123.362 24.5766V21.2031H132.63V31.7809H129.85Z"
                   fill="white"
                 />
-                <path
-                  d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z"
-                  fill="white"
-                />
+                <path d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z" fill="white" />
                 <path
                   d="M149.437 34.9535V29.6646L151.039 29.8027L151.471 29.5808H163.26V34.9535H160.718V31.7809H151.969V34.9535H149.437ZM158.306 31.7809V23.4032H154.38V24.5766C154.38 25.4789 154.317 26.3158 154.191 27.0837C154.065 27.8528 153.842 28.5368 153.525 29.1359C153.208 29.7361 152.769 30.2378 152.206 30.6433C151.644 31.0488 150.927 31.3397 150.053 31.5159L149.437 29.6646C150.1 29.5106 150.603 29.2086 150.946 28.7612C151.29 28.3125 151.519 27.7369 151.639 27.0307C151.757 26.3256 151.816 25.5085 151.816 24.5766V21.2031H161.086V31.7809H158.306Z"
                   fill="white"
@@ -1262,14 +1296,8 @@
                   d="M177.677 31.7804L174.541 26.1957L177.654 21.2026H180.575L177.514 26.0577L180.955 31.7804H177.677ZM171.1 31.7804V27.3901H168.105V25.19H171.1V21.2026H173.869V25.19H176.832V27.3901H173.869V31.7804H171.1ZM164.071 31.7804L167.434 26.1957L164.373 21.2026H167.403L170.42 26.1957L167.218 31.7804H164.071Z"
                   fill="white"
                 />
-                <path
-                  d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z"
-                  fill="white"
-                />
+                <path d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z" fill="white" />
+                <path d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z" fill="white" />
                 <path
                   d="M210.306 32.0984C209.562 32.0984 208.908 31.9603 208.337 31.6855C207.767 31.4094 207.323 31.0211 207.002 30.517C206.68 30.0129 206.52 29.4151 206.52 28.7236C206.52 28.1308 206.672 27.6032 206.975 27.1373C207.278 26.6714 207.744 26.2856 208.37 25.9787C208.997 25.6718 209.798 25.466 210.771 25.36C211.745 25.254 212.906 25.2688 214.254 25.4019L214.297 27.1903C213.417 27.0634 212.648 27.0067 211.993 27.0202C211.337 27.035 210.795 27.1065 210.365 27.2384C209.936 27.3678 209.615 27.5502 209.402 27.7819C209.19 28.0149 209.083 28.2861 209.083 28.5967C209.083 29.0626 209.257 29.42 209.602 29.6702C209.949 29.9204 210.422 30.0462 211.019 30.0462C211.532 30.0462 211.989 29.9549 212.393 29.7701C212.797 29.5876 213.119 29.3288 213.361 28.9923C213.603 28.6583 213.724 28.2626 213.724 27.8041V25.127C213.724 24.6895 213.629 24.3074 213.436 23.9795C213.246 23.6516 212.955 23.3953 212.56 23.2129C212.168 23.0304 211.669 22.9368 211.064 22.9368C210.5 22.9368 209.941 23.0206 209.387 23.187C208.831 23.3521 208.316 23.6073 207.839 23.9536L207.083 22.0173C207.767 21.5736 208.491 21.2556 209.252 21.0657C210.013 20.8759 210.747 20.7798 211.452 20.7798C212.462 20.7798 213.335 20.9351 214.074 21.2445C214.814 21.5551 215.383 22.0296 215.784 22.6681C216.184 23.3065 216.384 24.1151 216.384 25.095V31.7804H213.94V30.5749C213.58 31.068 213.082 31.4463 212.447 31.7064C211.812 31.9677 211.098 32.0984 210.306 32.0984Z"
                   fill="white"
@@ -1286,10 +1314,7 @@
                   d="M16.6192 21.2085H0V25.9748H20.8248C21.6591 25.9748 22.4467 26.8487 22.4467 27.7719L22.4379 34.5226H3.43173V39.2889L22.4467 39.2988V46.0408C22.4467 46.964 21.6591 47.8367 20.826 47.8367H0V52.603H16.6192C22.8626 52.603 27.7525 47.9131 27.7525 41.9266V31.8861C27.7525 25.8984 22.8626 21.2085 16.6192 21.2085Z"
                   fill="white"
                 />
-                <path
-                  d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z"
-                  fill="white"
-                />
+                <path d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z" fill="white" />
               </g>
               <defs>
                 <clipPath id="clip0_297_41192">
@@ -1303,22 +1328,13 @@
                   d="M80.6775 21.838H80.8544L83.3819 15.9255H86.3643L81.6632 25.713C81.3766 26.3772 80.9451 26.9705 80.3995 27.4505C79.905 27.8295 79.2935 28.0282 78.6682 28.013C77.9193 28.0312 77.1747 27.895 76.4819 27.613L77.0885 25.363C77.2596 25.4341 77.4374 25.4886 77.6193 25.5255C77.7957 25.5434 77.9736 25.5434 78.1501 25.5255C78.3874 25.5576 78.6288 25.5114 78.8368 25.3937C79.0447 25.2762 79.2075 25.094 79.3001 24.8755L79.4391 24.5255L74.5358 15.8755H77.7962L80.6775 21.838Z"
                   fill="white"
                 />
-                <path
-                  d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z"
-                  fill="white"
-                />
-                <path
-                  d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z"
-                  fill="white"
-                />
+                <path d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z" fill="white" />
+                <path d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z" fill="white" />
                 <path
                   d="M127.776 16.7877C128.133 17.0722 128.415 17.4355 128.602 17.8482C128.787 18.2608 128.873 18.7112 128.851 19.1627C128.857 19.6218 128.753 20.0759 128.547 20.4877C128.358 20.8552 128.057 21.1562 127.688 21.3502V21.5127C128.257 21.6868 128.751 22.043 129.091 22.5252C129.448 23.0252 129.635 23.6254 129.621 24.2377C129.621 24.7073 129.536 25.1729 129.369 25.6127C129.193 26.0419 128.916 26.4233 128.56 26.7253C128.156 27.0719 127.682 27.3315 127.17 27.4877C126.529 27.6858 125.858 27.7787 125.186 27.7627H119.398V15.9252H124.693C125.791 15.856 126.879 16.1604 127.776 16.7877ZM124.795 20.5377C125.177 20.5649 125.556 20.4489 125.856 20.2127C125.987 20.1028 126.091 19.9644 126.159 19.8083C126.227 19.652 126.257 19.4824 126.248 19.3127C126.248 18.5252 125.73 18.1377 124.706 18.1377H122.052V20.5377H124.795ZM125.224 25.4502C126.412 25.4502 126.993 24.9877 126.993 24.0627C127.002 23.8677 126.964 23.6733 126.883 23.4953C126.802 23.3173 126.679 23.1605 126.525 23.0377C126.15 22.7994 125.708 22.6817 125.262 22.7003H122.103V25.4502H125.224Z"
                   fill="white"
                 />
-                <path
-                  d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z"
-                  fill="white"
-                />
+                <path d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z" fill="white" />
                 <path
                   d="M153.456 16.2C154.009 16.3928 154.52 16.69 154.959 17.075C155.385 17.4395 155.718 17.8975 155.932 18.4123C156.17 18.9698 156.291 19.5697 156.286 20.1748C156.294 20.8045 156.16 21.4278 155.895 22C155.652 22.5293 155.289 22.9957 154.833 23.3625C154.372 23.7518 153.833 24.0415 153.253 24.2125C152.62 24.4117 151.959 24.5088 151.295 24.5H148.856V27.7375H146.126V15.9H151.459C152.136 15.8875 152.812 15.9888 153.456 16.2ZM151.295 22.15C151.9 22.1801 152.496 21.9937 152.975 21.6248C153.348 21.2447 153.557 20.7358 153.557 20.2061C153.557 19.6765 153.348 19.1676 152.975 18.7875C152.752 18.5976 152.493 18.4535 152.213 18.3633C151.934 18.2732 151.638 18.2388 151.345 18.2623H148.818V22.15H151.295Z"
                   fill="white"
@@ -1327,22 +1343,10 @@
                   d="M167.597 18.3876C167.012 18.1912 166.396 18.094 165.777 18.1001C165.237 18.0901 164.701 18.1835 164.197 18.3751C163.744 18.5417 163.334 18.8066 162.997 19.1501C162.659 19.4882 162.396 19.8929 162.226 20.3376C162.041 20.8167 161.948 21.3251 161.948 21.8376C161.941 22.3681 162.041 22.8946 162.238 23.3876C162.403 23.8317 162.667 24.2335 163.009 24.5626C163.348 24.8917 163.752 25.1471 164.197 25.3126C164.693 25.5032 165.221 25.5966 165.752 25.5876C166.4 25.5916 167.042 25.4771 167.647 25.2501C168.235 25.0221 168.772 24.6824 169.227 24.2501L170.756 26.1001C169.361 27.3867 167.507 28.0744 165.6 28.0126C164.737 28.0244 163.88 27.876 163.072 27.5751C162.327 27.3 161.647 26.8744 161.076 26.3251C160.527 25.7704 160.096 25.1112 159.812 24.3876C159.494 23.5921 159.336 22.7431 159.344 21.8876C159.339 21.0661 159.494 20.2514 159.799 19.4876C160.082 18.7517 160.512 18.08 161.063 17.5126C161.656 16.9297 162.361 16.4706 163.136 16.1626C164.854 15.5721 166.725 15.5721 168.443 16.1626C169.209 16.4429 169.913 16.8674 170.516 17.4126L169.037 19.3376C168.63 18.9239 168.14 18.6001 167.597 18.3876Z"
                   fill="white"
                 />
-                <path
-                  d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z"
-                  fill="white"
-                />
-                <path
-                  d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z"
-                  fill="white"
-                />
-                <path
-                  d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z"
-                  fill="white"
-                />
+                <path d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z" fill="white" />
+                <path d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z" fill="white" />
+                <path d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z" fill="white" />
+                <path d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z" fill="white" />
                 <path
                   d="M86.5784 47.7123H83.9498V38.2248H80.2976C80.2976 39.2373 80.2976 40.1748 80.2976 41.0498C80.286 41.8397 80.2311 42.6283 80.1334 43.4123C80.0565 44.0604 79.9211 44.7006 79.7289 45.3248C79.5642 45.8447 79.3076 46.3314 78.9707 46.7623C78.6642 47.1383 78.2694 47.4344 77.8207 47.6248C77.3144 47.8239 76.7732 47.9216 76.2285 47.9123C75.8893 47.9176 75.5505 47.8882 75.2174 47.8248C74.9199 47.7649 74.6313 47.6684 74.358 47.5373L74.952 45.2623C75.1 45.3196 75.252 45.3656 75.4069 45.3998H75.8366C76.0502 45.4072 76.2624 45.3643 76.4558 45.2748C76.6475 45.1593 76.8045 44.9953 76.9108 44.7998C77.0974 44.5042 77.23 44.1784 77.3025 43.8373C77.4112 43.3892 77.4873 42.9338 77.5301 42.4748C77.5301 41.9373 77.6185 41.3123 77.6185 40.5748C77.6185 39.8373 77.6185 38.9998 77.6185 38.0748V35.8623H86.6289L86.5784 47.7123Z"
                   fill="white"
@@ -1363,10 +1367,7 @@
                   d="M131.517 39.7625C131.465 40.4085 131.659 41.0505 132.06 41.5625C132.285 41.781 132.556 41.948 132.853 42.0517C133.15 42.1554 133.466 42.1932 133.779 42.1625C134.276 42.1697 134.77 42.1023 135.245 41.9625C135.696 41.8426 136.123 41.6483 136.509 41.3875V35.85H139.201V47.7125H136.509V43.7C135.57 44.2624 134.484 44.5405 133.387 44.5C132.763 44.5087 132.14 44.4201 131.542 44.2375C131.014 44.0704 130.531 43.7885 130.127 43.4125C129.721 43.0191 129.41 42.5406 129.217 42.0125C128.992 41.3698 128.885 40.6925 128.901 40.0125V35.8125H131.568L131.517 39.7625Z"
                   fill="white"
                 />
-                <path
-                  d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z"
-                  fill="white"
-                />
+                <path d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z" fill="white" />
                 <path
                   d="M163.856 36.7255C164.212 37.0073 164.495 37.3681 164.685 37.7785C164.873 38.1888 164.962 38.6375 164.943 39.088C164.948 39.5483 164.839 40.0031 164.627 40.413C164.442 40.7832 164.147 41.0886 163.78 41.288V41.438C164.346 41.6243 164.837 41.9831 165.183 42.463C165.541 42.9628 165.726 43.5631 165.714 44.1755C165.716 44.6423 165.626 45.1052 165.448 45.538C165.27 45.9691 164.993 46.354 164.64 46.663C164.236 47.005 163.768 47.2641 163.262 47.4255C162.616 47.6265 161.943 47.7235 161.265 47.713H155.477V35.8505H160.772C161.872 35.7828 162.961 36.0918 163.856 36.7255ZM160.874 40.4755C161.262 40.4986 161.644 40.3783 161.948 40.138C162.075 40.0287 162.176 39.8918 162.242 39.738C162.308 39.5841 162.337 39.4172 162.327 39.2505C162.327 38.463 161.821 38.0755 160.785 38.0755H158.144V40.4755H160.874ZM161.316 45.388C162.491 45.388 163.072 44.9255 163.072 43.988C163.081 43.796 163.043 43.6047 162.965 43.4291C162.885 43.2535 162.767 43.0982 162.618 42.9755C162.242 42.7357 161.801 42.6137 161.354 42.6255H158.194V45.388H161.316Z"
                   fill="white"
@@ -1409,10 +1410,7 @@
                   d="M120.981 34.9535V29.6646L122.583 29.8027L123.015 29.5808H134.805V34.9535H132.262V31.7809H123.513V34.9535H120.981ZM129.85 31.7809V23.4032H125.924V24.5766C125.924 25.4789 125.862 26.3158 125.735 27.0837C125.609 27.8528 125.387 28.5368 125.07 29.1359C124.752 29.7361 124.315 30.2378 123.75 30.6433C123.189 31.0488 122.471 31.3397 121.599 31.5159L120.981 29.6646C121.645 29.5106 122.148 29.2086 122.49 28.7612C122.834 28.3125 123.063 27.7369 123.183 27.0307C123.303 26.3256 123.362 25.5085 123.362 24.5766V21.2031H132.63V31.7809H129.85Z"
                   fill="white"
                 />
-                <path
-                  d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z"
-                  fill="white"
-                />
+                <path d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z" fill="white" />
                 <path
                   d="M149.437 34.9535V29.6646L151.039 29.8027L151.471 29.5808H163.26V34.9535H160.718V31.7809H151.969V34.9535H149.437ZM158.306 31.7809V23.4032H154.38V24.5766C154.38 25.4789 154.317 26.3158 154.191 27.0837C154.065 27.8528 153.842 28.5368 153.525 29.1359C153.208 29.7361 152.769 30.2378 152.206 30.6433C151.644 31.0488 150.927 31.3397 150.053 31.5159L149.437 29.6646C150.1 29.5106 150.603 29.2086 150.946 28.7612C151.29 28.3125 151.519 27.7369 151.639 27.0307C151.757 26.3256 151.816 25.5085 151.816 24.5766V21.2031H161.086V31.7809H158.306Z"
                   fill="white"
@@ -1421,14 +1419,8 @@
                   d="M177.677 31.7804L174.541 26.1957L177.654 21.2026H180.575L177.514 26.0577L180.955 31.7804H177.677ZM171.1 31.7804V27.3901H168.105V25.19H171.1V21.2026H173.869V25.19H176.832V27.3901H173.869V31.7804H171.1ZM164.071 31.7804L167.434 26.1957L164.373 21.2026H167.403L170.42 26.1957L167.218 31.7804H164.071Z"
                   fill="white"
                 />
-                <path
-                  d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z"
-                  fill="white"
-                />
+                <path d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z" fill="white" />
+                <path d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z" fill="white" />
                 <path
                   d="M210.306 32.0984C209.562 32.0984 208.908 31.9603 208.337 31.6855C207.767 31.4094 207.323 31.0211 207.002 30.517C206.68 30.0129 206.52 29.4151 206.52 28.7236C206.52 28.1308 206.672 27.6032 206.975 27.1373C207.278 26.6714 207.744 26.2856 208.37 25.9787C208.997 25.6718 209.798 25.466 210.771 25.36C211.745 25.254 212.906 25.2688 214.254 25.4019L214.297 27.1903C213.417 27.0634 212.648 27.0067 211.993 27.0202C211.337 27.035 210.795 27.1065 210.365 27.2384C209.936 27.3678 209.615 27.5502 209.402 27.7819C209.19 28.0149 209.083 28.2861 209.083 28.5967C209.083 29.0626 209.257 29.42 209.602 29.6702C209.949 29.9204 210.422 30.0462 211.019 30.0462C211.532 30.0462 211.989 29.9549 212.393 29.7701C212.797 29.5876 213.119 29.3288 213.361 28.9923C213.603 28.6583 213.724 28.2626 213.724 27.8041V25.127C213.724 24.6895 213.629 24.3074 213.436 23.9795C213.246 23.6516 212.955 23.3953 212.56 23.2129C212.168 23.0304 211.669 22.9368 211.064 22.9368C210.5 22.9368 209.941 23.0206 209.387 23.187C208.831 23.3521 208.316 23.6073 207.839 23.9536L207.083 22.0173C207.767 21.5736 208.491 21.2556 209.252 21.0657C210.013 20.8759 210.747 20.7798 211.452 20.7798C212.462 20.7798 213.335 20.9351 214.074 21.2445C214.814 21.5551 215.383 22.0296 215.784 22.6681C216.184 23.3065 216.384 24.1151 216.384 25.095V31.7804H213.94V30.5749C213.58 31.068 213.082 31.4463 212.447 31.7064C211.812 31.9677 211.098 32.0984 210.306 32.0984Z"
                   fill="white"
@@ -1445,10 +1437,7 @@
                   d="M16.6192 21.2085H0V25.9748H20.8248C21.6591 25.9748 22.4467 26.8487 22.4467 27.7719L22.4379 34.5226H3.43173V39.2889L22.4467 39.2988V46.0408C22.4467 46.964 21.6591 47.8367 20.826 47.8367H0V52.603H16.6192C22.8626 52.603 27.7525 47.9131 27.7525 41.9266V31.8861C27.7525 25.8984 22.8626 21.2085 16.6192 21.2085Z"
                   fill="white"
                 />
-                <path
-                  d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z"
-                  fill="white"
-                />
+                <path d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z" fill="white" />
               </g>
               <defs>
                 <clipPath id="clip0_297_41192">
@@ -1462,22 +1451,13 @@
                   d="M80.6775 21.838H80.8544L83.3819 15.9255H86.3643L81.6632 25.713C81.3766 26.3772 80.9451 26.9705 80.3995 27.4505C79.905 27.8295 79.2935 28.0282 78.6682 28.013C77.9193 28.0312 77.1747 27.895 76.4819 27.613L77.0885 25.363C77.2596 25.4341 77.4374 25.4886 77.6193 25.5255C77.7957 25.5434 77.9736 25.5434 78.1501 25.5255C78.3874 25.5576 78.6288 25.5114 78.8368 25.3937C79.0447 25.2762 79.2075 25.094 79.3001 24.8755L79.4391 24.5255L74.5358 15.8755H77.7962L80.6775 21.838Z"
                   fill="white"
                 />
-                <path
-                  d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z"
-                  fill="white"
-                />
-                <path
-                  d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z"
-                  fill="white"
-                />
+                <path d="M92.3785 20.5503H97.6103V15.9253H100.378V27.7628H97.6735V23.0128H92.4416V27.7628H89.7499V15.9253H92.4416L92.3785 20.5503Z" fill="white" />
+                <path d="M107.102 23.8128L112.89 15.9253H115.253V27.7628H112.599V20.3253L107.089 27.7628H104.461V15.9253H107.102V23.8128Z" fill="white" />
                 <path
                   d="M127.776 16.7877C128.133 17.0722 128.415 17.4355 128.602 17.8482C128.787 18.2608 128.873 18.7112 128.851 19.1627C128.857 19.6218 128.753 20.0759 128.547 20.4877C128.358 20.8552 128.057 21.1562 127.688 21.3502V21.5127C128.257 21.6868 128.751 22.043 129.091 22.5252C129.448 23.0252 129.635 23.6254 129.621 24.2377C129.621 24.7073 129.536 25.1729 129.369 25.6127C129.193 26.0419 128.916 26.4233 128.56 26.7253C128.156 27.0719 127.682 27.3315 127.17 27.4877C126.529 27.6858 125.858 27.7787 125.186 27.7627H119.398V15.9252H124.693C125.791 15.856 126.879 16.1604 127.776 16.7877ZM124.795 20.5377C125.177 20.5649 125.556 20.4489 125.856 20.2127C125.987 20.1028 126.091 19.9644 126.159 19.8083C126.227 19.652 126.257 19.4824 126.248 19.3127C126.248 18.5252 125.73 18.1377 124.706 18.1377H122.052V20.5377H124.795ZM125.224 25.4502C126.412 25.4502 126.993 24.9877 126.993 24.0627C127.002 23.8677 126.964 23.6733 126.883 23.4953C126.802 23.3173 126.679 23.1605 126.525 23.0377C126.15 22.7994 125.708 22.6817 125.262 22.7003H122.103V25.4502H125.224Z"
                   fill="white"
                 />
-                <path
-                  d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z"
-                  fill="white"
-                />
+                <path d="M142.082 18.3127H135.763V20.5377H141.387V22.8502H135.763V25.3502H142.373V27.7252H133.122V15.8877H142.082V18.3127Z" fill="white" />
                 <path
                   d="M153.456 16.2C154.009 16.3928 154.52 16.69 154.959 17.075C155.385 17.4395 155.718 17.8975 155.932 18.4123C156.17 18.9698 156.291 19.5697 156.286 20.1748C156.294 20.8045 156.16 21.4278 155.895 22C155.652 22.5293 155.289 22.9957 154.833 23.3625C154.372 23.7518 153.833 24.0415 153.253 24.2125C152.62 24.4117 151.959 24.5088 151.295 24.5H148.856V27.7375H146.126V15.9H151.459C152.136 15.8875 152.812 15.9888 153.456 16.2ZM151.295 22.15C151.9 22.1801 152.496 21.9937 152.975 21.6248C153.348 21.2447 153.557 20.7358 153.557 20.2061C153.557 19.6765 153.348 19.1676 152.975 18.7875C152.752 18.5976 152.493 18.4535 152.213 18.3633C151.934 18.2732 151.638 18.2388 151.345 18.2623H148.818V22.15H151.295Z"
                   fill="white"
@@ -1486,22 +1466,10 @@
                   d="M167.597 18.3876C167.012 18.1912 166.396 18.094 165.777 18.1001C165.237 18.0901 164.701 18.1835 164.197 18.3751C163.744 18.5417 163.334 18.8066 162.997 19.1501C162.659 19.4882 162.396 19.8929 162.226 20.3376C162.041 20.8167 161.948 21.3251 161.948 21.8376C161.941 22.3681 162.041 22.8946 162.238 23.3876C162.403 23.8317 162.667 24.2335 163.009 24.5626C163.348 24.8917 163.752 25.1471 164.197 25.3126C164.693 25.5032 165.221 25.5966 165.752 25.5876C166.4 25.5916 167.042 25.4771 167.647 25.2501C168.235 25.0221 168.772 24.6824 169.227 24.2501L170.756 26.1001C169.361 27.3867 167.507 28.0744 165.6 28.0126C164.737 28.0244 163.88 27.876 163.072 27.5751C162.327 27.3 161.647 26.8744 161.076 26.3251C160.527 25.7704 160.096 25.1112 159.812 24.3876C159.494 23.5921 159.336 22.7431 159.344 21.8876C159.339 21.0661 159.494 20.2514 159.799 19.4876C160.082 18.7517 160.512 18.08 161.063 17.5126C161.656 16.9297 162.361 16.4706 163.136 16.1626C164.854 15.5721 166.725 15.5721 168.443 16.1626C169.209 16.4429 169.913 16.8674 170.516 17.4126L169.037 19.3376C168.63 18.9239 168.14 18.6001 167.597 18.3876Z"
                   fill="white"
                 />
-                <path
-                  d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z"
-                  fill="white"
-                />
-                <path
-                  d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z"
-                  fill="white"
-                />
-                <path
-                  d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z"
-                  fill="white"
-                />
+                <path d="M176.923 23.8128L182.724 15.9253H185.049V27.7628H182.382V20.3253L176.873 27.7628H174.244V15.9253H176.885L176.923 23.8128Z" fill="white" />
+                <path d="M199.456 18.3253H195.348V27.7628H192.695V18.3253H188.587V15.9253H199.456V18.3253Z" fill="white" />
+                <path d="M211.916 18.3127H205.597V20.5377H211.221V22.8502H205.597V25.3502H212.207V27.7252H202.943V15.8877H211.903L211.916 18.3127Z" fill="white" />
+                <path d="M226.158 18.3253H222.064V27.7628H219.397V18.3253H215.303V15.9253H226.158V18.3253Z" fill="white" />
                 <path
                   d="M86.5784 47.7123H83.9498V38.2248H80.2976C80.2976 39.2373 80.2976 40.1748 80.2976 41.0498C80.286 41.8397 80.2311 42.6283 80.1334 43.4123C80.0565 44.0604 79.9211 44.7006 79.7289 45.3248C79.5642 45.8447 79.3076 46.3314 78.9707 46.7623C78.6642 47.1383 78.2694 47.4344 77.8207 47.6248C77.3144 47.8239 76.7732 47.9216 76.2285 47.9123C75.8893 47.9176 75.5505 47.8882 75.2174 47.8248C74.9199 47.7649 74.6313 47.6684 74.358 47.5373L74.952 45.2623C75.1 45.3196 75.252 45.3656 75.4069 45.3998H75.8366C76.0502 45.4072 76.2624 45.3643 76.4558 45.2748C76.6475 45.1593 76.8045 44.9953 76.9108 44.7998C77.0974 44.5042 77.23 44.1784 77.3025 43.8373C77.4112 43.3892 77.4873 42.9338 77.5301 42.4748C77.5301 41.9373 77.6185 41.3123 77.6185 40.5748C77.6185 39.8373 77.6185 38.9998 77.6185 38.0748V35.8623H86.6289L86.5784 47.7123Z"
                   fill="white"
@@ -1522,10 +1490,7 @@
                   d="M131.517 39.7625C131.465 40.4085 131.659 41.0505 132.06 41.5625C132.285 41.781 132.556 41.948 132.853 42.0517C133.15 42.1554 133.466 42.1932 133.779 42.1625C134.276 42.1697 134.77 42.1023 135.245 41.9625C135.696 41.8426 136.123 41.6483 136.509 41.3875V35.85H139.201V47.7125H136.509V43.7C135.57 44.2624 134.484 44.5405 133.387 44.5C132.763 44.5087 132.14 44.4201 131.542 44.2375C131.014 44.0704 130.531 43.7885 130.127 43.4125C129.721 43.0191 129.41 42.5406 129.217 42.0125C128.992 41.3698 128.885 40.6925 128.901 40.0125V35.8125H131.568L131.517 39.7625Z"
                   fill="white"
                 />
-                <path
-                  d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z"
-                  fill="white"
-                />
+                <path d="M151.939 38.2502H145.62V40.4752H151.244V42.7876H145.62V45.2876H152.192V47.6876H142.929V35.8252H151.888L151.939 38.2502Z" fill="white" />
                 <path
                   d="M163.856 36.7255C164.212 37.0073 164.495 37.3681 164.685 37.7785C164.873 38.1888 164.962 38.6375 164.943 39.088C164.948 39.5483 164.839 40.0031 164.627 40.413C164.442 40.7832 164.147 41.0886 163.78 41.288V41.438C164.346 41.6243 164.837 41.9831 165.183 42.463C165.541 42.9628 165.726 43.5631 165.714 44.1755C165.716 44.6423 165.626 45.1052 165.448 45.538C165.27 45.9691 164.993 46.354 164.64 46.663C164.236 47.005 163.768 47.2641 163.262 47.4255C162.616 47.6265 161.943 47.7235 161.265 47.713H155.477V35.8505H160.772C161.872 35.7828 162.961 36.0918 163.856 36.7255ZM160.874 40.4755C161.262 40.4986 161.644 40.3783 161.948 40.138C162.075 40.0287 162.176 39.8918 162.242 39.738C162.308 39.5841 162.337 39.4172 162.327 39.2505C162.327 38.463 161.821 38.0755 160.785 38.0755H158.144V40.4755H160.874ZM161.316 45.388C162.491 45.388 163.072 44.9255 163.072 43.988C163.081 43.796 163.043 43.6047 162.965 43.4291C162.885 43.2535 162.767 43.0982 162.618 42.9755C162.242 42.7357 161.801 42.6137 161.354 42.6255H158.194V45.388H161.316Z"
                   fill="white"
@@ -1568,10 +1533,7 @@
                   d="M120.981 34.9535V29.6646L122.583 29.8027L123.015 29.5808H134.805V34.9535H132.262V31.7809H123.513V34.9535H120.981ZM129.85 31.7809V23.4032H125.924V24.5766C125.924 25.4789 125.862 26.3158 125.735 27.0837C125.609 27.8528 125.387 28.5368 125.07 29.1359C124.752 29.7361 124.315 30.2378 123.75 30.6433C123.189 31.0488 122.471 31.3397 121.599 31.5159L120.981 29.6646C121.645 29.5106 122.148 29.2086 122.49 28.7612C122.834 28.3125 123.063 27.7369 123.183 27.0307C123.303 26.3256 123.362 25.5085 123.362 24.5766V21.2031H132.63V31.7809H129.85Z"
                   fill="white"
                 />
-                <path
-                  d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z"
-                  fill="white"
-                />
+                <path d="M136.794 31.7804V21.2026H139.466V27.888L144.916 21.2026H147.373V31.7804H144.7V25.0112L139.217 31.7804H136.794Z" fill="white" />
                 <path
                   d="M149.437 34.9535V29.6646L151.039 29.8027L151.471 29.5808H163.26V34.9535H160.718V31.7809H151.969V34.9535H149.437ZM158.306 31.7809V23.4032H154.38V24.5766C154.38 25.4789 154.317 26.3158 154.191 27.0837C154.065 27.8528 153.842 28.5368 153.525 29.1359C153.208 29.7361 152.769 30.2378 152.206 30.6433C151.644 31.0488 150.927 31.3397 150.053 31.5159L149.437 29.6646C150.1 29.5106 150.603 29.2086 150.946 28.7612C151.29 28.3125 151.519 27.7369 151.639 27.0307C151.757 26.3256 151.816 25.5085 151.816 24.5766V21.2031H161.086V31.7809H158.306Z"
                   fill="white"
@@ -1580,14 +1542,8 @@
                   d="M177.677 31.7804L174.541 26.1957L177.654 21.2026H180.575L177.514 26.0577L180.955 31.7804H177.677ZM171.1 31.7804V27.3901H168.105V25.19H171.1V21.2026H173.869V25.19H176.832V27.3901H173.869V31.7804H171.1ZM164.071 31.7804L167.434 26.1957L164.373 21.2026H167.403L170.42 26.1957L167.218 31.7804H164.071Z"
                   fill="white"
                 />
-                <path
-                  d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z"
-                  fill="white"
-                />
-                <path
-                  d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z"
-                  fill="white"
-                />
+                <path d="M182.922 31.7804V21.2026H185.592V27.888L191.044 21.2026H193.499V31.7804H190.828V25.0112L185.344 31.7804H182.922Z" fill="white" />
+                <path d="M199.004 31.7804V23.4028H195.597V21.2026H205.19V23.4028H201.784V31.7804H199.004Z" fill="white" />
                 <path
                   d="M210.306 32.0984C209.562 32.0984 208.908 31.9603 208.337 31.6855C207.767 31.4094 207.323 31.0211 207.002 30.517C206.68 30.0129 206.52 29.4151 206.52 28.7236C206.52 28.1308 206.672 27.6032 206.975 27.1373C207.278 26.6714 207.744 26.2856 208.37 25.9787C208.997 25.6718 209.798 25.466 210.771 25.36C211.745 25.254 212.906 25.2688 214.254 25.4019L214.297 27.1903C213.417 27.0634 212.648 27.0067 211.993 27.0202C211.337 27.035 210.795 27.1065 210.365 27.2384C209.936 27.3678 209.615 27.5502 209.402 27.7819C209.19 28.0149 209.083 28.2861 209.083 28.5967C209.083 29.0626 209.257 29.42 209.602 29.6702C209.949 29.9204 210.422 30.0462 211.019 30.0462C211.532 30.0462 211.989 29.9549 212.393 29.7701C212.797 29.5876 213.119 29.3288 213.361 28.9923C213.603 28.6583 213.724 28.2626 213.724 27.8041V25.127C213.724 24.6895 213.629 24.3074 213.436 23.9795C213.246 23.6516 212.955 23.3953 212.56 23.2129C212.168 23.0304 211.669 22.9368 211.064 22.9368C210.5 22.9368 209.941 23.0206 209.387 23.187C208.831 23.3521 208.316 23.6073 207.839 23.9536L207.083 22.0173C207.767 21.5736 208.491 21.2556 209.252 21.0657C210.013 20.8759 210.747 20.7798 211.452 20.7798C212.462 20.7798 213.335 20.9351 214.074 21.2445C214.814 21.5551 215.383 22.0296 215.784 22.6681C216.184 23.3065 216.384 24.1151 216.384 25.095V31.7804H213.94V30.5749C213.58 31.068 213.082 31.4463 212.447 31.7064C211.812 31.9677 211.098 32.0984 210.306 32.0984Z"
                   fill="white"
@@ -1604,10 +1560,7 @@
                   d="M16.6192 21.2085H0V25.9748H20.8248C21.6591 25.9748 22.4467 26.8487 22.4467 27.7719L22.4379 34.5226H3.43173V39.2889L22.4467 39.2988V46.0408C22.4467 46.964 21.6591 47.8367 20.826 47.8367H0V52.603H16.6192C22.8626 52.603 27.7525 47.9131 27.7525 41.9266V31.8861C27.7525 25.8984 22.8626 21.2085 16.6192 21.2085Z"
                   fill="white"
                 />
-                <path
-                  d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z"
-                  fill="white"
-                />
+                <path d="M56.6556 21.2085V34.5534H37.4767V21.2085H32.2352V52.603H37.4767V39.263H56.6556V52.603H61.897V21.2085H56.6556Z" fill="white" />
               </g>
               <defs>
                 <clipPath id="clip0_297_41192">
@@ -1637,22 +1590,9 @@
                   fill="white"
                 />
                 <defs>
-                  <filter
-                    id="filter0_d_297_41322"
-                    x="0"
-                    y="0"
-                    width="54.2963"
-                    height="58"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
+                  <filter id="filter0_d_297_41322" x="0" y="0" width="54.2963" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
-                    />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
                     <feComposite in2="hardAlpha" operator="out" />
@@ -1682,22 +1622,9 @@
                   fill="white"
                 />
                 <defs>
-                  <filter
-                    id="filter0_d_297_41323"
-                    x="0"
-                    y="0"
-                    width="54.2963"
-                    height="58"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
+                  <filter id="filter0_d_297_41323" x="0" y="0" width="54.2963" height="58" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                     <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
-                    />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
                     <feOffset dy="4" />
                     <feGaussianBlur stdDeviation="2" />
                     <feComposite in2="hardAlpha" operator="out" />
@@ -1729,9 +1656,7 @@
                   fill="white"
                 />
               </svg>
-              <p class="text-description--400">
-                Развитие профессиональных знаний, карьерный рост сотрудников и создание условий для деловой активности.
-              </p>
+              <p class="text-description--400">Развитие профессиональных знаний, карьерный рост сотрудников и создание условий для деловой активности.</p>
             </div>
             <div class="footer__content__corporate-culture__item">
               <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60" fill="none">
@@ -1753,9 +1678,7 @@
                   fill="white"
                 />
               </svg>
-              <p class="text-description--400">
-                Сохранение и уважение традиций, создание и развитие общих корпоративных ценностей
-              </p>
+              <p class="text-description--400">Сохранение и уважение традиций, создание и развитие общих корпоративных ценностей</p>
             </div>
           </div>
         </div>
@@ -1785,10 +1708,7 @@
               d="M11.3484 15.7979H0V19.1233H14.2199C14.7886 19.1233 15.328 19.7323 15.328 20.377L15.3216 25.0861H2.34364V28.4115L15.328 28.4179V33.1219C15.328 33.7653 14.7899 34.3743 14.2212 34.3743H0V37.6997H11.3484C15.6111 37.6997 18.9506 34.4278 18.9506 30.2513V23.2463C18.9506 19.0698 15.6111 15.7979 11.3484 15.7979Z"
               fill="white"
             />
-            <path
-              d="M38.6865 15.7979V25.1077H25.5912V15.7979H22.0107V37.6997H25.5912V28.3937H38.6865V37.6997H42.2657V15.7979H38.6865Z"
-              fill="white"
-            />
+            <path d="M38.6865 15.7979V25.1077H25.5912V15.7979H22.0107V37.6997H25.5912V28.3937H38.6865V37.6997H42.2657V15.7979H38.6865Z" fill="white" />
             <path
               d="M87.5753 32.9302C87.3152 33.1378 86.9173 33.241 86.3805 33.241H85.0174V30.6916H86.3346C86.8944 30.6916 87.3062 30.8011 87.5715 31.0216C87.8367 31.2407 87.968 31.5592 87.968 31.9771C87.968 32.4052 87.8367 32.7238 87.5753 32.9302ZM85.0174 27.5776H86.2505C86.735 27.5776 87.1073 27.6745 87.3687 27.8669C87.6288 28.0605 87.7602 28.3408 87.7602 28.7065C87.7602 28.9626 87.699 29.1805 87.5753 29.3627C87.4542 29.5436 87.2795 29.6837 87.0551 29.7793C86.8294 29.8761 86.5667 29.9246 86.267 29.9246H85.0174V27.5776ZM87.5587 30.1743C87.7474 30.108 87.9323 29.9959 88.1096 29.8366C88.2881 29.6774 88.4347 29.4926 88.5482 29.2799C88.663 29.0671 88.7203 28.8454 88.7203 28.6135C88.7203 28.0121 88.5087 27.5573 88.0841 27.2489C87.6607 26.9393 87.1086 26.7852 86.4277 26.7852H84.042V34.0399H86.5578C87.0512 34.0399 87.4797 33.952 87.8405 33.7774C88.2026 33.6029 88.4793 33.3659 88.6757 33.0652C88.8708 32.7645 88.969 32.4193 88.969 32.0294C88.969 31.5529 88.8338 31.1528 88.5622 30.8317C88.2906 30.5106 87.9553 30.2902 87.5587 30.1743Z"
               fill="white"
@@ -1889,20 +1809,19 @@
                 <a class="text-description--600" href="./pages/home/privacy-policy.html">Политика конфиденциальности</a>
               </li>
               <li>
-                <a class="text-description--600" href="./pages/home/anti-corruption-measures.html"
-                  >Противодейсвие коррупции</a
-                >
+                <a class="text-description--600" href="./pages/home/anti-corruption-measures.html">Противодейсвие коррупции</a>
               </li>
             </ul>
           </nav>
           <div class="footer__menu-bottom__owner-rights">
             <span class="text-small">Эн+ ТЕПЛО ВОЛГА @ 2025. Все права защещены</span>
-            <a class="text-small" target="_blank" href="https://enplus.digital/"
-              >Разработка и поддержка <span class="text-light-blue">ЭН+ Диджитал</span></a
-            >
+            <a class="text-small" target="_blank" href="https://enplus.digital/">Разработка и поддержка <span class="text-light-blue">ЭН+ Диджитал</span></a>
           </div>
         </div>
       </div>
     </footer>
+
+    <!-- Скрипты -->
+    <script src="./js/header.js"></script>
   </body>
 </html>

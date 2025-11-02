@@ -12,7 +12,6 @@ main {
 
   /* 480px-700px */
   height: clamp(30rem, 26.6626rem + 14.2395vw, 43.75rem);
-  margin-top: -100px;
 
   /* 20px-40px */
   border-radius: 0 0 clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem) clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem);
@@ -66,7 +65,6 @@ main {
   flex-direction: column;
 }
 
-/* Только описание плавно появляется/исчезает */
 .home__main-screen__item__description {
   min-width: 500px;
   height: 100%;
@@ -169,6 +167,15 @@ main {
   padding: clamp(0.938rem, 0.7863rem + 0.6472vw, 1.563rem) clamp(0.625rem, 0.3973rem + 0.9714vw, 1.563rem);
 }
 
+.home__company .external-link {
+  position: absolute;
+  right: 0;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+}
+
 .home__companies::-webkit-scrollbar {
   display: none;
 }
@@ -201,23 +208,6 @@ main {
   background: linear-gradient(180deg, #fff0 0%, #262d49bb 100%);
 }
 
-.home__company__icon-external-link {
-  position: absolute;
-  right: 0;
-  bottom: -22px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--color-dark-blue);
-  border: 1px solid #A0B3D1;
-  width: 56px;
-  padding: 10px;
-  border-radius: 100px;
-  transition: all 300ms ease;
-}
 
 /* ============================================= Блок 3: Экология ============================================= */
 .home__ecology {
@@ -795,7 +785,7 @@ main {
     box-shadow: 0 4px 0 0 var(--color-orange);
   }
 
-  .home__company:hover .home__company__icon-external-link {
+  .home__company:hover .external-link {
     box-shadow: 0 4px 0 0 var(--color-orange);
   }
 
@@ -854,7 +844,7 @@ main {
   box-shadow: 0 4px 0 0 var(--color-orange);
 }
 
-.home__company:active .home__company__icon-external-link {
+.home__company:active .external-link {
   box-shadow: 0 4px 0 0 var(--color-orange);
 }
 

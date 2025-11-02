@@ -11,7 +11,8 @@
     "font-family-name-quotes": "always-where-recommended",
     "font-weight-notation": "numeric",
     "media-feature-range-notation": "context",
-    "selector-class-pattern": null
+    "selector-class-pattern": null,
+    "no-descending-specificity": null
   },
   "ignoreFiles": ["node_modules/**/*", "dist/**/*", "build/**/*", "*.min.css"]
 }

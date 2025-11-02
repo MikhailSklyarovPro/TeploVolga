@@ -1,26 +1,14 @@
 .header {
   display: flex;
-  position: sticky;
+  flex-direction: column;
+  position: fixed;
   top: 0;
   z-index: 100;
   width: 100%;
-  height: 100px;
-
-  /* 15px 15px -  24px 85px */
-  padding: clamp(0.9375rem, 0.801rem + 0.5825vw, 1.5rem) clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem);
-  backdrop-filter: blur(6px);
-  background-color: #4a586e28;
 }
 
 .header--white {
   color: var(--color-white);
-}
-
-.header__main-menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
 }
 
 .header ul {
@@ -29,6 +17,19 @@
 
   /* 20px-32px */
   gap: clamp(1.25rem, 1.068rem + 0.7767vw, 2rem);
+}
+
+.header__main-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* 15px 15px -  24px 85px */
+  padding: clamp(0.9375rem, 0.801rem + 0.5825vw, 1.5rem) clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem);
+  z-index: 100;
+  min-height: 100px;
+  backdrop-filter: blur(6px);
+  background-color: #4a586e5e;
 }
 
 .header__main-menu__buttons {
@@ -43,6 +44,327 @@
   gap: 8px;
 }
 
+.header__main-menu__buttons button path,
+.header__main-menu__buttons button circle {
+  transition: all 300ms ease;
+}
+
+.header__main-menu nav a {
+  transition: all 300ms ease;
+}
+
+.header__sub-menu li {
+  transition: all 300ms ease;
+}
+
+.header__sub-menu {
+  /* 15px 15px -  24px 85px */
+  padding: clamp(0.9375rem, 0.801rem + 0.5825vw, 1.5rem) clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem);
+  background-color: var(--color-white);
+  color: var(--color-fiord);
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 100;
+  max-height: 0;
+  overflow: visible;
+  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+  position: relative;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 14px 0 #0000001c;
+}
+
+.header__sub-menu::before {
+  content: '';
+  position: absolute;
+  z-index: 100;
+  top: -20px;
+  left: var(--arrow-left, 0);
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 20px solid var(--color-white);
+  transition: left 0.3s ease;
+  opacity: 0;
+}
+
+.header__sub-menu--visible::before {
+  opacity: 1;
+}
+
+.header__sub-menu--visible {
+  opacity: 1;
+  visibility: visible;
+  max-height: 100px;
+}
+
+.header__sub-menu nav {
+  display: none;
+}
+
+/* ============================================= Модальное меню (Burger Menu) ============================================= */
+
+.header__modal-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 200;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.header__modal-menu--open {
+  pointer-events: all;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header__modal-menu__container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 0.4s ease;
+  overflow-y: auto;
+  display: grid;
+  grid-template-rows: 1fr auto;
+
+  /* 25px-100px */
+  gap: clamp(1.5625rem, 0.4248rem + 4.8544vw, 6.25rem);
+
+  /* 15px-85px */
+  padding: clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem);
+  background: linear-gradient(0deg, #2C4B83 0%, #769FB1 100%);
+  color: var(--color-white);
+}
+
+.header__modal-menu__content {
+  display: grid;
+
+  /* 25px-100px */
+  gap: clamp(1.5625rem, 0.4248rem + 4.8544vw, 6.25rem);
+  grid-template-columns: 1fr 4fr;
+}
+
+.header__modal-menu__main {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+
+  /* 34px-50px */
+  gap: clamp(2.125rem, 1.8823rem + 1.0356vw, 3.125rem)
+}
+
+.header__modal-menu__main svg {
+  /* 124px-275px */
+  width: clamp(7.75rem, 5.4593rem + 9.7735vw, 17.1875rem);
+
+  /* 36px-81px */
+  height: clamp(2.25rem, 1.5674rem + 2.9126vw, 5.0625rem);
+}
+
+.header__modal-menu__main ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header__modal-menu__detailed {
+  display: flex;
+  flex-direction: column;
+
+  /* 25px-55px */
+  gap: clamp(1.5625rem, 1.1074rem + 1.9417vw, 3.4375rem);
+}
+
+.header__modal-menu__detailed__item {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.header__modal-menu__detailed__item ul {
+  display: flex;
+  gap: 15px 35px;
+  flex-wrap: wrap;
+}
+
+.header__modal-menu__detailed__item li,
+.header__modal-menu__main li,
+.header__modal-menu__footer__main-menu a,
+.header__modal-menu__footer__detailed-menu a {
+  transition: all 300ms ease;
+}
+
+.header__modal-menu__footer {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+
+  /* 25px-100px */
+  gap: 15px clamp(1.5625rem, 0.4248rem + 4.8544vw, 6.25rem);
+}
+
+.header__modal-menu__footer__main-menu {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.header__modal-menu__footer__detailed-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.header__modal-menu__external {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  white-space: nowrap;
+}
+
+.header__modal-menu--open .header__modal-menu__container {
+  transform: translateX(0);
+}
+
+.header__modal-menu__close {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.header__modal-menu__nav a {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 600;
+  color: var(--color-fiord);
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  display: block;
+  padding: 0.5rem 0;
+}
+
+.header__modal-menu__nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.header__modal-menu__nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.5rem, 3vw, 2rem);
+  width: 100%;
+}
+
+.header__modal-menu__nav li {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  color: var(--color-fiord);
+}
+
+.header__modal-menu--open .header__modal-menu__nav li {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .header__modal-menu__nav a:hover {
+    color: var(--color-orange);
+    padding-left: 1rem;
+  }
+
+  .header__main-menu nav a:hover {
+    color: var(--color-orange);
+  }
+
+  .header__sub-menu li:hover {
+    color: var(--color-orange);
+  }
+
+  .header__main-menu__button__search:hover path,
+  .header__main-menu__button__search:hover circle,
+  .header__main-menu__buttons__burger-menu:hover path {
+    stroke: var(--color-orange);
+  }
+
+  .header__main-menu__button__eye:hover path {
+    fill: var(--color-orange);
+  }
+
+  .header__modal-menu__external:hover .external-link {
+    box-shadow: 0 4px 0 0 var(--color-orange);
+  }
+
+  .header__modal-menu__detailed__item li:hover,
+  .header__modal-menu__main li:hover,
+  .header__modal-menu__footer__main-menu a:hover,
+  .header__modal-menu__footer__detailed-menu a:hover {
+    color: var(--color-orange);
+  }
+}
+
+.header__modal-menu__nav a:active {
+  color: var(--color-orange);
+}
+
+.header__main-menu nav a:active,
+.header__main-menu nav .header__menu-item--active {
+  color: var(--color-orange);
+}
+
+.header__sub-menu li:active {
+  color: var(--color-orange);
+}
+
+.header__main-menu__button__search:active path,
+.header__main-menu__button__search:active circle,
+.header__main-menu__buttons__burger-menu:hover path {
+  stroke: var(--color-orange);
+}
+
+.header__main-menu__button__eye:active path {
+  fill: var(--color-orange);
+}
+
+.header__modal-menu__external:active .external-link {
+  box-shadow: 0 4px 0 0 var(--color-orange);
+}
+
+.header__modal-menu__detailed__item li:active,
+.header__modal-menu__main li:active,
+.header__modal-menu__footer__main-menu a:hover,
+.header__modal-menu__footer__detailed-menu a:hover {
+  color: var(--color-orange);
+}
+
+/* ============================================= media запросы для всех устройств ============================================= */
+@media (width <=744px) {
+  .header__modal-menu__content {
+    grid-template-columns: 1fr;
+  }
+
+  .header__modal-menu__footer {
+    grid-template-columns: 1fr;
+  }
+}
 
 @media (width <=1440px) {
   .header__main-menu nav {
