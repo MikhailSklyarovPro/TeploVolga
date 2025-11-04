@@ -42,6 +42,8 @@
       this.subMenuContainer = null;
       this.menuItems = [];
       this.subMenus = [];
+      this.arrowElement = null;
+      this.checkmarkElement = null;
 
       // Таймер для задержки скрытия
       this.hideTimer = null;
@@ -80,6 +82,9 @@
       // Инициализация модального меню
       this.initModalMenu();
 
+      // Инициализация мобильного аккордеона
+      this.initMobileAccordion();
+
       console.log('HeaderNavigation: Модуль успешно инициализирован');
     }
 
@@ -105,6 +110,10 @@
         console.error(`HeaderNavigation: Контейнер подменю не найден (${this.config.subMenuSelector})`);
         return false;
       }
+
+      // Получение элементов стрелки и галочки
+      this.arrowElement = this.subMenuContainer.querySelector('.header__sub-menu__arrow');
+      this.checkmarkElement = this.subMenuContainer.querySelector('.header__sub-menu__checkmark');
 
       // Получение пунктов меню с id
       this.menuItems = Array.from(this.mainMenu.querySelectorAll(this.config.menuItemSelector));
@@ -216,9 +225,7 @@
      */
     showSubMenu(menuId) {
       // Найти подменю с соответствующим data-sub-menu
-      const targetSubMenu = this.subMenus.find(
-        subMenu => subMenu.getAttribute(this.config.subMenuAttribute) === menuId
-      );
+      const targetSubMenu = this.subMenus.find(subMenu => subMenu.getAttribute(this.config.subMenuAttribute) === menuId);
 
       if (!targetSubMenu) {
         console.warn(`HeaderNavigation: Подменю с ${this.config.subMenuAttribute}="${menuId}" не найдено`);
@@ -261,8 +268,13 @@
       // Вычислить центр пункта меню относительно контейнера подменю
       const arrowLeft = menuItemRect.left - subMenuRect.left + menuItemRect.width / 2 - 20;
 
-      // Установить позицию через CSS переменную или напрямую
-      this.subMenuContainer.style.setProperty('--arrow-left', `${arrowLeft}px`);
+      // Позиционировать оба элемента (стрелку и галочку)
+      if (this.arrowElement) {
+        this.arrowElement.style.left = `${arrowLeft}px`;
+      }
+      if (this.checkmarkElement) {
+        this.checkmarkElement.style.left = `${arrowLeft}px`;
+      }
     }
 
     /**
@@ -386,6 +398,141 @@
       document.body.classList.remove('modal-menu-open');
 
       console.log('HeaderNavigation: Модальное меню закрыто');
+    }
+
+    /**
+     * Инициализация мобильного аккордеона для выпадающих подпунктов
+     */
+    initMobileAccordion() {
+      // Найти все элементы с выпадающими списками
+      const accordionItems = document.querySelectorAll('.header__modal-menu__detailed__item');
+
+      if (accordionItems.length === 0) {
+        return;
+      }
+
+      // Функция для проверки ширины экрана
+      const isMobile = () => window.innerWidth <= 744;
+
+      // Функция для применения/удаления мобильного режима
+      const toggleMobileMode = () => {
+        accordionItems.forEach(item => {
+          const header = item.querySelector('.header__modal-menu__detailed__item__header');
+          const button = header ? header.querySelector('button') : null;
+          const ul = item.querySelector('ul');
+
+          if (!header || !ul) {
+            return;
+          }
+
+          if (isMobile()) {
+            // Скрываем списки по умолчанию на мобильных (если не открыты)
+            if (!item.classList.contains('header__modal-menu__detailed__item--open')) {
+              ul.style.display = 'none';
+              ul.style.maxHeight = '0';
+              ul.style.opacity = '0';
+              if (button) {
+                button.classList.remove('header__modal-menu__detailed__item__button--rotated');
+              }
+            }
+          } else {
+            // Показываем списки на десктопе
+            ul.style.display = '';
+            ul.style.maxHeight = '';
+            ul.style.opacity = '';
+            if (button) {
+              button.classList.remove('header__modal-menu__detailed__item__button--rotated');
+            }
+            item.classList.remove('header__modal-menu__detailed__item--open');
+          }
+        });
+      };
+
+      // Инициализация обработчиков кликов
+      accordionItems.forEach(item => {
+        const header = item.querySelector('.header__modal-menu__detailed__item__header');
+        const button = header ? header.querySelector('button') : null;
+        const ul = item.querySelector('ul');
+
+        if (!header || !ul) {
+          return;
+        }
+
+        // Обработчик клика на header
+        const handleHeaderClick = e => {
+          e.preventDefault();
+          e.stopPropagation();
+
+          // Работает только на мобильных устройствах
+          if (!isMobile()) {
+            return;
+          }
+
+          const isOpen = item.classList.contains('header__modal-menu__detailed__item--open');
+
+          if (isOpen) {
+            // Закрываем
+            ul.style.maxHeight = '0';
+            ul.style.opacity = '0';
+            if (button) {
+              button.classList.remove('header__modal-menu__detailed__item__button--rotated');
+            }
+            item.classList.remove('header__modal-menu__detailed__item--open');
+
+            setTimeout(() => {
+              if (!item.classList.contains('header__modal-menu__detailed__item--open')) {
+                ul.style.display = 'none';
+              }
+            }, 300);
+          } else {
+            // Открываем
+            // Сначала делаем элемент видимым для вычисления высоты
+            ul.style.display = 'flex';
+            ul.style.maxHeight = 'none'; // Убираем ограничение для вычисления
+            ul.style.visibility = 'hidden'; // Скрываем визуально, но элемент занимает место
+            ul.style.opacity = '0';
+
+            // Вычисляем реальную высоту контента
+            const height = ul.scrollHeight;
+
+            // Возвращаем видимость
+            ul.style.visibility = '';
+
+            // Устанавливаем начальное состояние для анимации
+            ul.style.maxHeight = '0';
+
+            // Запускаем анимацию через requestAnimationFrame для плавности
+            requestAnimationFrame(() => {
+              ul.style.maxHeight = `${height}px`;
+              ul.style.opacity = '1';
+            });
+
+            if (button) {
+              button.classList.add('header__modal-menu__detailed__item__button--rotated');
+            }
+            item.classList.add('header__modal-menu__detailed__item--open');
+          }
+        };
+
+        header.addEventListener('click', handleHeaderClick);
+      });
+
+      // Инициализация при загрузке
+      toggleMobileMode();
+
+      // Обработка изменения размера окна
+      let resizeTimer;
+      const handleResize = () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+          toggleMobileMode();
+        }, 100);
+      };
+
+      window.addEventListener('resize', handleResize);
+
+      // Сохраняем обработчики для возможности очистки
+      this._accordionResizeHandler = handleResize;
     }
 
     /**

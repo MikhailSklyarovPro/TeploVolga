@@ -1,3 +1,7 @@
+.modal-menu-open {
+  overflow-y: hidden;
+}
+
 .header {
   display: flex;
   flex-direction: column;
@@ -60,7 +64,7 @@
 .header__sub-menu {
   /* 15px 15px -  24px 85px */
   padding: clamp(0.9375rem, 0.801rem + 0.5825vw, 1.5rem) clamp(0.9375rem, -0.1244rem + 4.5307vw, 5.3125rem);
-  background-color: var(--color-white);
+  background-color: #f2f4f6;
   color: var(--color-fiord);
   display: flex;
   opacity: 0;
@@ -68,28 +72,63 @@
   z-index: 100;
   max-height: 0;
   overflow: visible;
-  transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease,
+    max-height 0.3s ease;
   position: relative;
   backdrop-filter: blur(6px);
   box-shadow: 0 6px 14px 0 #0000001c;
 }
 
-.header__sub-menu::before {
-  content: '';
+.header__sub-menu__arrow {
   position: absolute;
   z-index: 100;
   top: -20px;
-  left: var(--arrow-left, 0);
-  width: 0;
-  height: 0;
-  border-left: 20px solid transparent;
-  border-right: 20px solid transparent;
-  border-bottom: 20px solid var(--color-white);
+  left: 0;
+  width: 40px;
+  height: 20px;
   transition: left 0.3s ease;
   opacity: 0;
 }
 
-.header__sub-menu--visible::before {
+.header__sub-menu__arrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 20px solid #f2f4f6;
+}
+
+.header__sub-menu__checkmark {
+  position: absolute;
+  z-index: 101;
+  top: -30px;
+  left: 0;
+  width: 46px;
+  height: 20px;
+  background: none;
+  transition: left 0.3s ease;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateX(-3px);
+}
+
+.header__sub-menu__checkmark svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.header__sub-menu--visible .header__sub-menu__arrow,
+.header__sub-menu--visible .header__sub-menu__checkmark {
   opacity: 1;
 }
 
@@ -101,6 +140,12 @@
 
 .header__sub-menu nav {
   display: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  /* 20px-32px */
+  gap: clamp(1.25rem, 1.068rem + 0.7767vw, 2rem);
 }
 
 /* ============================================= Модальное меню (Burger Menu) ============================================= */
@@ -115,7 +160,9 @@
   pointer-events: none;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
 }
 
 .header__modal-menu--open {
@@ -141,7 +188,7 @@
 
   /* 15px-85px */
   padding: clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem);
-  background: linear-gradient(0deg, #2C4B83 0%, #769FB1 100%);
+  background: linear-gradient(0deg, #2c4b83 0%, #769fb1 100%);
   color: var(--color-white);
 }
 
@@ -159,7 +206,7 @@
   min-width: 200px;
 
   /* 34px-50px */
-  gap: clamp(2.125rem, 1.8823rem + 1.0356vw, 3.125rem)
+  gap: clamp(2.125rem, 1.8823rem + 1.0356vw, 3.125rem);
 }
 
 .header__modal-menu__main svg {
@@ -181,7 +228,7 @@
   flex-direction: column;
 
   /* 25px-55px */
-  gap: clamp(1.5625rem, 1.1074rem + 1.9417vw, 3.4375rem);
+  gap: clamp(1.5625rem - 15px, 1.1074rem + 1.9417vw - 15px, 3.4375rem - 15px);
 }
 
 .header__modal-menu__detailed__item {
@@ -201,6 +248,35 @@
 .header__modal-menu__footer__main-menu a,
 .header__modal-menu__footer__detailed-menu a {
   transition: all 300ms ease;
+}
+
+.header__modal-menu__detailed__item__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.header__modal-menu__detailed__item__header h3,
+.header__modal-menu__detailed__item__header path {
+  transition: all 300ms ease;
+}
+
+.header__modal-menu__detailed__item__header button {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.3s ease;
+}
+
+.header__modal-menu__detailed__item__header button svg {
+  transition: transform 0.3s ease;
+}
+
+.header__modal-menu__detailed__item__button--rotated svg {
+  transform: rotate(180deg);
 }
 
 .header__modal-menu__footer {
@@ -243,14 +319,22 @@
   align-items: center;
   justify-content: center;
   color: var(--color-white);
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.header__modal-menu__close path {
+  transition: all 300ms ease;
 }
 
 .header__modal-menu__nav a {
   font-size: clamp(1.5rem, 3vw, 2rem);
   font-weight: 600;
   color: var(--color-fiord);
-  transition: color 0.3s ease, padding-left 0.3s ease;
+  transition:
+    color 0.3s ease,
+    padding-left 0.3s ease;
   display: block;
   padding: 0.5rem 0;
 }
@@ -271,7 +355,9 @@
 .header__modal-menu__nav li {
   opacity: 0;
   transform: translateX(30px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
   color: var(--color-fiord);
 }
 
@@ -279,9 +365,6 @@
   opacity: 1;
   transform: translateX(0);
 }
-
-
-
 
 /* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
 
@@ -319,6 +402,10 @@
   .header__modal-menu__footer__detailed-menu a:hover {
     color: var(--color-orange);
   }
+
+  .header__modal-menu__close:hover path {
+    stroke: var(--color-orange);
+  }
 }
 
 .header__modal-menu__nav a:active {
@@ -355,6 +442,30 @@
   color: var(--color-orange);
 }
 
+.header__modal-menu__close:active path {
+  stroke: var(--color-orange);
+}
+
+@media (hover: hover) and (pointer: fine) and (width <=744px) {
+  .header__modal-menu__detailed__item__header:hover path {
+    fill: var(--color-orange);
+  }
+
+  .header__modal-menu__detailed__item__header:hover h3 {
+    color: var(--color-orange);
+  }
+}
+
+@media (width <=744px) {
+  .header__modal-menu__detailed__item__header:active path {
+    fill: var(--color-orange);
+  }
+
+  .header__modal-menu__detailed__item__header:active h3 {
+    color: var(--color-orange);
+  }
+}
+
 /* ============================================= media запросы для всех устройств ============================================= */
 @media (width <=744px) {
   .header__modal-menu__content {
@@ -363,6 +474,40 @@
 
   .header__modal-menu__footer {
     grid-template-columns: 1fr;
+  }
+
+  .header__modal-menu__detailed__item,
+  .header__modal-menu__detailed {
+    gap: 0;
+  }
+
+  .header__modal-menu__detailed__item__header {
+    cursor: pointer;
+    margin: 10px 0 5px;
+  }
+
+  .header__modal-menu__detailed__item__header button {
+    display: flex;
+  }
+
+  .header__modal-menu__detailed__item ul {
+    flex-flow: column nowrap;
+    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .header__modal-menu__detailed__item--open ul {
+    opacity: 1;
+    max-height: none;
+  }
+
+  .header__modal-menu__detailed__item__header h3 {
+    font-size: 18px;
   }
 }
 
