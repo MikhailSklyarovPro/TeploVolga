@@ -1,0 +1,13 @@
+.breadcrumbs {
+  display: flex;
+  gap: 5px;
+}
+
+.breadcrumb__active {
+  color: var(--color-fiord);
+  cursor: pointer;
+}
+
+.breadcrumb__no-active {
+  color: var(--color-light-fiord);
+}

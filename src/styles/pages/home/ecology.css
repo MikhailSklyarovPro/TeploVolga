@@ -1,3 +1,122 @@
-p {
-  color: #000;
+/* ============================================= Блок 1: Главный экран ============================================= */
+.ecology__main-screen {
+  height: clamp(800px, 673.47px + 17.01vw, 1000px);
+  width: 100%;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ecology__main-screen__wrapper-img {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #ffffff1c, #769f5a4d, #769f5a94), url('../../../img/ecology/block1-main-screen/main-screen-bg1.webp');
+  background-size: cover;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.ecology__main-screen img {
+  object-fit: cover;
+  object-position: top right;
+  width: 100%;
+  height: 100%;
+}
+
+.ecology__main-screen__info {
+  display: flex;
+  flex-direction: column;
+  max-width: 670px;
+  margin-top: 100px;
+
+  /* 25px-50px */
+  gap: clamp(1.5625rem, 1.1833rem + 1.6181vw, 3.125rem);
+}
+
+.ecology__main-screen__header {
+  display: flex;
+  flex-direction: column;
+
+  /* 10px-15px */
+  gap: clamp(0.625rem, 0.549rem + 0.3241vw, 0.938rem);
+}
+
+.ecology__main-screen__content {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  /* 50px 15px 0px 15px - 80px 85px 0px 85px */
+  padding: clamp(3.125rem, 2.67rem + 1.94vw, 5rem) clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem) 0;
+}
+
+.ecology__main-screen__description {
+  display: flex;
+  flex-direction: column;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+.ecology__main-screen__facts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  background-color: var(--color-white);
+
+  /* 15px-20px */
+  border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem) clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem) 0 0;
+
+  /* 15px 15px - 50px 100px */
+  padding: clamp(0.9375rem, 0.41rem + 2.27vw, 3.125rem) clamp(0.9375rem, -0.35rem + 5.5vw, 6.25rem);
+}
+
+.ecology__main-screen__fact {
+  display: flex;
+  flex-direction: column;
+
+  /* 10px-25px */
+  gap: clamp(0.625rem, 0.4rem + 0.97vw, 1.5625rem);
+}
+
+/* ============================================= Блок 2: Карточка с картинкой ============================================= */
+.ecology__card-image {
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  height: 550px;
+  background: url('../../../img/ecology/block2-card-image/card-image-bg.webp');
+  background-size: cover;
+
+  /* 15px 15px - 25px 20px */
+  border-radius: 0 0 clamp(0.9375rem, 0.79rem + 0.65vw, 1.5625rem) clamp(0.9375rem, 0.86rem + 0.32vw, 1.25rem);
+
+  /* 15px 15px - 50px 100px */
+  padding: clamp(0.9375rem, 0.41rem + 2.27vw, 3.125rem) clamp(0.9375rem, -0.35rem + 5.5vw, 6.25rem);
+
+  /* 15px 15px - 50px 100px */
+  margin: 0 clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem);
+}
+
+.ecology__card-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffffe6;
+
+  /* 15px-20px */
+  border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+
+  /* 15px - 45px */
+  gap: clamp(0.9375rem, 0.48rem + 1.94vw, 2.8125rem);
+
+  /* 20px 15px - 35px 35px */
+  padding: clamp(1.25rem, 1.02rem + 0.97vw, 2.1875rem) clamp(0.9375rem, 0.63rem + 1.29vw, 2.1875rem);
 }
