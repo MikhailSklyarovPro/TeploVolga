@@ -15,8 +15,8 @@ class GalleryController {
 
   init() {
     this.mainImage = document.querySelector('[data-gallery-main]');
-    this.subtitle = document.querySelector('.home__gallery__subtitle');
-    this.description = document.querySelector('.home__gallery__description');
+    this.subtitle = document.querySelector('.gallery__subtitle');
+    this.description = document.querySelector('.gallery__description');
     this.prevBtn = document.querySelector('[data-gallery-prev]');
     this.nextBtn = document.querySelector('[data-gallery-next]');
     this.thumbnails = document.querySelectorAll('[data-gallery-thumb]');
@@ -72,7 +72,7 @@ class GalleryController {
   }
 
   initMobileImageClicks() {
-    const imageContainer = document.querySelector('.home__gallery__image-container');
+    const imageContainer = document.querySelector('.gallery__image-container');
     if (!imageContainer) {
       return;
     }
@@ -101,7 +101,7 @@ class GalleryController {
     let endY = 0;
 
     // Добавляем обработчики на контейнер изображения для мобильных устройств
-    const imageContainer = document.querySelector('.home__gallery__image-container');
+    const imageContainer = document.querySelector('.gallery__image-container');
     const targetElement = imageContainer || this.mainImage;
 
     targetElement?.addEventListener('touchstart', e => {
@@ -166,7 +166,7 @@ class GalleryController {
     }
 
     // Обновление CSS переменных для мобильного эффекта
-    const imageContainer = document.querySelector('.home__gallery__image-container');
+    const imageContainer = document.querySelector('.gallery__image-container');
     if (imageContainer) {
       imageContainer.style.setProperty('--prev-image', `url(${prevImage.src})`);
       imageContainer.style.setProperty('--next-image', `url(${nextImage.src})`);
@@ -178,9 +178,7 @@ class GalleryController {
     }
 
     if (this.description) {
-      this.description.innerHTML = currentImage.description
-        .map(paragraph => `<p class="text-description--400">${paragraph}</p>`)
-        .join('');
+      this.description.innerHTML = currentImage.description.map(paragraph => `<p class="text-description--400">${paragraph}</p>`).join('');
     }
 
     // Обновление активной миниатюры
@@ -206,7 +204,7 @@ class GalleryController {
 // Инициализация галереи при загрузке DOM
 document.addEventListener('DOMContentLoaded', () => {
   // Проверяем, что мы на главной странице
-  if (document.querySelector('.home__gallery')) {
+  if (document.querySelector('.gallery')) {
     window.galleryController = new GalleryController();
   }
 });

@@ -30,7 +30,41 @@
   gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
 }
 
-.footer__content__partners__logos {
+.footer__content__friends {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+}
+
+.footer__content__friends__items {
+  display: flex;
+  flex-direction: column;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+.footer__content__friends__item {
+  display: flex;
+
+  /* 15px-25px */
+  gap: clamp(0.9375rem, 0.79rem + 0.65vw, 1.5625rem);
+}
+
+.footer__content__friends__item svg {
+  flex-shrink: 0;
+
+  /* 20px-30px */
+  width: clamp(1.25rem, 1.1rem + 0.65vw, 1.875rem);
+
+  /* 20px-30px */
+  height: clamp(1.25rem, 1.1rem + 0.65vw, 1.875rem);
+}
+
+.footer__content__partners__items {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,7 +75,7 @@
   gap: clamp(1.25rem, 0.9466rem + 1.2945vw, 2.5rem);
 }
 
-.footer__content__partners__logos svg {
+.footer__content__partners__items svg {
   width: min-content;
 
   /* 40px-65px */
@@ -125,6 +159,11 @@
 
   /* 40px-60px */
   height: clamp(2.5rem, 2.1966rem + 1.2945vw, 3.75rem);
+}
+
+.footer__content__friends__item path,
+.footer__content__friends__item p {
+  transition: all 300ms ease;
 }
 
 .footer__menu {
@@ -217,27 +256,6 @@
 }
 
 /* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
-.footer__content__partners__buttons button:active .footer__content__partners__buttons__background {
-  fill: var(--color-orange);
-  fill-opacity: 1;
-}
-
-.footer nav ul li:active a {
-  color: var(--color-orange);
-}
-
-.footer__menu-bottom__owner-rights a:active .text-light-blue {
-  color: var(--color-orange);
-}
-
-.footer__menu-top__contacts__messengers a:active path {
-  fill: var(--color-orange);
-}
-
-.footer__content__partners__pagination__dot:active {
-  transform: scale(1);
-}
-
 @media (hover: hover) and (pointer: fine) {
   .footer__content__partners__buttons button:hover .footer__content__partners__buttons__background {
     fill: var(--color-orange);
@@ -260,6 +278,43 @@
     background-color: #fff9;
     transform: scale(1.1);
   }
+
+  .footer__content__friends__item:hover path {
+    fill: var(--color-orange);
+  }
+
+  .footer__content__friends__item:hover p {
+    color: var(--color-orange);
+  }
+}
+
+.footer__content__partners__buttons button:active .footer__content__partners__buttons__background {
+  fill: var(--color-orange);
+  fill-opacity: 1;
+}
+
+.footer nav ul li:active a {
+  color: var(--color-orange);
+}
+
+.footer__menu-bottom__owner-rights a:active .text-light-blue {
+  color: var(--color-orange);
+}
+
+.footer__menu-top__contacts__messengers a:active path {
+  fill: var(--color-orange);
+}
+
+.footer__content__partners__pagination__dot:active {
+  transform: scale(1);
+}
+
+.footer__content__friends__item:active path {
+  fill: var(--color-orange);
+}
+
+.footer__content__friends__item:active p {
+  color: var(--color-orange);
 }
 
 @media (width <=744px) {

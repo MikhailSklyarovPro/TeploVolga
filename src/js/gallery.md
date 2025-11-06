@@ -33,12 +33,7 @@
 Каждая миниатюра должна содержать следующие data-атрибуты:
 
 ```html
-<button
-  class="home__gallery__thumbnail"
-  data-gallery-thumb="0"
-  data-gallery-title="Заголовок изображения"
-  data-gallery-description="Первый параграф описания|Второй параграф описания"
->
+<button class="gallery__thumbnail" data-gallery-thumb="0" data-gallery-title="Заголовок изображения" data-gallery-description="Первый параграф описания|Второй параграф описания">
   <img src="путь_к_изображению" alt="альтернативный_текст" />
 </button>
 ```
@@ -158,9 +153,9 @@ document.addEventListener('keydown', e => {
 ### Основные элементы
 
 - `.home__gallery` - основной контейнер галереи
-- `.home__gallery__main-image` - главное изображение
-- `.home__gallery__thumbnail` - миниатюры
-- `.home__gallery__nav-btn` - кнопки навигации
+- `.gallery__main-image` - главное изображение
+- `.gallery__thumbnail` - миниатюры
+- `.gallery__nav-btn` - кнопки навигации
 
 ### Состояния
 
@@ -172,7 +167,7 @@ document.addEventListener('keydown', e => {
 ### 1. Переключение изображений
 
 ```css
-.home__gallery__main-image {
+.gallery__main-image {
   transition: opacity 0.3s ease-in-out;
 }
 ```
@@ -180,7 +175,7 @@ document.addEventListener('keydown', e => {
 ### 2. Hover эффекты миниатюр
 
 ```css
-.home__gallery__thumbnail:hover img {
+.gallery__thumbnail:hover img {
   transform: scale(1.05);
 }
 ```
@@ -188,7 +183,7 @@ document.addEventListener('keydown', e => {
 ### 3. Активное состояние
 
 ```css
-.home__gallery__thumbnail.active {
+.gallery__thumbnail.active {
   box-shadow: 0 0 0 3px var(--color-orange);
 }
 ```
@@ -200,14 +195,14 @@ document.addEventListener('keydown', e => {
 ```css
 /* Планшеты */
 @media (width <=1200px) {
-  .home__gallery__main {
+  .gallery__main {
     flex-direction: column;
   }
 }
 
 /* Мобильные устройства */
 @media (width <=768px) {
-  .home__gallery__thumbnails {
+  .gallery__thumbnails {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -237,7 +232,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ```php
 // Пример для Битрикс компонента
 foreach ($arResult['GALLERY_ITEMS'] as $index => $item) {
-    echo '<button class="home__gallery__thumbnail"
+    echo '<button class="gallery__thumbnail"
                   data-gallery-thumb="' . $index . '"
                   data-gallery-title="' . htmlspecialchars($item['TITLE']) . '"
                   data-gallery-description="' . htmlspecialchars($item['DESCRIPTION']) . '">';
@@ -268,7 +263,7 @@ foreach ($arResult['GALLERY_ITEMS'] as $index => $item) {
 Для изменения анимаций переключения измените CSS свойства:
 
 ```css
-.home__gallery__main-image {
+.gallery__main-image {
   transition: opacity 0.3s ease-in-out; /* Измените время и эффект */
 }
 ```

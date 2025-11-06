@@ -22,7 +22,7 @@
 
 ```html
 <div class="footer__content__partners">
-  <div class="footer__content__partners__logos">
+  <div class="footer__content__partners__items">
     <!-- SVG логотипы партнёров -->
     <svg>...</svg>
     <svg>...</svg>
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 1. Подключить скрипт в HTML
 2. Убедиться, что в DOM присутствуют элементы с классами:
-   - `.footer__content__partners__logos`
+   - `.footer__content__partners__items`
    - `.footer__content__partners__buttons`
 
 ## Совместимость

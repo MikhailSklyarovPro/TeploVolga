@@ -7,7 +7,7 @@
 
 class FooterLogosSlider {
   constructor() {
-    this.container = document.querySelector('.footer__content__partners__logos');
+    this.container = document.querySelector('.footer__content__partners__items');
     this.buttonsContainer = document.querySelector('.footer__content__partners__buttons');
     this.paginationContainer = document.querySelector('.footer__content__partners__pagination');
 

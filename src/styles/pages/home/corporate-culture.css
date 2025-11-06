@@ -1,3 +1,195 @@
-p {
-  color: #000;
+/* ============================================= Блок 1: Главный экран ============================================= */
+.corporate-culture__main-screen {
+  height: auto;
+  width: 100%;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+  background: linear-gradient(180deg, #ffffff1c 7.87%, #243d6a4d 46.13%, #243d6ae6 92.9%), url('/img/corporate-culture/block1-main-screen/main-screen-bg1.webp');
+  background-size: cover;
+  background-position: top;
+}
+
+.corporate-culture__main-screen__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+
+  /* 25px-50px */
+  gap: clamp(1.5625rem, 1.1833rem + 1.6181vw, 3.125rem);
+}
+
+.corporate-culture__main-screen__header {
+  display: flex;
+  flex-direction: column;
+
+  /* 10px-15px */
+  gap: clamp(0.625rem, 0.549rem + 0.3241vw, 0.938rem);
+}
+
+.corporate-culture__main-screen__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 80px;
+
+  /* 50px 15px 0px 15px - 80px 85px 0px 85px */
+  padding: clamp(3.125rem, 2.67rem + 1.94vw, 5rem) clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem) 0;
+}
+
+.corporate-culture__main-screen__description {
+  display: flex;
+  flex-direction: column;
+  max-width: 670px;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+.corporate-culture__main-screen__facts {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  width: 100%;
+
+  /* 30px-129px */
+  gap: 30px clamp(1.875rem, 0.37rem + 6.41vw, 8.0625rem);
+
+  /* 15px-20px */
+  border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem) clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem) 0 0;
+
+  /* 15px 15px - 50px 100px */
+  padding: clamp(0.9375rem, 0.41rem + 2.27vw, 3.125rem) clamp(0.9375rem, -0.35rem + 5.5vw, 6.25rem);
+}
+
+.corporate-culture__main-screen__fact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  /* 10px-25px */
+  gap: clamp(0.625rem, 0.4rem + 0.97vw, 1.5625rem);
+}
+
+.corporate-culture__main-screen__fact h1 {
+  white-space: nowrap;
+}
+
+.corporate-culture__main-screen__fact--hidden {
+  visibility: hidden;
+}
+
+/* ============================================= Блок 2: Карточка с картинкой ============================================= */
+.corporate-culture__card-image {
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  height: 550px;
+  background: url('../../../img/corporate-culture/block2-card-image/card-image-bg.webp');
+  background-size: cover;
+  background-position: center;
+
+  /* 15px 15px - 25px 20px */
+  border-radius: 0 0 clamp(0.9375rem, 0.79rem + 0.65vw, 1.5625rem) clamp(0.9375rem, 0.86rem + 0.32vw, 1.25rem);
+
+  /* 15px 15px - 50px 100px */
+  padding: clamp(0.9375rem, 0.41rem + 2.27vw, 3.125rem) clamp(0.9375rem, -0.35rem + 5.5vw, 6.25rem);
+
+  /* 15px 15px - 50px 100px */
+  margin: 0 clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem);
+}
+
+.corporate-culture__card-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffffe6;
+  max-width: 670px;
+
+  /* 15px-20px */
+  border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+
+  /* 15px - 45px */
+  gap: clamp(0.9375rem, 0.48rem + 1.94vw, 2.8125rem);
+
+  /* 20px 15px - 35px 35px */
+  padding: clamp(1.25rem, 1.02rem + 0.97vw, 2.1875rem) clamp(0.9375rem, 0.63rem + 1.29vw, 2.1875rem);
+}
+
+/* ============================================= Блок 3: Видео ============================================= */
+.corporate-culture__video {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+
+  /* 15px 15px 15px 15px - 100px 850px 0 85px */
+  padding: clamp(0.9375rem, -0.35rem + 5.5vw, 6.25rem) clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem) 0;
+}
+
+.corporate-culture__video-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 670px;
+
+  /* 15px-35px */
+  gap: clamp(0.938rem, 0.6346rem + 1.2945vw, 2.188rem);
+}
+
+.corporate-culture__benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  /* 30px-40px */
+  gap: clamp(1.875rem, 1.72rem + 0.65vw, 2.5rem) 20px;
+}
+
+.corporate-culture__benefit {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.corporate-culture__benefit svg {
+  flex-shrink: 0;
+
+  /* 50px-60px */
+  height: clamp(3.125rem, 2.97rem + 0.65vw, 3.75rem);
+}
+
+/* ============================================= Блок 4: Фотогаллерея ============================================= */
+.corporate-culture__gallery {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /* 50px 15px - 100px 85px */
+  padding: clamp(3.125rem, 2.37rem + 3.24vw, 6.25rem) clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem);
+}
+
+/* ============================================= media запросы на все устройства ============================================= */
+@media (width <=744px) {
+  .corporate-culture__main-screen__facts {
+    flex-direction: column;
+  }
+}
+
+@media (width <=1200px) {
+  .corporate-culture__video {
+    flex-direction: column;
+  }
+
+  .corporate-culture__video-description {
+    max-width: none;
+  }
+
+  .video,
+  .video video {
+    width: 100%;
+    height: auto;
+  }
 }
