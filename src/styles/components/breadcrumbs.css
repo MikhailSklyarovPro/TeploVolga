@@ -1,13 +1,30 @@
 .breadcrumbs {
   display: flex;
   gap: 5px;
+  background-color: #ffffff4a;
+  padding: 6px 12px;
+  border-radius: 12px;
+  width: max-content;
 }
 
 .breadcrumb__active {
-  color: var(--color-fiord);
+  color: var(--color-black);
   cursor: pointer;
+  transition: all 300ms ease;
 }
 
 .breadcrumb__no-active {
-  color: var(--color-light-fiord);
+  color: var(--color-bluish-grey);
+}
+
+/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
+
+@media (hover: hover) and (pointer: fine) {
+  .breadcrumb__active:hover {
+    color: var(--color-orange);
+  }
+}
+
+.breadcrumb__active:active {
+  color: var(--color-orange);
 }

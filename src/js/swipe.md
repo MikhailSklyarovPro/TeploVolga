@@ -19,8 +19,8 @@
 
 ```html
 <!-- Контейнер с карточками -->
-<div class="home__news-cards" data-swipe data-infinite-swipe>
-  <a href="#" class="home__news-wrapper-card">
+<div class="cards-news" data-swipe data-infinite-swipe>
+  <a href="#" class="wrapper-card-new">
     <!-- Содержимое карточки -->
   </a>
   <!-- Другие карточки -->
@@ -137,14 +137,14 @@ const scrollPosition = index * (cardWidth + gap);
 Модуль работает с существующими CSS стилями:
 
 ```css
-.home__news-cards {
+.cards-news {
   display: flex;
   gap: 20px;
   overflow-x: auto;
   scrollbar-width: none;
 }
 
-.home__news-wrapper-card {
+.wrapper-card-new {
   flex-shrink: 0;
 }
 ```
@@ -155,7 +155,7 @@ const scrollPosition = index * (cardWidth + gap);
 
 - Контейнер с атрибутом `data-swipe`
 - Кнопки с атрибутами `data-swipe-prev` и `data-swipe-next`
-- Карточки с классом `home__news-wrapper-card`
+- Карточки с классом `wrapper-card-new`
 
 При отсутствии элементов выводится предупреждение в консоль.
 

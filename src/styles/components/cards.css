@@ -1,0 +1,131 @@
+/* ============================================= Карточки новостей ============================================= */
+.wrapper-card-new {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cards-news {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding-bottom: 6px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.card-news__date {
+  /* 15px-30px */
+  padding-left: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+.card-news {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-light-blue);
+  flex-grow: 1;
+  overflow: clip;
+  transition: all 300ms ease;
+  cursor: pointer;
+
+  /* 256px-416px */
+  width: clamp(16rem, 13.5728rem + 10.356vw, 26rem);
+
+  /* 15px-20px */
+  border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+}
+
+.card-news__image {
+  position: relative;
+  width: 100%;
+
+  /* 166px-200px */
+  height: clamp(10.375rem, 9.8592rem + 2.2006vw, 12.5rem);
+  overflow: hidden;
+}
+
+.card-news__image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, #6896c400 0%, #6896c4cc 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.card-news__image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.card-news img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.card-news__content {
+  display: flex;
+  flex-direction: column;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+
+  /* 15px-32px */
+  padding: clamp(0.938rem, 0.6802rem + 1.0998vw, 2rem);
+}
+
+.card-news__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.card-news__tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 10px;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  border-radius: 5px;
+}
+
+.card-news__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
+@media (hover: hover) and (pointer: fine) {
+  .card-news:hover {
+    box-shadow: 0 6px 0 0 var(--color-orange);
+  }
+
+  .card-news:hover .card-news__image::after {
+    opacity: 1;
+    background: linear-gradient(180deg, #6896c400 50%, #fd5d39cc 100%);
+  }
+}
+
+.card-news:active {
+  box-shadow: 0 6px 0 0 var(--color-blue);
+}
+
+.card-news:active .card-news__image::after {
+  opacity: 0;
+}

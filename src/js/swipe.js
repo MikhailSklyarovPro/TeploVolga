@@ -8,7 +8,7 @@ class NewsSwipeController {
     this.container = document.querySelector('[data-swipe]');
     this.prevButton = document.querySelector('[data-swipe-prev]');
     this.nextButton = document.querySelector('[data-swipe-next]');
-    this.cards = this.container?.querySelectorAll('.home__news-wrapper-card');
+    this.cards = this.container?.querySelectorAll('.wrapper-card-new');
 
     if (!this.container || !this.prevButton || !this.nextButton || !this.cards.length) {
       console.warn('NewsSwipeController: Не найдены необходимые элементы');
@@ -159,23 +159,35 @@ class NewsSwipeController {
     // Блокируем кнопку "назад" если мы в начале
     if (isAtStart) {
       this.prevButton.disabled = true;
-      this.prevButton.style.opacity = '0.5';
-      this.prevButton.querySelector('path').style.fill = '#9CA3AF';
+      this.prevButton.style.opacity = '';
+      const prevPath = this.prevButton.querySelector('path');
+      if (prevPath) {
+        prevPath.style.fill = '';
+      }
     } else {
       this.prevButton.disabled = false;
-      this.prevButton.style.opacity = '1';
-      this.prevButton.querySelector('path').style.fill = '#FD5D39';
+      this.prevButton.style.opacity = '';
+      const prevPath = this.prevButton.querySelector('path');
+      if (prevPath) {
+        prevPath.style.fill = '';
+      }
     }
 
     // Блокируем кнопку "вперед" если мы в конце
     if (isAtEnd) {
       this.nextButton.disabled = true;
-      this.nextButton.style.opacity = '0.5';
-      this.nextButton.querySelector('path').style.fill = '#9CA3AF';
+      this.nextButton.style.opacity = '';
+      const nextPath = this.nextButton.querySelector('path');
+      if (nextPath) {
+        nextPath.style.fill = '';
+      }
     } else {
       this.nextButton.disabled = false;
-      this.nextButton.style.opacity = '1';
-      this.nextButton.querySelector('path').style.fill = '#FD5D39';
+      this.nextButton.style.opacity = '';
+      const nextPath = this.nextButton.querySelector('path');
+      if (nextPath) {
+        nextPath.style.fill = '';
+      }
     }
   }
 

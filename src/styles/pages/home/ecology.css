@@ -1,35 +1,21 @@
 /* ============================================= Блок 1: Главный экран ============================================= */
 .ecology__main-screen {
-  height: clamp(800px, 673.47px + 17.01vw, 1000px);
+  height: auto;
   width: 100%;
   border-radius: 0 0 40px 40px;
   position: relative;
   overflow: hidden;
-}
-
-.ecology__main-screen__wrapper-img {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, #ffffff1c, #769f5a4d, #769f5a94), url('../../../img/ecology/block1-main-screen/main-screen-bg1.webp');
+  color: var(--color-white);
+  background: linear-gradient(180deg, #ffffff1c 7.87%, #243d6a4d 46.13%, #243d6ae6 92.9%), url('/img/ecology/block1-main-screen/main-screen-bg1.webp');
   background-size: cover;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-}
-
-.ecology__main-screen img {
-  object-fit: cover;
-  object-position: top right;
-  width: 100%;
-  height: 100%;
+  background-position: top;
 }
 
 .ecology__main-screen__info {
   display: flex;
   flex-direction: column;
-  max-width: 670px;
   margin-top: 100px;
+  width: 100%;
 
   /* 25px-50px */
   gap: clamp(1.5625rem, 1.1833rem + 1.6181vw, 3.125rem);
@@ -44,15 +30,12 @@
 }
 
 .ecology__main-screen__content {
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
   height: 100%;
+  gap: 80px;
 
   /* 50px 15px 0px 15px - 80px 85px 0px 85px */
   padding: clamp(3.125rem, 2.67rem + 1.94vw, 5rem) clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem) 0;
@@ -61,16 +44,20 @@
 .ecology__main-screen__description {
   display: flex;
   flex-direction: column;
+  max-width: 670px;
 
   /* 15px-30px */
   gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
 }
 
 .ecology__main-screen__facts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  display: flex;
+  justify-content: space-between;
   background-color: var(--color-white);
+  color: var(--color-black);
+
+  /* 30px-129px */
+  gap: 30px clamp(1.875rem, 0.37rem + 6.41vw, 8.0625rem);
 
   /* 15px-20px */
   border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem) clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem) 0 0;
@@ -80,11 +67,20 @@
 }
 
 .ecology__main-screen__fact {
+  flex: 1;
   display: flex;
   flex-direction: column;
 
   /* 10px-25px */
   gap: clamp(0.625rem, 0.4rem + 0.97vw, 1.5625rem);
+}
+
+.ecology__main-screen__fact h1 {
+  white-space: nowrap;
+}
+
+.ecology__main-screen__fact--hidden {
+  visibility: hidden;
 }
 
 /* ============================================= Блок 2: Карточка с картинкой ============================================= */
@@ -95,6 +91,7 @@
   height: 550px;
   background: url('../../../img/ecology/block2-card-image/card-image-bg.webp');
   background-size: cover;
+  background-position: right;
 
   /* 15px 15px - 25px 20px */
   border-radius: 0 0 clamp(0.9375rem, 0.79rem + 0.65vw, 1.5625rem) clamp(0.9375rem, 0.86rem + 0.32vw, 1.25rem);
@@ -110,6 +107,7 @@
   display: flex;
   flex-direction: column;
   background-color: #ffffffe6;
+  max-width: 670px;
 
   /* 15px-20px */
   border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
@@ -119,4 +117,133 @@
 
   /* 20px 15px - 35px 35px */
   padding: clamp(1.25rem, 1.02rem + 0.97vw, 2.1875rem) clamp(0.9375rem, 0.63rem + 1.29vw, 2.1875rem);
+}
+
+/* ============================================= Блок 3: Видео ============================================= */
+.ecology__video {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  width: 100%;
+
+  /* 15px 15px - 50px 100px */
+  padding: clamp(0.9375rem, 0.41rem + 2.27vw, 3.125rem) clamp(0.9375rem, -0.35rem + 5.5vw, 6.25rem);
+}
+
+.ecology__video-description {
+  display: flex;
+  flex-direction: column;
+  max-width: 670px;
+
+  /* 15px-35px */
+  gap: clamp(0.938rem, 0.6346rem + 1.2945vw, 2.188rem);
+}
+
+/* ============================================= Блок 4: Новости ============================================= */
+.ecology__news {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+
+  /* 0 15px 50px 15px - 0 85px 150px 85px */
+  padding: 0 clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem) clamp(3.125rem, 1.608rem + 6.4725vw, 9.375rem);
+}
+
+.ecology__news-title {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.ecology__news-title__controls {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.ecology__news-title__controls__arrow {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 300ms ease;
+}
+
+.ecology__news-title__controls__arrow:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.ecology__news-title__controls__arrow:disabled path {
+  fill: var(--color-light-fiord);
+}
+
+.ecology__news-title__controls__arrow:not(:disabled) path {
+  fill: var(--color-orange);
+}
+
+.ecology__news-title__controls__all-news {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ecology__news-title__controls__all-news path,
+.ecology__news-title__controls__arrow path,
+.ecology__news-title__controls__all-news a {
+  transition: all 300ms ease;
+}
+
+/* ============================================= media запросы на все устройства ============================================= */
+@media (width <=744px) {
+  .ecology__main-screen__facts {
+    flex-direction: column;
+  }
+}
+
+@media (width <=1200px) {
+  .ecology__video {
+    flex-direction: column;
+  }
+
+  .video,
+  .video video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* ============================================= media запросы для мобилок ============================================= */
+@media (hover: none) and (pointer: coarse) {
+  .ecology__news-title__controls__arrow {
+    display: none;
+  }
+}
+
+/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
+@media (hover: hover) and (pointer: fine) {
+  .ecology__news-title__controls__arrow:not(:disabled):hover path {
+    fill: var(--color-blue);
+  }
+
+  .ecology__news-title__controls__all-news:hover a {
+    color: var(--color-light-fiord);
+  }
+
+  .ecology__news-title__controls__all-news:hover path {
+    fill: var(--color-light-fiord);
+  }
+}
+
+.ecology__news-title__controls__all-news:active a {
+  color: var(--color-light-fiord);
+}
+
+.ecology__news-title__controls__all-news:active path {
+  fill: var(--color-light-fiord);
 }
