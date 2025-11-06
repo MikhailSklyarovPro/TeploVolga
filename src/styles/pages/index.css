@@ -506,6 +506,10 @@ main {
   box-shadow: 0 4px 0 0 var(--color-orange);
 }
 
+.home__news-title__controls__arrow:active path {
+  fill: var(--color-blue);
+}
+
 .home__news-title__controls__all-news:active a {
   color: var(--color-light-fiord);
 }

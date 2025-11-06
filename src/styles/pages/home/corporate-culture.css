@@ -171,9 +171,94 @@
   padding: clamp(3.125rem, 2.37rem + 3.24vw, 6.25rem) clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem);
 }
 
+/* ============================================= Блок 5: Советы  ============================================= */
+.corporate-culture__councils {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+
+  /* 0 15px - 0 85px */
+  padding: 0 clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem);
+}
+
+.corporate-culture__council {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+}
+
+.corporate-culture__council-info {
+  display: flex;
+  flex-direction: column;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+/* ============================================= Блок 6: Вакансии  ============================================= */
+.corporate-culture__vacancies {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+
+  /* 50px 15px - 100px 85px */
+  padding: clamp(3.125rem, 2.37rem + 3.24vw, 6.25rem) clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem);
+}
+
+.corporate-culture__vacancies-title {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.corporate-culture__vacancies-title__controls {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.corporate-culture__vacancies__controls__arrow {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 300ms ease;
+}
+
+.corporate-culture__vacancies__controls__arrow path {
+  transition: all 300ms ease;
+}
+
+.corporate-culture__vacancies__controls__arrow:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.corporate-culture__vacancies__controls__arrow:disabled path {
+  fill: var(--color-light-fiord);
+}
+
+.corporate-culture__vacancies__controls__arrow:not(:disabled) path {
+  fill: var(--color-orange);
+}
+
 /* ============================================= media запросы на все устройства ============================================= */
 @media (width <=744px) {
   .corporate-culture__main-screen__facts {
+    flex-direction: column;
+  }
+}
+
+@media (width <=1100px) {
+  .corporate-culture__councils {
     flex-direction: column;
   }
 }
@@ -192,4 +277,22 @@
     width: 100%;
     height: auto;
   }
+}
+
+/* ============================================= media запросы на мобилку ============================================= */
+@media (hover: none) and (pointer: coarse) {
+  .corporate-culture__vacancies__controls__arrow {
+    display: none;
+  }
+}
+
+/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
+@media (hover: hover) and (pointer: fine) {
+  .corporate-culture__vacancies__controls__arrow:hover path {
+    fill: var(--color-blue);
+  }
+}
+
+.corporate-culture__vacancies__controls__arrow:active path {
+  fill: var(--color-blue);
 }

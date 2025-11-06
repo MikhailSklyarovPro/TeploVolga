@@ -8,7 +8,7 @@ class NewsSwipeController {
     this.container = document.querySelector('[data-swipe]');
     this.prevButton = document.querySelector('[data-swipe-prev]');
     this.nextButton = document.querySelector('[data-swipe-next]');
-    this.cards = this.container?.querySelectorAll('.wrapper-card-new');
+    this.cards = this.container?.querySelectorAll('.card-swipe');
 
     if (!this.container || !this.prevButton || !this.nextButton || !this.cards.length) {
       console.warn('NewsSwipeController: Не найдены необходимые элементы');

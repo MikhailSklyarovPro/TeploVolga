@@ -20,7 +20,7 @@
 ```html
 <!-- Контейнер с карточками -->
 <div class="cards-news" data-swipe data-infinite-swipe>
-  <a href="#" class="wrapper-card-new">
+  <a href="#" class="card-swipe">
     <!-- Содержимое карточки -->
   </a>
   <!-- Другие карточки -->
@@ -144,7 +144,7 @@ const scrollPosition = index * (cardWidth + gap);
   scrollbar-width: none;
 }
 
-.wrapper-card-new {
+.card-swipe {
   flex-shrink: 0;
 }
 ```
@@ -155,7 +155,7 @@ const scrollPosition = index * (cardWidth + gap);
 
 - Контейнер с атрибутом `data-swipe`
 - Кнопки с атрибутами `data-swipe-prev` и `data-swipe-next`
-- Карточки с классом `wrapper-card-new`
+- Карточки с классом `card-swipe`
 
 При отсутствии элементов выводится предупреждение в консоль.
 

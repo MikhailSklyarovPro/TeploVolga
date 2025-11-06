@@ -28,6 +28,21 @@
   white-space: nowrap;
 }
 
+.btn-blue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: var(--color-blue);
+  border: 1px solid transparent;
+  transition: all 300ms ease;
+  color: var(--color-white);
+  width: min-content;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
 .external-link {
   display: flex;
   align-items: center;
@@ -40,26 +55,53 @@
   transition: all 300ms ease;
 }
 
+.link-blue {
+  color: var(--color-blue);
+  transition: all 300ms ease;
+  width: max-content;
+}
+
 /* ============================================= Все эффекты наведения и фокуса ============================================= */
 @media (hover: hover) and (pointer: fine) {
   .btn-orange:hover {
     border: 1px solid var(--color-blue);
-    background-color: #f5f5f5;
+    background-color: var(--color-white);
     color: var(--color-blue);
   }
 
   .btn-fiord:hover {
     background-color: var(--color-orange);
   }
+
+  .btn-blue:hover {
+    border: 1px solid var(--color-blue);
+    background-color: var(--color-white);
+    color: var(--color-blue);
+  }
+
+  .link-blue:hover {
+    color: var(--color-orange);
+  }
 }
 
 .btn-orange:active {
   border: 1px solid var(--color-blue);
   background-color: var(--color-blue);
+  color: var(--color-white);
 }
 
 .btn-fiord:active {
   border-color: var(--color-blue);
   background-color: var(--color-white);
   color: var(--color-blue);
+}
+
+.btn-blue:active {
+  border: 1px solid var(--color-dark-blue);
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
+.link-blue:active {
+  color: var(--color-orange);
 }
