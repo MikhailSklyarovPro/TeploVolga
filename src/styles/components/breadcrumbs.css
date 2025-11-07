@@ -7,6 +7,13 @@
   width: max-content;
 }
 
+.breadcrumbs--without-bg {
+  display: flex;
+  gap: 5px;
+  padding: 6px 0;
+  width: max-content;
+}
+
 .breadcrumb__active {
   color: var(--color-black);
   cursor: pointer;

@@ -21,6 +21,13 @@ h3 {
   font-weight: 400;
 }
 
+/* size: 20px-28px line-height: 20px-28px */
+h4 {
+  font-size: clamp(1.25rem, 1.13rem + 0.52vw, 1.75rem);
+  line-height: clamp(1.25rem, 1.13rem + 0.52vw, 1.75rem);
+  font-weight: 400;
+}
+
 /* size: 16px-32px line-height: 24px-36px */
 .caption--500 {
   font-size: clamp(1rem, 0.7573rem + 1.0356vw, 2rem);

@@ -174,7 +174,8 @@
   }
 
   .card-vacancy:hover .link-blue {
-    color: #8be8f7;
+    color: var(--color-dark-blue);
+    text-decoration: underline;
   }
 }
 
@@ -189,4 +190,9 @@
 .card-vacancy:active {
   background-color: var(--color-dark-blue);
   color: var(--color-white);
+}
+
+.card-vacancy:active .link-blue {
+  color: var(--color-orange);
+  text-decoration: underline;
 }
