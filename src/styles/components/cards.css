@@ -15,6 +15,56 @@
   scrollbar-width: none;
 }
 
+.cards-news__title {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.cards-news__title__controls {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.cards-news__title__controls__arrow {
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 300ms ease;
+}
+
+.cards-news__title__controls__arrow:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.cards-news__title__controls__arrow:disabled path {
+  fill: var(--color-light-fiord);
+}
+
+.cards-news__title__controls__arrow:not(:disabled) path {
+  fill: var(--color-orange);
+}
+
+.cards-news__title__controls__all-news {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+
+.cards-news__title__controls__all-news path,
+.cards-news__title__controls__arrow path,
+.cards-news__title__controls__all-news a {
+  transition: all 300ms ease;
+}
+
+
 .card-news__date {
   /* 15px-30px */
   padding-left: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
@@ -157,6 +207,14 @@
   gap: 10px;
 }
 
+
+/* ============================================= media запросы для мобилок ============================================= */
+@media (hover: none) and (pointer: coarse) {
+  .cards-news__title__controls__arrow {
+    display: none;
+  }
+}
+
 /* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
 @media (hover: hover) and (pointer: fine) {
   .card-news:hover {
@@ -177,6 +235,18 @@
     color: var(--color-dark-blue);
     text-decoration: underline;
   }
+
+  .cards-news__title__controls__arrow:not(:disabled):hover path {
+    fill: var(--color-blue);
+  }
+
+  .cards-news__title__controls__all-news:hover a {
+    color: var(--color-light-fiord);
+  }
+
+  .cards-news__title__controls__all-news:hover path {
+    fill: var(--color-light-fiord);
+  }
 }
 
 .card-news:active {
@@ -195,4 +265,12 @@
 .card-vacancy:active .link-blue {
   color: var(--color-orange);
   text-decoration: underline;
+}
+
+.cards-news__title__controls__all-news:active a {
+  color: var(--color-light-fiord);
+}
+
+.cards-news__title__controls__all-news:active path {
+  fill: var(--color-light-fiord);
 }

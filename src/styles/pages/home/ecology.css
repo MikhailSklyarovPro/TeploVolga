@@ -152,54 +152,6 @@
   padding: 0 clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem) clamp(3.125rem, 1.608rem + 6.4725vw, 9.375rem);
 }
 
-.ecology__news-title {
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.ecology__news-title__controls {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.ecology__news-title__controls__arrow {
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 300ms ease;
-}
-
-.ecology__news-title__controls__arrow:disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.ecology__news-title__controls__arrow:disabled path {
-  fill: var(--color-light-fiord);
-}
-
-.ecology__news-title__controls__arrow:not(:disabled) path {
-  fill: var(--color-orange);
-}
-
-.ecology__news-title__controls__all-news {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.ecology__news-title__controls__all-news path,
-.ecology__news-title__controls__arrow path,
-.ecology__news-title__controls__all-news a {
-  transition: all 300ms ease;
-}
-
 /* ============================================= media запросы на все устройства ============================================= */
 @media (width <=744px) {
   .ecology__main-screen__facts {
@@ -217,34 +169,4 @@
     width: 100%;
     height: auto;
   }
-}
-
-/* ============================================= media запросы для мобилок ============================================= */
-@media (hover: none) and (pointer: coarse) {
-  .ecology__news-title__controls__arrow {
-    display: none;
-  }
-}
-
-/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
-@media (hover: hover) and (pointer: fine) {
-  .ecology__news-title__controls__arrow:not(:disabled):hover path {
-    fill: var(--color-blue);
-  }
-
-  .ecology__news-title__controls__all-news:hover a {
-    color: var(--color-light-fiord);
-  }
-
-  .ecology__news-title__controls__all-news:hover path {
-    fill: var(--color-light-fiord);
-  }
-}
-
-.ecology__news-title__controls__all-news:active a {
-  color: var(--color-light-fiord);
-}
-
-.ecology__news-title__controls__all-news:active path {
-  fill: var(--color-light-fiord);
 }

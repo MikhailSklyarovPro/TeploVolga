@@ -299,60 +299,6 @@ main {
   padding: 0 clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem) clamp(3.125rem, 1.608rem + 6.4725vw, 9.375rem);
 }
 
-.home__news-title {
-  display: flex;
-  gap: 10px;
-  justify-content: space-between;
-  align-items: flex-end;
-}
-
-.home__news-title__controls {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-}
-
-.home__news-title__controls__all-news {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.home__news-title__controls__all-news a {
-  transition: all 300ms ease;
-}
-
-.home__news-title__controls__all-news path {
-  transition: all 300ms ease;
-}
-
-.home__news-title__controls__arrow path {
-  transition: all 300ms ease;
-}
-
-.home__news-title__controls__arrow {
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: opacity 300ms ease;
-}
-
-.home__news-title__controls__arrow:disabled {
-  cursor: not-allowed;
-  pointer-events: none;
-  opacity: 0.5;
-}
-
-.home__news-title__controls__arrow:disabled path {
-  fill: var(--color-light-fiord);
-}
-
-.home__news-title__controls__arrow:not(:disabled) path {
-  fill: var(--color-orange);
-}
-
 /* ============================================= Блок 5: Цитаты ============================================= */
 .home__quotes {
   width: 100%;
@@ -421,7 +367,7 @@ main {
   height: 100px;
 }
 
-.home__quote > p {
+.home__quote>p {
   max-width: 774px;
 }
 
@@ -468,18 +414,6 @@ main {
     box-shadow: 0 4px 0 0 var(--color-orange);
   }
 
-  .home__news-title__controls__arrow:hover path {
-    fill: var(--color-blue);
-  }
-
-  .home__news-title__controls__all-news:hover a {
-    color: var(--color-light-fiord);
-  }
-
-  .home__news-title__controls__all-news:hover path {
-    fill: var(--color-light-fiord);
-  }
-
   .home__quotes__container button:hover .quotes__button__background {
     fill: var(--color-orange);
   }
@@ -504,18 +438,6 @@ main {
 
 .home__company:active .external-link {
   box-shadow: 0 4px 0 0 var(--color-orange);
-}
-
-.home__news-title__controls__arrow:active path {
-  fill: var(--color-blue);
-}
-
-.home__news-title__controls__all-news:active a {
-  color: var(--color-light-fiord);
-}
-
-.home__news-title__controls__all-news:active path {
-  fill: var(--color-light-fiord);
 }
 
 .home__quotes__container button:active .quotes__button__background {
@@ -588,11 +510,5 @@ main {
 
     /* 150px-406px */
     grid-auto-columns: minmax(clamp(9.375rem, 5.4915rem + 16.5696vw, 25.375rem), 1fr);
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .home__news-title__controls__arrow {
-    display: none;
   }
 }
