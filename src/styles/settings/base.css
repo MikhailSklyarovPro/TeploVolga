@@ -9,11 +9,12 @@
   --color-light-blue: #e1ebf5;
   --color-beige: #eddcd1;
   --color-snow-white: #fffafa;
+  --color-light-grey: #E7E9E9;
   --color-white: #fff;
   --color-fiord: #4a586e;
   --color-light-fiord: #7c8797;
   --color-black: #21272a;
-  --color-grey: #414042;
+  --color-grey: #717171;
 
   /* Шрифты */
   --font-family-default: geologica, arial, sans-serif;
@@ -105,6 +106,7 @@ a {
 }
 
 @media (hover: none) and (pointer: coarse) {
+
   /* Весь скроллбар */
   *::-webkit-scrollbar {
     display: none;
@@ -112,6 +114,7 @@ a {
 }
 
 @media (hover: hover) and (pointer: fine) {
+
   /* Весь скроллбар */
   *::-webkit-scrollbar {
     width: 10px;

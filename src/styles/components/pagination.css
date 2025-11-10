@@ -1,0 +1,62 @@
+.pagination {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 50px;
+    border-radius: 8px;
+    transition: all 300ms ease;
+    color: var(--color-grey);
+    font-size: inherit;
+    background-color: var(--color-light-grey);
+}
+
+.pagination__button:disabled {
+    opacity: 0.6;
+    cursor: default;
+}
+
+.pagination__button--active {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+}
+
+/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
+@media (hover: hover) and (pointer: fine) {
+    .pagination__button:hover:not(:disabled, .pagination__button--active) {
+        color: var(--color-blue);
+        background-color: var(--color-snow-white);
+        border: 1px solid var(--color-blue);
+    }
+
+    .pagination__button--active:hover {
+        background-color: #ff4920;
+    }
+
+    .pagination__button--arrow:hover:not(:disabled) path {
+        fill: var(--color-blue);
+    }
+}
+
+.pagination__button:active:not(:disabled, .pagination__button--active) {
+    color: var(--color-blue);
+    background-color: var(--color-snow-white);
+    border: 1px solid var(--color-blue);
+}
+
+
+.pagination__button--active:active {
+    background-color: #ff4920;
+}
+
+.pagination__button--arrow:active:not(:disabled) path {
+    fill: var(--color-blue);
+}

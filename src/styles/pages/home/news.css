@@ -1,3 +1,145 @@
-p {
-  color: #000;
+.news {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 50px;
+
+  /* 50px 15px 50px 15px - 60px 85px 150px 85px */
+  padding: clamp(3.125rem, 2.97rem + 0.65vw, 3.75rem) clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem) clamp(3.125rem, 1.61rem + 6.47vw, 9.375rem);
+}
+
+/* ============================================= Заголовок страницы  ============================================= */
+.news__wrapper-title {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+
+  /* 25px-30px */
+  gap: clamp(1.5625rem, 1.49rem + 0.32vw, 1.875rem);
+}
+
+.news__title {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* =============================================  Контент страницы  ============================================= */
+.news__content {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+}
+
+.news__filters {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.news__filters__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.news__filters__item {
+  cursor: pointer;
+  transition: all 300ms ease;
+  color: var(--color-light-fiord);
+  white-space: nowrap;
+}
+
+.news__filters__search {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: var(--color-fiord);
+  text-decoration: none;
+  transition: color 300ms ease;
+  white-space: nowrap;
+}
+
+.news__filters__search svg {
+  /* 15px-20px */
+  width: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+
+  /* 15px-20px */
+  height: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+}
+
+.news__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(clamp(16rem, 13.5728rem + 10.356vw, 26rem), 1fr));
+  gap: 30px;
+}
+
+.news__grid .wrapper-card-new {
+  width: 100%;
+}
+
+.news__grid .card-news {
+  width: 100%;
+  height: 100%;
+}
+
+.news__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.news__filters__item--active {
+  color: var(--color-fiord);
+  text-decoration: underline solid var(--color-orange) 2px;
+  text-underline-offset: 4px;
+}
+
+/* =============================================  Адаптивность для всех устройств ============================================= */
+@media (width <=744px) {
+  .news__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
+@media (hover: hover) and (pointer: fine) {
+  .news__filters__item:hover {
+    color: var(--color-fiord);
+  }
+
+  .news__filters__item--active:hover {
+    color: var(--color-dark-blue);
+  }
+
+  .news__filters__search:hover {
+    color: var(--color-dark-blue);
+  }
+
+  .news__filters__search:hover path,
+  .news__filters__search:hover circle {
+    stroke: var(--color-dark-blue);
+  }
+}
+
+.news__filters__item:active {
+  color: var(--color-fiord);
+}
+
+.news__filters__item--active:active {
+  color: var(--color-dark-blue);
+}
+
+.news__filters__search:active {
+  color: var(--color-dark-blue);
+}
+
+.news__filters__search:active path,
+.news__filters__search:active circle {
+  stroke: var(--color-dark-blue);
 }
