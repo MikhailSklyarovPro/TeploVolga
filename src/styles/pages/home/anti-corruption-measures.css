@@ -1,3 +1,113 @@
-p {
-  color: #000;
+.anti-corruption-measures {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  gap: 50px;
+
+  /* 50px 15px 50px 15px - 60px 85px 150px 85px */
+  padding: clamp(3.125rem, 2.97rem + 0.65vw, 3.75rem) clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem) clamp(3.125rem, 1.61rem + 6.47vw, 9.375rem);
+}
+
+/* ============================================= Заголовок страницы  ============================================= */
+.anti-corruption-measures__wrapper-title {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+
+  /* 25px-30px */
+  gap: clamp(1.5625rem, 1.49rem + 0.32vw, 1.875rem);
+}
+
+.anti-corruption-measures__title-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: max-content;
+
+  /* 100px-180px */
+  height: clamp(6.25rem, 5.04rem + 5.18vw, 11.25rem);
+}
+
+.anti-corruption-measures__title-icon svg {
+  width: 100%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.anti-corruption-measures__title {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* =============================================  Контент страницы  ============================================= */
+.anti-corruption-measures__content {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+}
+
+.anti-corruption-measures__content-wrapper-text {
+  display: flex;
+  flex-direction: column;
+
+  /* 15px-25px */
+  gap: clamp(0.9375rem, 0.79rem + 0.65vw, 1.5625rem);
+}
+
+.anti-corruption-measures__content-text {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.anti-corruption-measures__content-text ul {
+  display: flex;
+  flex-direction: column;
+  list-style: disc;
+  list-style-position: inside;
+  gap: 15px;
+}
+
+.anti-corruption-measures__contacts {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: max-content;
+
+  /* 25px-30px */
+  gap: clamp(1.5625rem, 1.49rem + 0.32vw, 1.875rem);
+
+  /* 20px 40px 20px 20px - 32px 200px 32px 32px */
+  padding: clamp(1.25rem, 1.07rem + 0.78vw, 2rem) clamp(2.5rem, 0.07rem + 10.36vw, 12.5rem) clamp(1.25rem, 1.07rem + 0.78vw, 2rem) clamp(1.25rem, 1.07rem + 0.78vw, 2rem);
+}
+
+.anti-corruption-measures__contacts-border {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.anti-corruption-measures__contacts-title {
+  display: flex;
+  flex-direction: column;
+
+  /* 10px-15px */
+  gap: clamp(0.625rem, 0.549rem + 0.3241vw, 0.938rem);
+  position: relative;
+  z-index: 1;
+}
+
+.anti-corruption-measures__contacts-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
 }

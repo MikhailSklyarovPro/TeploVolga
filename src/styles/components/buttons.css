@@ -61,6 +61,12 @@
   width: max-content;
 }
 
+.link-orange {
+  color: var(--color-orange);
+  transition: all 300ms ease;
+  width: max-content;
+}
+
 /* ============================================= Все эффекты наведения и фокуса ============================================= */
 @media (hover: hover) and (pointer: fine) {
   .btn-orange:hover {
@@ -81,6 +87,11 @@
 
   .link-blue:hover {
     color: var(--color-dark-blue);
+    text-decoration: underline;
+  }
+
+  .link-orange:hover {
+    color: #ff2f00;
     text-decoration: underline;
   }
 }
