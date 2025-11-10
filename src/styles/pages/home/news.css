@@ -35,10 +35,9 @@
 
 .news__filters {
   display: flex;
-  align-items: center;
+  flex-flow: column;
   justify-content: space-between;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .news__filters__list {
@@ -54,22 +53,86 @@
   white-space: nowrap;
 }
 
-.news__filters__search {
+.news__filters__search-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
-  gap: 15px;
-  color: var(--color-fiord);
-  text-decoration: none;
-  transition: color 300ms ease;
-  white-space: nowrap;
 }
 
-.news__filters__search svg {
+.news__filters__search-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-fiord);
+  transition: all 300ms ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.news__filters__search-button svg {
   /* 15px-20px */
   width: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
 
   /* 15px-20px */
   height: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+}
+
+.news__filters__search-input-wrapper {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  visibility: hidden;
+  width: 0;
+  overflow: hidden;
+  transition: all 300ms ease;
+  transform-origin: left center;
+}
+
+.news__filters__search-input-wrapper--active {
+  opacity: 1;
+  visibility: visible;
+  width: 300px;
+}
+
+.news__filters__search-input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid var(--color-light-fiord);
+  border-radius: 16px;
+  color: var(--color-fiord);
+  background-color: var(--color-white);
+  outline: none;
+  transition: border-color 300ms ease;
+}
+
+.news__filters__search-input::placeholder {
+  color: var(--color-light-fiord);
+  font-weight: 300;
+}
+
+.news__filters__search-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: none;
+  cursor: pointer;
+  transition: all 300ms ease;
+  flex-shrink: 0;
+}
+
+.news__filters__search-close svg {
+  width: 20px;
+  height: 20px;
+}
+
+.news__filters__search-close path {
+  transition: stroke 300ms ease;
 }
 
 .news__grid {
@@ -105,6 +168,10 @@
   .news__grid {
     grid-template-columns: 1fr;
   }
+
+  .news__filters__search-input-wrapper--active {
+    width: 250px;
+  }
 }
 
 /* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */
@@ -117,12 +184,16 @@
     color: var(--color-dark-blue);
   }
 
-  .news__filters__search:hover {
+  .news__filters__search-button:hover {
     color: var(--color-dark-blue);
   }
 
-  .news__filters__search:hover path,
-  .news__filters__search:hover circle {
+  .news__filters__search-button:hover path,
+  .news__filters__search-button:hover circle {
+    stroke: var(--color-dark-blue);
+  }
+
+  .news__filters__search-close:hover path {
     stroke: var(--color-dark-blue);
   }
 }
@@ -135,11 +206,19 @@
   color: var(--color-dark-blue);
 }
 
-.news__filters__search:active {
+.news__filters__search-button:active {
   color: var(--color-dark-blue);
 }
 
-.news__filters__search:active path,
-.news__filters__search:active circle {
+.news__filters__search-button:active path,
+.news__filters__search-button:active circle {
   stroke: var(--color-dark-blue);
+}
+
+.news__filters__search-close:active path {
+  stroke: var(--color-dark-blue);
+}
+
+.news__filters__search-input:focus {
+  border-color: var(--color-blue);
 }

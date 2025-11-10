@@ -303,7 +303,7 @@
               <li><a class="text-base--400" href="../../pages/home/ecology.html">Экология</a></li>
               <li><a class="text-base--400" href="../../pages/home/corporate-culture.html">Корпоративная культура</a></li>
               <li><a class="text-base--400" href="../../pages/home/company-structure.html">Структура компании</a></li>
-              <li><a class="text-base--400" href="../../pages/home/works-council.html">Молодежный совет</a></li>
+              <li><a class="text-base--400" href="../../pages/home/youth-council.html">Молодежный совет</a></li>
               <li><a class="text-base--400" href="../../pages/home/works-council.html">Рабочий совет</a></li>
               <li><a class="text-base--400" href="../../pages/home/news.html">Новости</a></li>
             </ul>
@@ -455,6 +455,23 @@
       <section class="news__content">
         <!-- Меню фильтров -->
         <nav class="news__filters" data-news-filters>
+          <div class="news__filters__search-wrapper">
+            <button class="news__filters__search-button text-base--400" data-search-toggle>
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                <circle cx="10" cy="10" r="9" stroke="#4A586E" stroke-width="2" />
+                <path d="M16.7812 16.7773L20.3168 20.3129" stroke="#4A586E" stroke-width="2" />
+              </svg>
+              <span class="text-base--400">Найти</span>
+            </button>
+            <div class="news__filters__search-input-wrapper" data-search-input-wrapper>
+              <input type="text" class="news__filters__search-input text-base--400" placeholder="Поиск..." data-search-input />
+              <button class="news__filters__search-close" data-search-close aria-label="Закрыть поиск">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                  <path d="M5 5L15 15M15 5L5 15" stroke="#4A586E" stroke-width="2" stroke-linecap="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
           <ul class="news__filters__list">
             <li>
               <button class="news__filters__item news__filters__item--active text-base--400" data-filter="all">Все</button>
@@ -484,13 +501,6 @@
               <button class="news__filters__item text-base--400" data-filter="ecology">Экология</button>
             </li>
           </ul>
-          <a href="#" class="news__filters__search text-base--400">
-            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
-              <circle cx="10" cy="10" r="9" stroke="#4A586E" stroke-width="2" />
-              <path d="M16.7812 16.7773L20.3168 20.3129" stroke="#4A586E" stroke-width="2" />
-            </svg>
-            <span class="text-base--400">Найти</span>
-          </a>
         </nav>
 
         <!-- Сетка новостей -->

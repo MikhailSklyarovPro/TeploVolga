@@ -33,6 +33,10 @@ class NewsMenu {
 
     this.filteredNews = [...this.options.news];
     this.pagination = null;
+    this.searchInputWrapper = null;
+    this.searchInput = null;
+    this.searchButton = null;
+    this.searchCloseButton = null;
 
     this.init();
   }
@@ -41,9 +45,50 @@ class NewsMenu {
    * Инициализация
    */
   init() {
+    this.initSearchElements();
+    this.readFilterFromURL();
     this.attachFilterEvents();
+    this.attachSearchEvents();
     this.initPagination();
     this.renderNews();
+  }
+
+  /**
+   * Чтение фильтра из URL параметров
+   */
+  readFilterFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const filterFromURL = urlParams.get('filter');
+
+    if (filterFromURL) {
+      // Проверяем, что фильтр валидный
+      const validFilters = ['all', 'enplusGroup', 'heatingNetworks', 'generation', 'avtozavodskayaTpp', 'factoryNetworks', 'youthCouncil', 'worksCouncil', 'ecology'];
+
+      if (validFilters.includes(filterFromURL)) {
+        this.options.activeFilter = filterFromURL;
+        // Устанавливаем активную кнопку без вызова setActiveFilter (чтобы не обновлять URL)
+        const filterButtons = this.filtersContainer.querySelectorAll('[data-filter]');
+        filterButtons.forEach(btn => {
+          if (btn.dataset.filter === filterFromURL) {
+            btn.classList.add('news__filters__item--active');
+          } else {
+            btn.classList.remove('news__filters__item--active');
+          }
+        });
+        // Применяем фильтрацию
+        this.filterNews();
+      }
+    }
+  }
+
+  /**
+   * Обновление URL с параметром фильтра
+   * @param {string} filter - Значение фильтра
+   */
+  updateURL(filter) {
+    const url = new URL(window.location);
+    url.searchParams.set('filter', filter);
+    window.history.pushState({ filter }, '', url);
   }
 
   /**
@@ -58,6 +103,78 @@ class NewsMenu {
         this.setActiveFilter(filter);
       });
     });
+  }
+
+  /**
+   * Инициализация элементов поиска
+   */
+  initSearchElements() {
+    this.searchButton = this.filtersContainer.querySelector('[data-search-toggle]');
+    this.searchInputWrapper = this.filtersContainer.querySelector('[data-search-input-wrapper]');
+    this.searchInput = this.filtersContainer.querySelector('[data-search-input]');
+    this.searchCloseButton = this.filtersContainer.querySelector('[data-search-close]');
+  }
+
+  /**
+   * Привязка событий к поиску
+   */
+  attachSearchEvents() {
+    if (this.searchButton) {
+      this.searchButton.addEventListener('click', () => {
+        this.showSearchInput();
+      });
+    }
+
+    if (this.searchCloseButton) {
+      this.searchCloseButton.addEventListener('click', () => {
+        this.hideSearchInput();
+      });
+    }
+
+    if (this.searchInput) {
+      // Обработка Escape для закрытия поиска
+      this.searchInput.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+          this.hideSearchInput();
+        }
+      });
+    }
+  }
+
+  /**
+   * Показать поле ввода поиска
+   */
+  showSearchInput() {
+    if (this.searchInputWrapper) {
+      this.searchInputWrapper.classList.add('news__filters__search-input-wrapper--active');
+      if (this.searchButton) {
+        this.searchButton.style.opacity = '0';
+        this.searchButton.style.visibility = 'hidden';
+      }
+      // Фокус на поле ввода после анимации
+      setTimeout(() => {
+        if (this.searchInput) {
+          this.searchInput.focus();
+        }
+      }, 300);
+    }
+  }
+
+  /**
+   * Скрыть поле ввода поиска
+   */
+  hideSearchInput() {
+    if (this.searchInputWrapper) {
+      this.searchInputWrapper.classList.remove('news__filters__search-input-wrapper--active');
+      if (this.searchButton) {
+        this.searchButton.style.opacity = '1';
+        this.searchButton.style.visibility = 'visible';
+      }
+      // Очищаем поле ввода при закрытии
+      if (this.searchInput) {
+        this.searchInput.value = '';
+      }
+    }
   }
 
   /**
@@ -80,6 +197,9 @@ class NewsMenu {
         btn.classList.remove('news__filters__item--active');
       }
     });
+
+    // Обновляем URL
+    this.updateURL(filter);
 
     // Фильтруем новости
     this.filterNews();
