@@ -10,8 +10,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 50px;
-    height: 50px;
+
+    /* 40px-50px */
+    min-width: clamp(2.5rem, 2.35rem + 0.65vw, 3.125rem);
+
+    /* 40px-50px */
+    height: clamp(2.5rem, 2.35rem + 0.65vw, 3.125rem);
     border-radius: 8px;
     transition: all 300ms ease;
     color: var(--color-grey);
@@ -27,6 +31,21 @@
 .pagination__button--active {
     background-color: var(--color-orange);
     color: var(--color-white);
+}
+
+.pagination__button--ellipsis {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* 40px-50px */
+    min-width: clamp(2.5rem, 2.35rem + 0.65vw, 3.125rem);
+
+    /* 40px-50px */
+    height: clamp(2.5rem, 2.35rem + 0.65vw, 3.125rem);
+    color: var(--color-grey);
+    pointer-events: none;
+    user-select: none;
 }
 
 /* ============================================= Все эффекты наведения и фокуса (hover focus active) ============================================= */

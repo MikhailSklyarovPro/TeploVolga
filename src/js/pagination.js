@@ -37,6 +37,8 @@ class Pagination {
     };
 
     this.totalPages = Math.ceil(this.options.totalItems / this.options.itemsPerPage);
+    this.resizeHandler = null;
+    this.resizeTimeout = null;
     this.init();
   }
 
@@ -46,6 +48,7 @@ class Pagination {
   init() {
     this.render();
     this.attachEvents();
+    this.attachResizeHandler();
   }
 
   /**
@@ -82,32 +85,50 @@ class Pagination {
   }
 
   /**
-   * Получение списка видимых страниц
-   * @returns {Array<number>} Массив номеров страниц
+   * Получение списка видимых страниц с троеточием
+   * Статическая логика: всегда показываем первую, последнюю и 3 промежуточные страницы
+   * @returns {Array<number|string>} Массив номеров страниц и троеточий
    */
   getVisiblePages() {
-    const { currentPage, maxVisiblePages } = this.options;
+    const { currentPage } = this.options;
     const pages = [];
 
-    if (this.totalPages <= maxVisiblePages) {
-      // Если страниц меньше максимума, показываем все
+    // Если страниц 5 или меньше, показываем все
+    if (this.totalPages <= 5) {
       for (let i = 1; i <= this.totalPages; i++) {
         pages.push(i);
       }
-    } else {
-      // Вычисляем диапазон страниц для отображения
-      let start = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-      const end = Math.min(this.totalPages, start + maxVisiblePages - 1);
-
-      // Корректируем начало, если достигли конца
-      if (end - start < maxVisiblePages - 1) {
-        start = Math.max(1, end - maxVisiblePages + 1);
-      }
-
-      for (let i = start; i <= end; i++) {
-        pages.push(i);
-      }
+      return pages;
     }
+
+    // Всегда показываем первую страницу
+    pages.push(1);
+
+    // Определяем, какие страницы показывать между первой и последней
+    if (currentPage <= 2) {
+      // Страница 1-2: 1, 2, троеточие, 9, 10
+      pages.push(2);
+      pages.push('ellipsis-end');
+      pages.push(this.totalPages - 1);
+    } else if (currentPage === 3) {
+      // Страница 3: 1, 2, 3, троеточие, 10
+      pages.push(2);
+      pages.push(3);
+      pages.push('ellipsis-end');
+    } else if (currentPage >= this.totalPages - 2) {
+      // Страница 8-10: 1, троеточие, 8, 9, 10
+      pages.push('ellipsis-start');
+      pages.push(this.totalPages - 2);
+      pages.push(this.totalPages - 1);
+    } else {
+      // Страница 4-8: 1, троеточие, текущая, троеточие, 10
+      pages.push('ellipsis-start');
+      pages.push(currentPage);
+      pages.push('ellipsis-end');
+    }
+
+    // Всегда показываем последнюю страницу
+    pages.push(this.totalPages);
 
     return pages;
   }
@@ -139,6 +160,16 @@ class Pagination {
 
     // Номера страниц
     pages.forEach(page => {
+      // Обработка троеточия
+      if (page === 'ellipsis-start' || page === 'ellipsis-end') {
+        html.push(`
+          <span class="${buttonClass} ${buttonClass}--ellipsis" aria-hidden="true">
+            ...
+          </span>
+        `);
+        return;
+      }
+
       const isActive = page === currentPage;
       html.push(`
         <button
@@ -221,9 +252,34 @@ class Pagination {
   }
 
   /**
+   * Привязка обработчика изменения размера окна
+   */
+  attachResizeHandler() {
+    // Используем debounce для оптимизации
+    this.resizeHandler = () => {
+      if (this.resizeTimeout) {
+        clearTimeout(this.resizeTimeout);
+      }
+      this.resizeTimeout = setTimeout(() => {
+        this.render();
+      }, 150);
+    };
+
+    window.addEventListener('resize', this.resizeHandler);
+  }
+
+  /**
    * Уничтожение экземпляра
    */
   destroy() {
+    if (this.resizeHandler) {
+      window.removeEventListener('resize', this.resizeHandler);
+      this.resizeHandler = null;
+    }
+    if (this.resizeTimeout) {
+      clearTimeout(this.resizeTimeout);
+      this.resizeTimeout = null;
+    }
     this.container.innerHTML = '';
     this.container = null;
   }
