@@ -4,7 +4,10 @@
   background-color: #ffffffcf;
   padding: 6px 12px;
   border-radius: 12px;
-  width: max-content;
+  width: auto;
+  overflow: auto;
+  max-width: max-content;
+  white-space: nowrap;
 }
 
 .breadcrumbs--without-bg {

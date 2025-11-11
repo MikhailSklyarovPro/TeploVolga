@@ -438,7 +438,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 2 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Стратегическое развитие ЭН+ Групп',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 2,
@@ -448,7 +448,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 8 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news2.webp',
         imageAlt: 'Корпоративные программы ЭН+ Групп',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 3,
@@ -458,7 +458,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 15 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news3.webp',
         imageAlt: 'Экологические проекты ЭН+ Групп',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
     ],
     heatingNetworks: [
@@ -470,7 +470,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 1 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news4.webp',
         imageAlt: 'Модернизация тепловых сетей',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 5,
@@ -480,7 +480,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 10 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Бестраншейная прокладка труб',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 6,
@@ -490,7 +490,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 18 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news4.webp',
         imageAlt: 'Эффективность теплосетей',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
     ],
     generation: [
@@ -502,7 +502,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 3 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news3.webp',
         imageAlt: 'Реконструкция котельных',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 8,
@@ -512,7 +512,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 12 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news2.webp',
         imageAlt: 'Экологичное будущее генерации',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 9,
@@ -522,7 +522,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 43,
@@ -532,7 +532,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 3535,
@@ -542,7 +542,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 45454,
@@ -552,7 +552,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 434,
@@ -562,7 +562,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 2233,
@@ -572,7 +572,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 7575,
@@ -582,7 +582,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 8787,
@@ -592,7 +592,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 999,
@@ -602,7 +602,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 1000,
@@ -612,7 +612,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 3232,
@@ -622,7 +622,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 2211,
@@ -632,7 +632,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 1122,
@@ -642,7 +642,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 3344,
@@ -652,7 +652,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 44433,
@@ -662,7 +662,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 44533,
@@ -672,7 +672,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 44493,
@@ -682,7 +682,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 44437,
@@ -692,7 +692,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 554433,
@@ -702,7 +702,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 48433,
@@ -712,7 +712,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 499433,
@@ -722,7 +722,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 235232,
@@ -732,7 +732,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 77979,
@@ -742,7 +742,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 546446,
@@ -752,7 +752,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 78423,
@@ -762,7 +762,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 85264,
@@ -772,7 +772,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 21470,
@@ -782,7 +782,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 357087,
@@ -792,7 +792,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 90535,
@@ -802,7 +802,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 335742,
@@ -812,7 +812,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
     ],
     avtozavodskayaTpp: [
@@ -824,7 +824,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 4 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Обновление оборудования ТЭЦ',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 11,
@@ -834,7 +834,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 11 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news2.webp',
         imageAlt: 'Надежность работы ТЭЦ',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 12,
@@ -844,7 +844,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 19 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news3.webp',
         imageAlt: 'Экология на ТЭЦ',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
     ],
     factoryNetworks: [
@@ -856,7 +856,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 5 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news4.webp',
         imageAlt: 'Заводские тепловые сети',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 14,
@@ -866,7 +866,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 13 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Проекты заводских сетей',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 15,
@@ -876,7 +876,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 21 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news4.webp',
         imageAlt: 'Оптимизация заводских сетей',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
 
       {
@@ -887,7 +887,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 6767676,
@@ -897,7 +897,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 20 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Автоматизированные системы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
     ],
     youthCouncil: [
@@ -909,7 +909,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 6 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news3.webp',
         imageAlt: 'Марафон по-нижегородски',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 17,
@@ -919,7 +919,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 14 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news2.webp',
         imageAlt: 'Молодежные инициативы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 18,
@@ -929,7 +929,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 22 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Спортивные достижения',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
     ],
     worksCouncil: [
@@ -941,7 +941,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Безопасность по-новому',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 20,
@@ -951,7 +951,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 16 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news2.webp',
         imageAlt: 'Рабочий совет',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 21,
@@ -961,7 +961,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 23 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news3.webp',
         imageAlt: '130 метров под землей',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
     ],
     ecology: [
@@ -973,7 +973,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 9 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news4.webp',
         imageAlt: 'Экологические программы',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 23,
@@ -983,7 +983,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 17 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news1.webp',
         imageAlt: 'Экологичное топливо',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
       {
         id: 24,
@@ -993,7 +993,7 @@ function getTestNewsDataByCategory() {
         date: new Date(today.getTime() - 25 * 24 * 60 * 60 * 1000).toISOString(),
         image: '../../img/news/cards/news2.webp',
         imageAlt: 'Охрана окружающей среды',
-        link: '../home/news-details.html',
+        link: '../home/news-detailed.html',
       },
     ],
   };

@@ -1,0 +1,108 @@
+/* ============================================= Блок 1: Главный экран ============================================= */
+.news-detailed__main-screen {
+  width: 100%;
+  height: auto;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+  background: linear-gradient(180deg, #ffffff1c 7.87%, #243d6a4d 46.13%, #243d6ae6 92.9%), url('/img/news-detailed/block1-main-screen/main-screen-bg.webp');
+  background-size: cover;
+  background-position: top;
+
+  /* 480px-700px */
+  min-height: clamp(30rem, 26.6626rem + 14.2395vw, 43.75rem);
+}
+
+.news-detailed__main-screen__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 80px;
+
+  /* 50px 15px - 80px 85px */
+  padding: clamp(3.125rem, 2.67rem + 1.94vw, 5rem) clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem);
+}
+
+.news-detailed__main-screen__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+
+  /* 25px-50px */
+  gap: clamp(1.5625rem, 1.1833rem + 1.6181vw, 3.125rem);
+}
+
+.news-detailed__main-screen__header {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+}
+
+.news-detailed__main-screen__header__title {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+.news-detailed__main-screen__title__content {
+  display: flex;
+  flex-direction: column;
+
+  /* 10px-15px */
+  gap: clamp(0.625rem, 0.549rem + 0.3241vw, 0.938rem);
+}
+
+.news-detailed__main-screen__title__date {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffffb8;
+}
+
+.news-detailed__main-screen__title__description {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* ============================================= Блок 2: Фотогаллерея ============================================= */
+.news-detailed__gallery {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+
+  /* 50px 15px - 100px 85px */
+  padding: clamp(3.125rem, 2.37rem + 3.24vw, 6.25rem) clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem);
+}
+
+.news-detailed__gallery__content__description {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+}
+
+/* ============================================= Блок 3: Новости ============================================= */
+.news-detailed__news {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+
+  /* 0 15px 50px 15px - 0 85px 150px 85px */
+  padding: 0 clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem) clamp(3.125rem, 1.608rem + 6.4725vw, 9.375rem);
+}
