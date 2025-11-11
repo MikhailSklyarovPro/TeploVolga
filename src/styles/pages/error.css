@@ -4,11 +4,14 @@
   align-items: center;
   justify-content: center;
   margin-top: 100px;
-  height: 70vh;
-  background: url('../../img/error/xxx.png');
-  background-size: cover;
-  background-position: center;
+  background: url('../../img/error/error-bg.svg');
+  background-size: 100% auto;
+  background-position: bottom;
   background-repeat: no-repeat;
+  margin-bottom: 50px;
+
+  /* 15px 15px 15px 15px - 85px 85px 20px 85px */
+  padding: clamp(0.9375rem, -0.05rem + 4.21vw, 5rem) clamp(0.9375rem, -0.05rem + 4.21vw, 5rem) clamp(0.9375rem, 0.79rem + 0.65vw, 1.5625rem);
 
   /* 30px-50px */
   gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
@@ -20,4 +23,21 @@
   /* 100px-260px */
   height: clamp(6.25rem, 3.82rem + 10.36vw, 16.25rem);
   width: auto;
+}
+
+/* Управление мерцанием через CSS */
+.error__not-find-icon {
+  /* CSS переменные для управления мерцанием */
+  --twinkle-duration: 2s;
+}
+
+/* Дополнительные эффекты мерцания через CSS */
+.error__not-find-icon path {
+  /* Можно добавить filter для дополнительного эффекта */
+  will-change: opacity, filter;
+}
+
+/* Для управления скоростью мерцания можно изменить через CSS */
+.error__not-find-icon animate[attributeName="opacity"] {
+  /* SVG анимация управляется через атрибуты, но можно добавить CSS для стилизации */
 }

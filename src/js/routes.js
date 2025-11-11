@@ -74,9 +74,9 @@ export function normalizePath(path) {
   // Если путь не заканчивается на .html, добавляем index.html
   if (!normalized.endsWith('.html')) {
     if (normalized.endsWith('/')) {
-      normalized = `${normalized}index.html`;
+      normalized = normalized + 'index.html';
     } else {
-      normalized = `${normalized}/index.html`;
+      normalized = normalized + '/index.html';
     }
   }
 

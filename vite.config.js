@@ -1,7 +1,7 @@
+import { existsSync, writeFileSync } from 'fs';
 import { glob } from 'glob';
 import { dirname, resolve } from 'path';
 import { fileURLToPath } from 'url';
-import { writeFileSync, existsSync } from 'fs';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -23,7 +23,7 @@ function generateRoutes() {
   const routes = htmlFiles
     .map(file => {
       // Убираем префикс 'src/' и нормализуем слэши
-      let route = file.replace(/^src[\/\\]/, '').replace(/\\/g, '/');
+      const route = file.replace(/^src[\/\\]/, '').replace(/\\/g, '/');
       return route;
     })
     .sort();

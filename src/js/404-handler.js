@@ -26,6 +26,15 @@ function getCurrentPath() {
     return 'index.html';
   }
 
+  // Если путь не заканчивается на .html и не является директорией, добавляем .html
+  if (!relativePath.endsWith('.html') && !relativePath.endsWith('/')) {
+    // Проверяем, есть ли расширение файла
+    const hasExtension = relativePath.includes('.');
+    if (!hasExtension) {
+      relativePath = `${relativePath}.html`;
+    }
+  }
+
   return relativePath;
 }
 
@@ -45,11 +54,20 @@ function checkPageExists() {
   if (!isRouteExists(normalizedPath)) {
     // Перенаправляем на страницу ошибки
     // Определяем правильный путь к error.html в зависимости от текущей директории
-    let errorPath = './pages/error.html';
+    const base = import.meta.env.BASE_URL || './';
+    let errorPath = '';
 
     // Если мы уже в папке pages, используем относительный путь
     if (window.location.pathname.includes('/pages/')) {
-      errorPath = './error.html';
+      errorPath = base === './' ? './error.html' : `${base}pages/error.html`;
+    } else {
+      // Определяем путь относительно корня
+      if (base === './') {
+        errorPath = './pages/error.html';
+      } else {
+        // Используем абсолютный путь от корня
+        errorPath = '/pages/error.html';
+      }
     }
 
     // Сохраняем оригинальный путь для возможного использования
@@ -75,4 +93,3 @@ function init404Handler() {
 
 // Запускаем проверку
 init404Handler();
-
