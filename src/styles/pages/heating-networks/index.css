@@ -1,3 +1,102 @@
-p {
-  color: #000;
+/* ============================================= Блок 1: Главный экран ============================================= */
+.heating-networks__main-screen {
+  height: auto;
+  width: 100%;
+  border-radius: 0 0 40px 40px;
+  position: relative;
+  overflow: hidden;
+  color: var(--color-white);
+  background: linear-gradient(180deg, #ffffff1c 7.87%, #243d6a4d 46.13%, #243d6ae6 92.9%), url('/img/heating-networks/main/block1-main-screen/main-screen-bg.webp');
+  background-size: cover;
+  background-position: top;
+}
+
+.heating-networks__main-screen__info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+  width: 100%;
+
+  /* 25px-50px */
+  gap: clamp(1.5625rem, 1.1833rem + 1.6181vw, 3.125rem);
+}
+
+.heating-networks__main-screen__header {
+  display: flex;
+  flex-direction: column;
+
+  /* 10px-15px */
+  gap: clamp(0.625rem, 0.549rem + 0.3241vw, 0.938rem);
+}
+
+.heating-networks__main-screen__content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 80px;
+
+  /* 50px 15px 0px 15px - 80px 85px 0px 85px */
+  padding: clamp(3.125rem, 2.67rem + 1.94vw, 5rem) clamp(0.9375rem, -0.12rem + 4.53vw, 5.3125rem) 0;
+}
+
+.heating-networks__main-screen__description {
+  display: flex;
+  flex-direction: column;
+  max-width: 670px;
+
+  /* 15px-30px */
+  gap: clamp(0.938rem, 0.7106rem + 0.9704vw, 1.875rem);
+}
+
+.heating-networks__main-screen__facts {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-snow-white);
+  color: var(--color-black);
+  width: 100%;
+
+  /* 30px-129px */
+  gap: 30px clamp(1.875rem, 0.37rem + 6.41vw, 8.0625rem);
+
+  /* 15px-20px */
+  border-radius: clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem) clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem) 0 0;
+
+  /* 15px 15px - 50px 100px */
+  padding: clamp(0.9375rem, 0.41rem + 2.27vw, 3.125rem) clamp(0.9375rem, -0.35rem + 5.5vw, 6.25rem);
+}
+
+.heating-networks__main-screen__fact {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  /* 10px-25px */
+  gap: clamp(0.625rem, 0.4rem + 0.97vw, 1.5625rem);
+}
+
+.heating-networks__main-screen__fact h1 {
+  white-space: nowrap;
+}
+
+.heating-networks__main-screen__fact--hidden {
+  visibility: hidden;
+}
+
+/* ============================================= Блок 2: Карточка с историей  ============================================= */
+
+
+
+
+/* ============================================= Блок 3: Новости ============================================= */
+.heating-networks__news {
+  display: flex;
+  flex-direction: column;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+
+  /* 0 15px 50px 15px - 0 85px 150px 85px */
+  padding: 0 clamp(0.938rem, -0.1239rem + 4.5307vw, 5.313rem) clamp(3.125rem, 1.608rem + 6.4725vw, 9.375rem);
 }

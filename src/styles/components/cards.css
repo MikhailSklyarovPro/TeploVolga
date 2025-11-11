@@ -208,6 +208,25 @@
 }
 
 
+/* ============================================= Карточки истории компании ============================================= */
+.card-history-company {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-snow-white);
+  box-shadow: 0 4px 4px 0 #4a586e1c;
+
+  /* 30px-50px */
+  gap: clamp(1.875rem, 1.5716rem + 1.2945vw, 3.125rem);
+
+  /* 15px-20px */
+  border-radius: 0 0 clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem) clamp(0.938rem, 0.8623rem + 0.3231vw, 1.25rem);
+
+  /* 15px 15px - 50px 100px */
+  padding: clamp(0.9375rem, 0.41rem + 2.27vw, 3.125rem) clamp(0.9375rem, -0.35rem + 5.5vw, 6.25rem);
+}
+
+
+
 /* ============================================= media запросы для мобилок ============================================= */
 @media (hover: none) and (pointer: coarse) {
   .cards-news__title__controls__arrow {
